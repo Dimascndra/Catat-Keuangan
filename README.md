@@ -1,59 +1,158 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Catat Keuangan (Sistem Manajemen Keuangan)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi untuk mengelola keuangan pribadi, melacak pemasukan, pengeluaran, hutang, dan anggaran dengan dukungan multi-dompet.
 
-## About Laravel
+## 🚀 Panduan Instalasi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal Anda:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Prasyarat
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   PHP >= 8.2
+-   Composer
+-   Node.js & NPM
+-   MySQL
 
-## Learning Laravel
+### Langkah-langkah
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+1.  **Clone Repository**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    ```bash
+    git clone <repository_url>
+    cd keuangan
+    ```
 
-## Laravel Sponsors
+2.  **Install Dependensi PHP**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    ```bash
+    composer install
+    ```
 
-### Premium Partners
+3.  **Setup File Environment**
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+    ```bash
+    cp .env.example .env
+    ```
 
-## Contributing
+    -   Buka file `.env` dan atur konfigurasi database Anda (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4.  **Generate Application Key**
 
-## Code of Conduct
+    ```bash
+    php artisan key:generate
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5.  **Jalankan Migrasi & Seeder**
 
-## Security Vulnerabilities
+    ```bash
+    php artisan migrate --seed
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6.  **Tautkan Storage (Penyimpanan)**
 
-## License
+    ```bash
+    php artisan storage:link
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7.  **Install & Build Aset Frontend**
+
+    ```bash
+    npm install
+    npm run build
+    ```
+
+8.  **Install Paket Tambahan (Opsional)**
+
+    Jika paket belum terinstall otomatis, jalankan perintah berikut:
+
+    ```bash
+    composer require maatwebsite/excel
+    composer require barryvdh/laravel-dompdf
+    composer require spatie/laravel-permission
+    ```
+
+9.  **Jalankan Server Development**
+
+
+    ```bash
+    php artisan serve
+    ```
+    Akses aplikasi di `http://127.0.0.1:8000`.
+
+---
+
+## 🔄 Alur Kerja Sistem & Modul
+
+Sistem ini bekerja sebagai ekosistem keuangan yang terintegrasi. Berikut adalah interaksi antar modul:
+
+### 1. **Wallets (Dompet)**
+
+-   **Konsep**: Mewakili sumber dana Anda (misal: Tunai, Bank BCA, Gopay).
+-   **Alur Kerja**:
+    -   Buat dompet dengan saldo awal.
+    -   Saldo akan otomatis diperbarui saat Anda mencatat **Pemasukan**, **Pengeluaran**, **Transfer**, atau **Pembayaran Hutang**.
+
+### 2. **Transaksi (Pemasukan & Pengeluaran)**
+
+-   **Income (Pemasukan)**: Saldo dompet yang dipilih akan **bertambah**.
+    -   _Fitur_: Pilih Kategori (Gaji, Hadiah, dll), Sumber, Tanggal, Deskripsi.
+-   **Expense (Pengeluaran)**: Saldo dompet yang dipilih akan **berkurang**.
+    -   _Fitur_: Pilih Kategori (Makanan, Transport, dll), perhitungan Jumlah x Harga, **Upload Bukti** (struk/nota).
+-   **Kategori Dinamis**: Anda dapat menambah, mengubah, atau menghapus kategori pemasukan dan pengeluaran sesuai kebutuhan melalui menu **Categories**.
+
+### 3. **Transfers (Transfer Dana)**
+
+-   **Konsep**: Memindahkan uang antar dompet pribadi Anda.
+-   **Alur Kerja**:
+    -   Pilih Dompet Asal (Saldo -).
+    -   Pilih Dompet Tujuan (Saldo +).
+    -   Masukkan Jumlah.
+
+### 4. **Budget Management (Anggaran)**
+
+-   **Konsep**: Membatasi pengeluaran Anda untuk kategori tertentu setiap bulan.
+-   **Alur Kerja**:
+    -   Tetapkan batas (misal: Makanan: Rp 1.000.000).
+    -   Dashboard menampilkan progress bar **Realisasi vs Anggaran**.
+    -   Saat Anda mencatat pengeluaran di kategori tersebut, bar akan terisi dan berubah warna (Biru -> Kuning -> Merah) jika mendekati batas.
+
+### 5. **Debt & Receivables (Hutang & Piutang)**
+
+-   **Receivable (Piutang)**: Uang yang dipinjam orang lain dari Anda.
+-   **Payable (Hutang)**: Uang yang Anda pinjam dari orang lain.
+-   **Alur Kerja**:
+    -   Buat catatan (Nama, Jumlah, Tanggal Jatuh Tempo).
+    -   **Klik Bayar (Pay)**: Pilih dompet yang digunakan untuk menerima/membayar.
+    -   **Hasil**: Status Hutang menjadi "Lunas" (Paid), dan saldo Dompet menyesuaikan otomatis.
+
+### 6. **Enhanced Reports (Laporan Lengkap)**
+
+-   **Konsep**: Dashboard analisis keuangan yang komprehensif.
+-   **Fitur**:
+    -   **Laporan Harian**: Grafik & Tabel pengeluaran per hari.
+    -   **Laporan Kategori**: Diagram lingkaran (Pie Chart) pengeluaran per kategori.
+    -   **Arus Kas (Cash Flow)**: Ringkasan Saldo Awal, Total Masuk, Total Keluar, dan Saldo Akhir.
+    -   **Tren Bulanan**: Grafik garis tren pemasukan vs pengeluaran selama 12 bulan.
+    -   **Mutasi Dompet**: Riwayat transaksi detail difilter per dompet.
+    -   **Ekspor**: Unduh laporan ke **Excel** atau **PDF**.
+
+### 7. **Teknologi yang Digunakan**
+
+-   **Framework Backend**: Laravel 12.x
+-   **Bahasa**: PHP 8.2+
+-   **Database**: MySQL
+-   **Frontend**: Blade Templates, Bootstrap 4/5, jQuery
+-   **Plugins Utama**:
+    -   `maatwebsite/excel` (Ekspor Excel)
+    -   `barryvdh/laravel-dompdf` (Cetak PDF)
+    -   `spatie/laravel-permission` (Manajemen Role/Permission)
+    -   **Chart.js** (Visualisasi Grafik)
+    -   **Select2** (Dropdown Pencarian yang Lebih Baik)
+
+---
+
+## 🤝 Kontribusi
+
+Aplikasi ini dikembangkan untuk tujuan pembelajaran dan manajemen keuangan pribadi. Silakan kirim _Pull Request_ jika Anda ingin menambahkan fitur baru.
+
+Created with ❤️ by **Dimas Candra Pebriyanto**.

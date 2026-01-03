@@ -1,140 +1,422 @@
 @extends('layouts.index')
-@section('title', 'Dashboard')
-@section('styles')
-    <link href="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css" />
-@endsection
+@section('title', 'System Reports')
+
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Dashboard
-        @endslot
-        @slot('other')
-            <span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
-            <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a>
+            Financial Report System
         @endslot
         @slot('action')
-            <div class="d-flex align-items-center">
-                <!--begin::Actions-->
-                <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Today</a>
-                <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Month</a>
-                <a href="#" class="btn btn-clean btn-sm font-weight-bold font-size-base mr-1">Year</a>
-                <!--end::Actions-->
-                <!--begin::Daterange-->
-                <a href="#" class="btn btn-sm btn-light font-weight-bold mr-2" id="kt_dashboard_daterangepicker"
-                    data-toggle="tooltip" title="Select dashboard daterange" data-placement="left">
-                    <span class="text-muted font-size-base font-weight-bold mr-2"
-                        id="kt_dashboard_daterangepicker_title">Today</span>
-                    <span class="text-primary font-size-base font-weight-bolder" id="kt_dashboard_daterangepicker_date">Aug
-                        16</span>
-                </a>
-                <!--end::Daterange-->
-                <!--begin::Dropdowns-->
-                <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
-                    <a href="#" class="btn btn-sm btn-clean btn-icon" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <span class="svg-icon svg-icon-success svg-icon-lg">
-                            <!--begin::Svg Icon | path:assets/media/svg/icons/Files/File-plus.svg-->
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                height="24px" viewBox="0 0 24 24" version="1.1">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <polygon points="0 0 24 0 24 24 0 24" />
-                                    <path
-                                        d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z"
-                                        fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                    <path
-                                        d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z"
-                                        fill="#000000" />
-                                </g>
-                            </svg>
-                            <!--end::Svg Icon-->
-                        </span>
-                    </a>
-                    <div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right py-3">
-                        <!--begin::Navigation-->
-                        <ul class="navi navi-hover py-5">
-                            <li class="navi-item">
-                                <a href="#" class="navi-link">
-                                    <span class="navi-icon">
-                                        <i class="flaticon2-drop"></i>
-                                    </span>
-                                    <span class="navi-text">New Group</span>
-                                </a>
-                            </li>
-                            <li class="navi-item">
-                                <a href="#" class="navi-link">
-                                    <span class="navi-icon">
-                                        <i class="flaticon2-list-3"></i>
-                                    </span>
-                                    <span class="navi-text">Contacts</span>
-                                </a>
-                            </li>
-                            <li class="navi-item">
-                                <a href="#" class="navi-link">
-                                    <span class="navi-icon">
-                                        <i class="flaticon2-rocket-1"></i>
-                                    </span>
-                                    <span class="navi-text">Groups</span>
-                                    <span class="navi-link-badge">
-                                        <span class="label label-light-primary label-inline font-weight-bold">new</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="navi-item">
-                                <a href="#" class="navi-link">
-                                    <span class="navi-icon">
-                                        <i class="flaticon2-bell-2"></i>
-                                    </span>
-                                    <span class="navi-text">Calls</span>
-                                </a>
-                            </li>
-                            <li class="navi-item">
-                                <a href="#" class="navi-link">
-                                    <span class="navi-icon">
-                                        <i class="flaticon2-gear"></i>
-                                    </span>
-                                    <span class="navi-text">Settings</span>
-                                </a>
-                            </li>
-                            <li class="navi-separator my-3"></li>
-                            <li class="navi-item">
-                                <a href="#" class="navi-link">
-                                    <span class="navi-icon">
-                                        <i class="flaticon2-magnifier-tool"></i>
-                                    </span>
-                                    <span class="navi-text">Help</span>
-                                </a>
-                            </li>
-                            <li class="navi-item">
-                                <a href="#" class="navi-link">
-                                    <span class="navi-icon">
-                                        <i class="flaticon2-bell-2"></i>
-                                    </span>
-                                    <span class="navi-text">Privacy</span>
-                                    <span class="navi-link-badge">
-                                        <span class="label label-light-danger label-rounded font-weight-bold">5</span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <!--end::Navigation-->
-                    </div>
-                </div>
-                <!--end::Dropdowns-->
-            </div>
+            <a href="{{ route('expenses.create') }}" class="btn btn-primary font-weight-bolder btn-sm">
+                Add Expense
+            </a>
+            <a href="{{ route('incomes.create') }}" class="btn btn-success font-weight-bolder btn-sm ml-2">
+                Add Income
+            </a>
         @endslot
     @endcomponent
 @endsection
+
 @section('content')
-    <!--begin::Container-->
-    @include('layouts.partials._content')
-    <!--end::Container-->
+    <div class="container">
+        <!-- Financial Summary -->
+        <div class="card card-custom gutter-b">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card card-custom bg-light-success">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Total Income</span>
+                                        <span class="text-muted font-weight-bold mt-2">Pemasukan</span>
+                                    </div>
+                                    <span class="text-success font-weight-bolder font-size-h3">
+                                        Rp {{ number_format($totalIncome, 0, ',', '.') }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card card-custom bg-light-danger">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Total Expenses</span>
+                                        <span class="text-muted font-weight-bold mt-2">Pemakaian</span>
+                                    </div>
+                                    <span class="text-danger font-weight-bolder font-size-h3">
+                                        Rp {{ number_format($totalExpense, 0, ',', '.') }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card card-custom bg-light-primary">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Balance</span>
+                                        <span class="text-muted font-weight-bold mt-2">Sisa Uang</span>
+                                    </div>
+                                    <span class="text-primary font-weight-bolder font-size-h3">
+                                        Rp {{ number_format($balance, 0, ',', '.') }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wallet Balances -->
+        <div class="row mb-5">
+            @foreach ($wallets as $wallet)
+                <div class="col-lg-4 col-xl-3">
+                    <div class="card card-custom gutter-b card-stretch">
+                        <div class="card-body pt-4">
+                            <div class="d-flex justify-content-between align-items-center mb-5">
+                                <span class="text-dark-75 font-weight-bolder mr-2">{{ $wallet->type }}</span>
+                                <a href="{{ route('wallets.edit', $wallet) }}"
+                                    class="btn btn-clean btn-hover-light-primary btn-sm btn-icon">
+                                    <i class="ki ki-bold-edit text-primary"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-4">
+                                    {{ $wallet->name }}
+                                </a>
+                                <span class="font-weight-bolder font-size-h2 text-dark">
+                                    {{ $wallet->formatted_balance }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+        <!-- Budget Realization -->
+        <div class="card card-custom gutter-b">
+            <div class="card-header border-0 pb-0">
+                <h3 class="card-title font-weight-bolder text-dark">Budget Realization ({{ date('F Y') }})</h3>
+                <div class="card-toolbar">
+                    <a href="{{ route('budgets.index') }}" class="btn btn-light-primary btn-sm font-weight-bold">Manage
+                        Budgets</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    @foreach ($budgets as $budget)
+                        <div class="col-lg-6 mb-8">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="font-weight-bold mr-2">{{ $budget->category }}</span>
+                                <span class="text-muted">{{ 'Rp ' . number_format($budget->spent_amount, 0, ',', '.') }} /
+                                    {{ $budget->formatted_amount }}</span>
+                            </div>
+                            <div class="progress progress-xs mb-2">
+                                <div class="progress-bar {{ $budget->progress > 100 ? 'bg-danger' : ($budget->progress > 80 ? 'bg-warning' : 'bg-primary') }}"
+                                    role="progressbar" style="width: {{ min(100, $budget->progress) }}%;"
+                                    aria-valuenow="{{ $budget->progress }}" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <span
+                                class="font-weight-bolder {{ $budget->progress > 100 ? 'text-danger' : 'text-dark' }}">{{ $budget->progress }}%
+                                Used</span>
+                        </div>
+                    @endforeach
+                    @if ($budgets->isEmpty())
+                        <div class="col-12 text-center text-muted">
+                            No budgets set. <a href="{{ route('budgets.create') }}">Set a budget</a> to track your
+                            spending.
+                        </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">Financial Overview ({{ date('F Y') }})</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chart_trend" style="height: 350px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">Expense By Category</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chart_category" style="height: 350px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Chart Section -->
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">Daily Spending (Last 30 Days)</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chart_daily" style="height: 350px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">Income Sources</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="chart_income" style="height: 350px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-custom gutter-b">
+            <div class="card-header border-0">
+                <h3 class="card-title font-weight-bolder text-dark">Recent Activity</h3>
+            </div>
+            <div class="card-body pt-0">
+                <div class="table-responsive">
+                    <table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_2">
+                        <thead>
+                            <tr class="text-uppercase">
+                                <th class="pl-0" style="width: 150px">Date</th>
+                                <th style="min-width: 150px">Description</th>
+                                <th style="min-width: 120px">Category/Source</th>
+                                <th class="text-right" style="min-width: 130px">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse($recentActivity as $activity)
+                                <tr>
+                                    <td class="pl-0">
+                                        <span
+                                            class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $activity->date->format('d M Y') }}</span>
+                                    </td>
+                                    <td>
+                                        <span
+                                            class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $activity->description ?? '-' }}</span>
+                                        <span class="text-muted font-weight-bold">{{ ucfirst($activity->type) }}</span>
+                                    </td>
+                                    <td>
+                                        @if ($activity->type == 'income')
+                                            <span
+                                                class="label label-lg label-light-success label-inline font-weight-bold py-4">{{ $activity->source }}</span>
+                                        @else
+                                            <span
+                                                class="label label-lg label-light-danger label-inline font-weight-bold py-4">{{ $activity->category }}</span>
+                                        @endif
+                                    </td>
+                                    <td class="text-right">
+                                        @if ($activity->type == 'income')
+                                            <span class="text-success font-weight-bolder font-size-lg">+
+                                                {{ $activity->formatted_amount }}</span>
+                                        @else
+                                            <span class="text-danger font-weight-bolder font-size-lg">-
+                                                {{ $activity->formatted_total_amount }}</span>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted">No recent activity.</td>
+                                </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
+
 @section('scripts')
-    <!--begin::Page Vendors(used by this page)-->
-    <script src="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Trend Chart
+            var optionsTrend = {
+                series: [{
+                    name: 'Income',
+                    data: @json($dataIncome)
+                }, {
+                    name: 'Expenses',
+                    data: @json($dataExpense)
+                }],
+                chart: {
+                    height: 350,
+                    type: 'area',
+                    toolbar: {
+                        show: false
+                    }
+                },
+                colors: ['#1BC5BD', '#F64E60'],
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    curve: 'smooth'
+                },
+                xaxis: {
+                    categories: @json($months),
+                    tooltip: {
+                        enabled: false
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function(value) {
+                            return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                        }
+                    }
+                },
+                tooltip: {
+                    y: {
+                        formatter: function(value) {
+                            return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                        }
+                    }
+                }
+            };
+            var chartTrend = new ApexCharts(document.querySelector("#chart_trend"), optionsTrend);
+            chartTrend.render();
 
-    <!--end::Page Vendors-->
+            // Category Chart
+            var optionsCategory = {
+                series: @json($categoryTotals),
+                labels: @json($categoryLabels),
+                chart: {
+                    type: 'donut',
+                    height: 350
+                },
+                colors: ['#3699FF', '#1BC5BD', '#8950FC', '#FFA800', '#F64E60'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                tooltip: {
+                    y: {
+                        formatter: function(value) {
+                            return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                        }
+                    }
+                }
+            };
+            var chartCategory = new ApexCharts(document.querySelector("#chart_category"), optionsCategory);
+            chartCategory.render();
 
-    <!--begin::Page Scripts(used by this page)-->
-    <script src="{{ asset('assets/js/pages/widgets.js') }}"></script>
+            // Daily Expense Chart
+            var optionsDaily = {
+                series: [{
+                    name: 'Spending',
+                    data: @json($dailyTotals)
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        show: false
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                xaxis: {
+                    categories: @json($dailyLabels),
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function(value) {
+                            return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                        }
+                    }
+                },
+                fill: {
+                    opacity: 1
+                },
+                colors: ['#F64E60'],
+                tooltip: {
+                    y: {
+                        formatter: function(value) {
+                            return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                        }
+                    }
+                }
+            };
+            var chartDaily = new ApexCharts(document.querySelector("#chart_daily"), optionsDaily);
+            chartDaily.render();
+
+            // Income Source Chart
+            var optionsIncome = {
+                series: @json($incomeTotals),
+                labels: @json($incomeLabels),
+                chart: {
+                    type: 'pie',
+                    height: 350
+                },
+                colors: ['#1BC5BD', '#3699FF', '#8950FC', '#FFA800', '#F64E60'],
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                tooltip: {
+                    y: {
+                        formatter: function(value) {
+                            return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                        }
+                    }
+                }
+            };
+            var chartIncome = new ApexCharts(document.querySelector("#chart_income"), optionsIncome);
+            chartIncome.render();
+        });
+    </script>
 @endsection
