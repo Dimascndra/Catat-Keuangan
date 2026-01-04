@@ -26,17 +26,17 @@
                         <div class="form-group">
                             <input
                                 class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5"
-                                type="email" name="email" value="test@example.com" autocomplete="off" />
+                                type="email" name="email" value="{{ old('email') }}" autocomplete="off" />
                         </div>
                         <div class="form-group">
                             <input
                                 class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5"
-                                type="password" placeholder="Password" name="password" value="password" />
+                                type="password" placeholder="Password" name="password" value="{{ old('password') }}" />
                         </div>
                         <div class="form-group d-flex flex-wrap justify-content-between align-items-center px-8">
                             <div class="checkbox-inline">
                                 <label class="checkbox checkbox-outline checkbox-white text-white m-0">
-                                    <input type="checkbox" name="remember" />
+                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} />
                                     <span></span>Remember me</label>
                             </div>
                             <a href="javascript:;" id="kt_login_forgot" class="text-white font-weight-bold">Forget Password
