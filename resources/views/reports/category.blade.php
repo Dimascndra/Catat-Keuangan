@@ -45,6 +45,17 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
+                    <h3 class="card-label">Category Distribution Chart</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="chart_category_trend"></div>
+            </div>
+        </div>
+
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
                     <h3 class="card-label">Expense by Category</h3>
                 </div>
             </div>
@@ -82,4 +93,39 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        var options = {
+            series: @json($chartSeries),
+            labels: @json($chartLabels),
+            chart: {
+                type: 'donut',
+                height: 350
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 300
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }],
+            colors: ['#3699FF', '#1BC5BD', '#8950FC', '#FFA800', '#F64E60', '#333333', '#111000', '#999999'],
+            tooltip: {
+                y: {
+                    formatter: function(value) {
+                        return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart_category_trend"), options);
+        chart.render();
+    </script>
 @endsection

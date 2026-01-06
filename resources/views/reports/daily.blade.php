@@ -45,6 +45,17 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
+                    <h3 class="card-label">Daily Trend Chart</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="chart_daily_trend"></div>
+            </div>
+        </div>
+
+        <div class="card card-custom gutter-b">
+            <div class="card-header">
+                <div class="card-title">
                     <h3 class="card-label">Daily Recap</h3>
                 </div>
             </div>
@@ -92,4 +103,43 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        var options = {
+            series: [{
+                name: 'Income',
+                data: @json($incomeData)
+            }, {
+                name: 'Expense',
+                data: @json($expenseData)
+            }],
+            chart: {
+                height: 350,
+                type: 'area'
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            xaxis: {
+                type: 'category',
+                categories: @json($chartLabels)
+            },
+            tooltip: {
+                y: {
+                    formatter: function(value) {
+                        return "Rp " + new Intl.NumberFormat('id-ID').format(value);
+                    }
+                }
+            },
+            colors: ['#1BC5BD', '#F64E60']
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart_daily_trend"), options);
+        chart.render();
+    </script>
 @endsection
