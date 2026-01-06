@@ -176,7 +176,9 @@ class ReportController extends Controller
             ->get();
 
         $chartLabels = $categories->pluck('category');
-        $chartSeries = $categories->pluck('total');
+        $chartSeries = $categories->pluck('total')->map(function ($item) {
+            return (float)$item;
+        });
 
         $wallets = \App\Models\Wallet::all();
         return view('reports.category', compact('categories', 'startDate', 'endDate', 'wallets', 'walletId', 'chartLabels', 'chartSeries'));
