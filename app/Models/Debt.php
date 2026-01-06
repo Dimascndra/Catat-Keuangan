@@ -10,6 +10,7 @@ class Debt extends Model
     use HasFactory;
 
     protected $fillable = [
+        'wallet_id',
         'type',
         'name',
         'amount',
@@ -22,6 +23,11 @@ class Debt extends Model
     protected $casts = [
         'due_date' => 'date',
     ];
+
+    public function wallet()
+    {
+        return $this->belongsTo(Wallet::class);
+    }
 
     public function payments()
     {

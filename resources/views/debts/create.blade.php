@@ -36,6 +36,22 @@
                             </select>
                         </div>
                         <div class="col-lg-6">
+                            <label>Wallet (Optional)</label>
+                            <select class="form-control form-control-solid select2" id="walletSelect" name="wallet_id">
+                                <option value="">Select Wallet (None)</option>
+                                @foreach ($wallets as $wallet)
+                                    <option value="{{ $wallet->id }}"
+                                        {{ old('wallet_id') == $wallet->id ? 'selected' : '' }}>
+                                        {{ $wallet->name }} ({{ number_format($wallet->balance, 0, ',', '.') }})
+                                    </option>
+                                @endforeach
+                            </select>
+                            <span class="form-text text-muted">Select a wallet to immediately adjust balance based on
+                                type.</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-6">
                             <label>Name (Person/Entity) <span class="text-danger">*</span></label>
                             <input type="text"
                                 class="form-control form-control-solid @error('name') is-invalid @enderror" name="name"
@@ -44,35 +60,34 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-lg-6">
-                            <label>Amount (Rp) <span class="text-danger">*</span></label>
-                            <input type="number"
-                                class="form-control form-control-solid @error('amount') is-invalid @enderror" name="amount"
-                                id="amount" placeholder="0" value="{{ old('amount') }}" step="0.01" min="0"
-                                required />
-                            @error('amount')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                            <span class="form-text text-muted" id="amount_display"></span>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Amount (Rp) <span class="text-danger">*</span></label>
+                                <input type="number"
+                                    class="form-control form-control-solid @error('amount') is-invalid @enderror"
+                                    name="amount" id="amount" placeholder="0" value="{{ old('amount') }}"
+                                    step="0.01" min="0" required />
+                                @error('amount')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                                <span class="form-text text-muted" id="amount_display"></span>
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Due Date</label>
+                                <input type="date"
+                                    class="form-control form-control-solid @error('due_date') is-invalid @enderror"
+                                    name="due_date" value="{{ old('due_date') }}" />
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <label>Due Date</label>
-                            <input type="date"
-                                class="form-control form-control-solid @error('due_date') is-invalid @enderror"
-                                name="due_date" value="{{ old('due_date') }}" />
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control form-control-solid" name="description" rows="3">{{ old('description') }}</textarea>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Description</label>
-                        <textarea class="form-control form-control-solid" name="description" rows="3">{{ old('description') }}</textarea>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary mr-2">Save</button>
+                        <button type="reset" class="btn btn-secondary">Cancel</button>
                     </div>
-                </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary mr-2">Save</button>
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
-                </div>
             </form>
         </div>
     </div>
@@ -85,6 +100,11 @@
                 placeholder: "Select Type",
                 allowClear: false,
                 minimumResultsForSearch: Infinity
+            });
+
+            $('#walletSelect').select2({
+                placeholder: "Select Wallet (Optional)",
+                allowClear: true
             });
         });
 

@@ -27,7 +27,8 @@ class DebtController extends Controller
      */
     public function create()
     {
-        return view('debts.create');
+        $wallets = Wallet::all();
+        return view('debts.create', compact('wallets'));
     }
 
     /**
@@ -37,13 +38,28 @@ class DebtController extends Controller
     {
         $validated = $request->validate([
             'type' => 'required|in:payable,receivable',
+            'wallet_id' => 'nullable|exists:wallets,id', // Optional wallet selection
             'name' => 'required|string|max:255',
             'amount' => 'required|numeric|min:0',
             'due_date' => 'nullable|date',
             'description' => 'nullable|string|max:255',
         ]);
 
-        Debt::create($validated);
+        DB::transaction(function () use ($validated) {
+            $debt = Debt::create($validated);
+
+            if (!empty($validated['wallet_id'])) {
+                $wallet = Wallet::findOrFail($validated['wallet_id']);
+                if ($validated['type'] == 'payable') {
+                    // Hutang (Borrowing money) -> Money comes IN to wallet
+                    $wallet->balance += $validated['amount'];
+                } else {
+                    // Piutang (Lending money) -> Money goes OUT from wallet
+                    $wallet->balance -= $validated['amount'];
+                }
+                $wallet->save();
+            }
+        });
 
         return redirect()->route('debts.index')
             ->with('success', 'Record created successfully.');
