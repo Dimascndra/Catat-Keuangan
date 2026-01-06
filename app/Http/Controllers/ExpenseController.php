@@ -13,7 +13,17 @@ class ExpenseController extends Controller
      */
     public function index(Request $request)
     {
+        // Get all wallets for tabs
+        $wallets = \App\Models\Wallet::all();
+
+        // Determine active wallet (default to first wallet if not provided)
+        $activeWalletId = $request->query('wallet_id', $wallets->first()->id ?? null);
+
         $query = Expense::query();
+
+        if ($activeWalletId) {
+            $query->where('wallet_id', $activeWalletId);
+        }
 
         // Filter by Current Month
         $query->whereMonth('date', now()->month)
@@ -33,11 +43,11 @@ class ExpenseController extends Controller
         $expenses = $query->paginate(10)->withQueryString();
 
         // Financial Summary (Expense Focused)
-        $totalExpenseToday = \App\Models\Expense::whereDate('date', now()->today())->sum('total_amount');
-        $totalExpenseThisWeek = \App\Models\Expense::whereBetween('date', [now()->startOfWeek(), now()->endOfWeek()])->sum('total_amount');
-        $totalExpenseThisMonth = \App\Models\Expense::whereMonth('date', now()->month)->whereYear('date', now()->year)->sum('total_amount');
+        $totalExpenseToday = \App\Models\Expense::where('wallet_id', $activeWalletId)->whereDate('date', now()->today())->sum('total_amount');
+        $totalExpenseThisWeek = \App\Models\Expense::where('wallet_id', $activeWalletId)->whereBetween('date', [now()->startOfWeek(), now()->endOfWeek()])->sum('total_amount');
+        $totalExpenseThisMonth = \App\Models\Expense::where('wallet_id', $activeWalletId)->whereMonth('date', now()->month)->whereYear('date', now()->year)->sum('total_amount');
 
-        return view('expenses.index', compact('expenses', 'sortField', 'sortDirection', 'totalExpenseToday', 'totalExpenseThisWeek', 'totalExpenseThisMonth'));
+        return view('expenses.index', compact('expenses', 'wallets', 'activeWalletId', 'sortField', 'sortDirection', 'totalExpenseToday', 'totalExpenseThisWeek', 'totalExpenseThisMonth'));
     }
 
     /**

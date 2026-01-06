@@ -31,6 +31,24 @@
             </div>
         @endif
 
+        <!-- Wallet Tabs -->
+        <div class="card card-custom gutter-b">
+            <div class="card-header card-header-tabs-line">
+                <div class="card-toolbar">
+                    <ul class="nav nav-tabs nav-bold nav-tabs-line">
+                        @foreach ($wallets as $wallet)
+                            <li class="nav-item">
+                                <a class="nav-link {{ $activeWalletId == $wallet->id ? 'active' : '' }}"
+                                    href="{{ route('expenses.index', ['wallet_id' => $wallet->id]) }}">
+                                    <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
+                                    <span class="nav-text">{{ $wallet->name }}</span>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <!-- Financial Summary -->
         <div class="card card-custom gutter-b">

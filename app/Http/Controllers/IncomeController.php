@@ -43,11 +43,17 @@ class IncomeController extends Controller
             'date' => 'required|date',
             'wallet_id' => 'required|exists:wallets,id',
             'category' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
             'amount' => 'required|numeric|min:0',
+            'description' => 'required|string|max:255',
         ]);
 
-        Income::create($validated);
+        Income::create([
+            'date' => $validated['date'],
+            'wallet_id' => $validated['wallet_id'],
+            'source' => $validated['category'], // Map category to source
+            'description' => $validated['description'],
+            'amount' => $validated['amount'],
+        ]);
 
         return redirect()->route('incomes.index')
             ->with('success', 'Income created successfully.');
