@@ -137,16 +137,27 @@ class ReportController extends Controller
             ->get()->pluck('total', 'year');
 
         $yearlyRecap = [];
+        $chartLabels = [];
+        $incomeData = [];
+        $expenseData = [];
+
         for ($y = $startYear; $y <= $endYear; $y++) {
+            $inc = $yearlyIncomes[$y] ?? 0;
+            $exp = $yearlyExpenses[$y] ?? 0;
+
             $yearlyRecap[] = [
                 'year' => $y,
-                'income' => $yearlyIncomes[$y] ?? 0,
-                'expense' => $yearlyExpenses[$y] ?? 0,
+                'income' => $inc,
+                'expense' => $exp,
             ];
+
+            $chartLabels[] = (string)$y;
+            $incomeData[] = $inc;
+            $expenseData[] = $exp;
         }
 
         $wallets = \App\Models\Wallet::all();
-        return view('reports.yearly', compact('yearlyRecap', 'wallets', 'walletId'));
+        return view('reports.yearly', compact('yearlyRecap', 'wallets', 'walletId', 'chartLabels', 'incomeData', 'expenseData'));
     }
 
     public function category(Request $request)
@@ -164,8 +175,11 @@ class ReportController extends Controller
             ->orderBy('total', 'desc')
             ->get();
 
+        $chartLabels = $categories->pluck('category');
+        $chartSeries = $categories->pluck('total');
+
         $wallets = \App\Models\Wallet::all();
-        return view('reports.category', compact('categories', 'startDate', 'endDate', 'wallets', 'walletId'));
+        return view('reports.category', compact('categories', 'startDate', 'endDate', 'wallets', 'walletId', 'chartLabels', 'chartSeries'));
     }
 
     public function mutation(Request $request)
