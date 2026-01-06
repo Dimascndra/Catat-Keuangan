@@ -74,9 +74,9 @@
                         <span class="menu-text">Dashboard</span></a>
                 </li>
 
-                <li class="menu-item {{ request()->routeIs('reports.*') ? 'menu-item-active' : '' }}"
-                    aria-haspopup="true">
-                    <a href="{{ route('reports.index') }}" class="menu-link">
+                <li class="menu-item menu-item-submenu {{ request()->routeIs('reports.*') ? 'menu-item-open menu-item-active' : '' }}"
+                    aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
                         <span class="svg-icon menu-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -95,7 +95,55 @@
                                 </g>
                             </svg>
                         </span>
-                        <span class="menu-text">Laporan</span></a>
+                        <span class="menu-text">Laporan</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text">Laporan</span>
+                                </span>
+                            </li>
+                            <li class="menu-item {{ request()->routeIs('reports.daily') ? 'menu-item-active' : '' }}"
+                                aria-haspopup="true">
+                                <a href="{{ route('reports.daily') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Harian</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{ request()->routeIs('reports.monthly') ? 'menu-item-active' : '' }}"
+                                aria-haspopup="true">
+                                <a href="{{ route('reports.monthly') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Bulanan</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{ request()->routeIs('reports.yearly') ? 'menu-item-active' : '' }}"
+                                aria-haspopup="true">
+                                <a href="{{ route('reports.yearly') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Tahunan</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {{ request()->routeIs('reports.category') ? 'menu-item-active' : '' }}"
+                                aria-haspopup="true">
+                                <a href="{{ route('reports.category') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Kategori</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li class="menu-item {{ request()->routeIs('incomes.*') ? 'menu-item-active' : '' }}"

@@ -6,35 +6,39 @@ use App\Exports\ExpensesExport;
 use App\Models\Expense;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
-use PDF; // Barryvdh\DomPDF\Facade
+// use PDF; // Barryvdh\DomPDF\Facade
 use Illuminate\Support\Facades\DB;
 
 class ReportController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        // Default to current month
+        return redirect()->route('reports.daily');
+    }
+
+    public function daily(Request $request)
+    {
         $startDate = $request->input('start_date', date('Y-m-01'));
         $endDate = $request->input('end_date', date('Y-m-t'));
         $walletId = $request->input('wallet_id');
 
-        // 1. Daily Recap (Income vs Expense)
+        // Logic for Daily Recap
         $dailyIncomes = \App\Models\Income::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
             ->selectRaw('date, SUM(amount) as total')
             ->groupBy('date')
             ->get()->keyBy('date');
 
         $dailyExpenses = \App\Models\Expense::whereBetween('date', [$startDate, $endDate])
-            ->selectRaw('date, SUM(total_amount) as total') // Note: Expense uses total_amount logic if quantity exists, but model accessor handles it usually. DB column is amount? Check schema.
-            // Wait, Expense schema has 'amount' and 'quantity'. 'total_amount' is likely an accessor.
-            // In DB query we should likely use 'amount' if quantity is 1, or 'amount * quantity'.
-            // Let's check Expense model first. If 'total_amount' is a virtual attribute, I can't select it directly in selectRaw without logic.
-            // Standard approach: SUM(amount * quantity) if quantity column exists.
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
             ->selectRaw('date, SUM(amount * quantity) as total')
             ->groupBy('date')
             ->get()->keyBy('date');
 
-        // Merge dates
         $dates = $dailyIncomes->keys()->merge($dailyExpenses->keys())->unique()->sort();
         $dailyRecap = [];
         foreach ($dates as $date) {
@@ -45,138 +49,99 @@ class ReportController extends Controller
             ];
         }
 
-        // 2. Category Breakdown (Expense Only)
-        $categoryRecap = \App\Models\Expense::whereBetween('date', [$startDate, $endDate])
-            ->selectRaw('category, COUNT(*) as count, SUM(amount * quantity) as total')
-            ->groupBy('category')
-            ->orderBy('total', 'desc')
-            ->get();
+        $wallets = \App\Models\Wallet::all();
 
-        // 3. Cash Flow
-        $initialBalance = \App\Models\Wallet::sum('initial_balance');
-        $incomeBefore = \App\Models\Income::where('date', '<', $startDate)->sum('amount');
-        $expenseBefore = \App\Models\Expense::where('date', '<', $startDate)->sum(DB::raw('amount * quantity'));
+        return view('reports.daily', compact('dailyRecap', 'startDate', 'endDate', 'wallets', 'walletId'));
+    }
 
-        $openingBalance = $initialBalance + $incomeBefore - $expenseBefore;
+    public function monthly(Request $request)
+    {
+        $year = $request->input('year', date('Y'));
+        $walletId = $request->input('wallet_id');
 
-        $totalIncome = \App\Models\Income::whereBetween('date', [$startDate, $endDate])->sum('amount');
-        $totalExpense = \App\Models\Expense::whereBetween('date', [$startDate, $endDate])->sum(DB::raw('amount * quantity'));
-
-        $closingBalance = $openingBalance + $totalIncome - $totalExpense;
-
-        $cashFlow = [
-            'opening_balance' => $openingBalance,
-            'income' => $totalIncome,
-            'expense' => $totalExpense,
-            'closing_balance' => $closingBalance
-        ];
-
-        // 4. Monthly Trends (Last 12 Months)
-        // This is tricky as it might span before start_date. Let's fix it to this year or just always show last 12 months up to end_date.
-        // Let's go with 12 months ending at end_date.
-        $trendStart = \Carbon\Carbon::parse($endDate)->subMonths(11)->startOfMonth();
-        $trendEnd = \Carbon\Carbon::parse($endDate)->endOfMonth();
-
-        $monthlyIncomes = \App\Models\Income::whereBetween('date', [$trendStart, $trendEnd])
-            ->selectRaw("DATE_FORMAT(date, '%Y-%m') as month, SUM(amount) as total")
+        $monthlyIncomes = \App\Models\Income::whereYear('date', $year)
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
+            ->selectRaw("DATE_FORMAT(date, '%m') as month, SUM(amount) as total")
             ->groupBy('month')
             ->get()->pluck('total', 'month');
 
-        $monthlyExpenses = \App\Models\Expense::whereBetween('date', [$trendStart, $trendEnd])
-            ->selectRaw("DATE_FORMAT(date, '%Y-%m') as month, SUM(amount * quantity) as total")
+        $monthlyExpenses = \App\Models\Expense::whereYear('date', $year)
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
+            ->selectRaw("DATE_FORMAT(date, '%m') as month, SUM(amount * quantity) as total")
             ->groupBy('month')
             ->get()->pluck('total', 'month');
 
-        $monthlyTrends = [];
-        $period = \Carbon\CarbonPeriod::create($trendStart, '1 month', $trendEnd);
-        foreach ($period as $dt) {
-            $month = $dt->format('Y-m');
-            $monthlyTrends[] = [
-                'month' => $dt->format('F Y'),
+        $monthlyRecap = [];
+        for ($i = 1; $i <= 12; $i++) {
+            $month = str_pad($i, 2, '0', STR_PAD_LEFT);
+            $monthlyRecap[] = [
+                'month' => date("F", mktime(0, 0, 0, $i, 10)),
                 'income' => $monthlyIncomes[$month] ?? 0,
                 'expense' => $monthlyExpenses[$month] ?? 0,
             ];
         }
 
-        // 5. Wallet History (Mutasi with Running Balance) - Logic is complex for running balance.
-        // Simplified: Just list transactions.
-        $walletHistory = [];
-        if ($walletId) {
-            // Get initial balance for this wallet specifically
-            $w = \App\Models\Wallet::find($walletId);
-            if ($w) {
-                // Calc balance before range
-                $wIncomeBefore = \App\Models\Income::where('wallet_id', $walletId)->where('date', '<', $startDate)->sum('amount');
-                $wExpenseBefore = \App\Models\Expense::where('wallet_id', $walletId)->where('date', '<', $startDate)->sum(DB::raw('amount * quantity'));
-                // Need to account for transfers too? Yes. But Transfer logic might be heavy.
-                // Let's stick to Income/Expense for now, and maybe Transfers later if critical.
-                // Actually, without transfers, wallet balance is wrong.
-                // Fetch Transfers
-                $transfersInBefore = \App\Models\Transfer::where('to_wallet_id', $walletId)->where('date', '<', $startDate)->sum('amount');
-                $transfersOutBefore = \App\Models\Transfer::where('from_wallet_id', $walletId)->where('date', '<', $startDate)->sum('amount');
+        $wallets = \App\Models\Wallet::all();
+        return view('reports.monthly', compact('monthlyRecap', 'year', 'wallets', 'walletId'));
+    }
 
-                $currentRunningBalance = $w->initial_balance + $wIncomeBefore - $wExpenseBefore + $transfersInBefore - $transfersOutBefore;
+    public function yearly(Request $request)
+    {
+        // Simple 5 year trend
+        $walletId = $request->input('wallet_id');
+        $startYear = date('Y') - 4;
+        $endYear = date('Y');
 
-                // Fetch all transactions in range
-                $incomes = \App\Models\Income::where('wallet_id', $walletId)->whereBetween('date', [$startDate, $endDate])->get()->map(function ($i) {
-                    $i->type = 'income';
-                    return $i;
-                });
-                $expenses = \App\Models\Expense::where('wallet_id', $walletId)->whereBetween('date', [$startDate, $endDate])->get()->map(function ($e) {
-                    $e->type = 'expense';
-                    return $e;
-                });
-                $transfersIn = \App\Models\Transfer::where('to_wallet_id', $walletId)->whereBetween('date', [$startDate, $endDate])->get()->map(function ($t) {
-                    $t->type = 'transfer_in';
-                    return $t;
-                });
-                $transfersOut = \App\Models\Transfer::where('from_wallet_id', $walletId)->whereBetween('date', [$startDate, $endDate])->get()->map(function ($t) {
-                    $t->type = 'transfer_out';
-                    return $t;
-                });
+        $yearlyIncomes = \App\Models\Income::whereBetween(DB::raw('YEAR(date)'), [$startYear, $endYear])
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
+            ->selectRaw("YEAR(date) as year, SUM(amount) as total")
+            ->groupBy('year')
+            ->get()->pluck('total', 'year');
 
-                $walletTransactions = $incomes->concat($expenses)->concat($transfersIn)->concat($transfersOut)->sortBy('date');
+        $yearlyExpenses = \App\Models\Expense::whereBetween(DB::raw('YEAR(date)'), [$startYear, $endYear])
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
+            ->selectRaw("YEAR(date) as year, SUM(amount * quantity) as total")
+            ->groupBy('year')
+            ->get()->pluck('total', 'year');
 
-                foreach ($walletTransactions as $t) {
-                    $amount = 0;
-                    if ($t->type == 'income') {
-                        $amount = $t->amount;
-                        $currentRunningBalance += $amount;
-                    } elseif ($t->type == 'expense') {
-                        $amount = - ($t->amount * $t->quantity);
-                        $currentRunningBalance += $amount;
-                    } elseif ($t->type == 'transfer_in') {
-                        $amount = $t->amount;
-                        $currentRunningBalance += $amount;
-                    } elseif ($t->type == 'transfer_out') {
-                        $amount = -$t->amount;
-                        $currentRunningBalance += $amount;
-                    }
-
-                    $walletHistory[] = [
-                        'date' => $t->date,
-                        'type' => $t->type,
-                        'description' => $t->description ?? $t->category . ' ' . $t->description, // Fallback
-                        'amount' => $amount,
-                        'balance' => $currentRunningBalance
-                    ];
-                }
-            }
+        $yearlyRecap = [];
+        for ($y = $startYear; $y <= $endYear; $y++) {
+            $yearlyRecap[] = [
+                'year' => $y,
+                'income' => $yearlyIncomes[$y] ?? 0,
+                'expense' => $yearlyExpenses[$y] ?? 0,
+            ];
         }
 
         $wallets = \App\Models\Wallet::all();
+        return view('reports.yearly', compact('yearlyRecap', 'wallets', 'walletId'));
+    }
 
-        return view('reports.index', compact(
-            'startDate',
-            'endDate',
-            'walletId',
-            'dailyRecap',
-            'categoryRecap',
-            'cashFlow',
-            'monthlyTrends',
-            'walletHistory',
-            'wallets'
-        ));
+    public function category(Request $request)
+    {
+        $startDate = $request->input('start_date', date('Y-m-01'));
+        $endDate = $request->input('end_date', date('Y-m-t'));
+        $walletId = $request->input('wallet_id');
+
+        $categories = \App\Models\Expense::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
+            ->selectRaw('category, SUM(amount * quantity) as total')
+            ->groupBy('category')
+            ->orderBy('total', 'desc')
+            ->get();
+
+        $wallets = \App\Models\Wallet::all();
+        return view('reports.category', compact('categories', 'startDate', 'endDate', 'wallets', 'walletId'));
     }
 
     public function export(Request $request)

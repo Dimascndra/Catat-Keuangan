@@ -23,7 +23,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Reports (Must be before expenses resource to avoid collision)
-    Route::get('/reports', [\App\Http\Controllers\ReportController::class, 'index'])->name('reports.index');
+    // Reports
+    Route::prefix('reports')->name('reports.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\ReportController::class, 'index'])->name('index'); // Keep index for now as redirect or general
+        Route::get('/daily', [\App\Http\Controllers\ReportController::class, 'daily'])->name('daily');
+        Route::get('/monthly', [\App\Http\Controllers\ReportController::class, 'monthly'])->name('monthly');
+        Route::get('/yearly', [\App\Http\Controllers\ReportController::class, 'yearly'])->name('yearly');
+        Route::get('/category', [\App\Http\Controllers\ReportController::class, 'category'])->name('category');
+    });
     Route::post('/reports/export', [\App\Http\Controllers\ReportController::class, 'export'])->name('reports.export');
     Route::get('/expenses/reports', function () {
         return redirect()->route('reports.index');
