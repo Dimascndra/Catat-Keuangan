@@ -27,14 +27,12 @@ class BudgetController extends Controller
      */
     public function create()
     {
-    public function create()
-    {
         // Get all expense categories from the categories table
         $allCategories = \App\Models\Category::where('type', 'expense')->orderBy('name')->get();
-        
+
         // Exclude categories that already have a budget
         $budgetedCategoryNames = Budget::pluck('category')->toArray();
-        
+
         // Filter categories
         $categories = $allCategories->filter(function ($category) use ($budgetedCategoryNames) {
             return !in_array($category->name, $budgetedCategoryNames);
