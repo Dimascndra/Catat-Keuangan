@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::prefix('reports')->name('reports.')->group(function () {
         Route::get('/', [\App\Http\Controllers\ReportController::class, 'index'])->name('index'); // Keep index for now as redirect or general
         Route::get('/daily', [\App\Http\Controllers\ReportController::class, 'daily'])->name('daily');
+        Route::get('/weekly', [\App\Http\Controllers\ReportController::class, 'weekly'])->name('weekly');
         Route::get('/monthly', [\App\Http\Controllers\ReportController::class, 'monthly'])->name('monthly');
         Route::get('/yearly', [\App\Http\Controllers\ReportController::class, 'yearly'])->name('yearly');
         Route::get('/category', [\App\Http\Controllers\ReportController::class, 'category'])->name('category');
