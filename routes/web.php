@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/monthly', [\App\Http\Controllers\ReportController::class, 'monthly'])->name('monthly');
         Route::get('/yearly', [\App\Http\Controllers\ReportController::class, 'yearly'])->name('yearly');
         Route::get('/category', [\App\Http\Controllers\ReportController::class, 'category'])->name('category');
+        Route::get('/mutation', [\App\Http\Controllers\ReportController::class, 'mutation'])->name('mutation');
     });
     Route::post('/reports/export', [\App\Http\Controllers\ReportController::class, 'export'])->name('reports.export');
     Route::get('/expenses/reports', function () {

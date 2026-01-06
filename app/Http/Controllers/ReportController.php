@@ -41,17 +41,30 @@ class ReportController extends Controller
 
         $dates = $dailyIncomes->keys()->merge($dailyExpenses->keys())->unique()->sort();
         $dailyRecap = [];
+        // Chart Arrays
+        $chartLabels = [];
+        $incomeData = [];
+        $expenseData = [];
+
         foreach ($dates as $date) {
+            $inc = $dailyIncomes[$date]->total ?? 0;
+            $exp = $dailyExpenses[$date]->total ?? 0;
+
             $dailyRecap[] = [
                 'date' => $date,
-                'income' => $dailyIncomes[$date]->total ?? 0,
-                'expense' => $dailyExpenses[$date]->total ?? 0,
+                'income' => $inc,
+                'expense' => $exp,
             ];
+
+            // Chart Data
+            $chartLabels[] = \Carbon\Carbon::parse($date)->format('d M');
+            $incomeData[] = $inc;
+            $expenseData[] = $exp;
         }
 
         $wallets = \App\Models\Wallet::all();
 
-        return view('reports.daily', compact('dailyRecap', 'startDate', 'endDate', 'wallets', 'walletId'));
+        return view('reports.daily', compact('dailyRecap', 'startDate', 'endDate', 'wallets', 'walletId', 'chartLabels', 'incomeData', 'expenseData'));
     }
 
     public function monthly(Request $request)
@@ -76,17 +89,28 @@ class ReportController extends Controller
             ->get()->pluck('total', 'month');
 
         $monthlyRecap = [];
+        $chartLabels = [];
+        $incomeData = [];
+        $expenseData = [];
+
         for ($i = 1; $i <= 12; $i++) {
-            $month = str_pad($i, 2, '0', STR_PAD_LEFT);
+            $monthKey = str_pad($i, 2, '0', STR_PAD_LEFT);
+            $inc = $monthlyIncomes[$monthKey] ?? 0;
+            $exp = $monthlyExpenses[$monthKey] ?? 0;
+
             $monthlyRecap[] = [
                 'month' => date("F", mktime(0, 0, 0, $i, 10)),
-                'income' => $monthlyIncomes[$month] ?? 0,
-                'expense' => $monthlyExpenses[$month] ?? 0,
+                'income' => $inc,
+                'expense' => $exp,
             ];
+
+            $chartLabels[] = date("M", mktime(0, 0, 0, $i, 10));
+            $incomeData[] = $inc;
+            $expenseData[] = $exp;
         }
 
         $wallets = \App\Models\Wallet::all();
-        return view('reports.monthly', compact('monthlyRecap', 'year', 'wallets', 'walletId'));
+        return view('reports.monthly', compact('monthlyRecap', 'year', 'wallets', 'walletId', 'chartLabels', 'incomeData', 'expenseData'));
     }
 
     public function yearly(Request $request)
@@ -142,6 +166,126 @@ class ReportController extends Controller
 
         $wallets = \App\Models\Wallet::all();
         return view('reports.category', compact('categories', 'startDate', 'endDate', 'wallets', 'walletId'));
+    }
+
+    public function mutation(Request $request)
+    {
+        $startDate = $request->input('start_date', date('Y-m-01'));
+        $endDate = $request->input('end_date', date('Y-m-t'));
+        $walletId = $request->input('wallet_id');
+
+        $walletHistory = [];
+        $openingBalance = 0;
+
+        // If a specific wallet is selected, we can calculate precise running balance
+        // If ALL wallets are selected, it's a bit ambiguous (sum of all wallets?), but we can still do it.
+
+        // 1. Calculate Opening Balance (Balance before start_date)
+        $initialBalanceQuery = \App\Models\Wallet::query();
+        if ($walletId) {
+            $initialBalanceQuery->where('id', $walletId);
+        }
+        $openingBalance += $initialBalanceQuery->sum('initial_balance');
+
+        $incomeBefore = \App\Models\Income::where('date', '<', $startDate)
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('wallet_id', $walletId);
+            })->sum('amount');
+
+        $expenseBefore = \App\Models\Expense::where('date', '<', $startDate)
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('wallet_id', $walletId);
+            })->sum(DB::raw('amount * quantity'));
+
+        // Transfers logic
+        $transfersInBefore = \App\Models\Transfer::where('date', '<', $startDate)
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('to_wallet_id', $walletId);
+            })->sum('amount');
+
+        $transfersOutBefore = \App\Models\Transfer::where('date', '<', $startDate)
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('from_wallet_id', $walletId);
+            })->sum('amount');
+
+
+        $openingBalance = $openingBalance + $incomeBefore - $expenseBefore + $transfersInBefore - $transfersOutBefore;
+
+
+        // 2. Fetch Transactions in Range
+        $incomes = \App\Models\Income::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('wallet_id', $walletId);
+            })->get()->map(function ($i) {
+                $i->type = 'Income';
+                $i->class = 'success'; // Color
+                $i->mutation_amount = $i->amount;
+                return $i;
+            });
+
+        $expenses = \App\Models\Expense::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('wallet_id', $walletId);
+            })->get()->map(function ($e) {
+                $e->type = 'Expense';
+                $e->class = 'danger';
+                $e->mutation_amount = - ($e->amount * $e->quantity);
+                return $e;
+            });
+
+        $transfersIn = collect([]);
+        $transfersOut = collect([]);
+
+        // Only fetch transfers if we are looking at specific wallet or just list all transfers?
+        // If All Wallets: Transfer from A to B is neutral globally? No, it's out form A, in to B.
+        // Showing "Transfer" in general mutation list is fine.
+
+        $transfersIn = \App\Models\Transfer::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('to_wallet_id', $walletId);
+            })->get()->map(function ($t) {
+                $t->type = 'Transfer In';
+                $t->class = 'primary';
+                $t->mutation_amount = $t->amount;
+                $t->description = "From: " . ($t->fromWallet->name ?? '-');
+                return $t;
+            });
+
+        $transfersOut = \App\Models\Transfer::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                $q->where('from_wallet_id', $walletId);
+            })->get()->map(function ($t) {
+                $t->type = 'Transfer Out';
+                $t->class = 'warning';
+                $t->mutation_amount = -$t->amount;
+                $t->description = "To: " . ($t->toWallet->name ?? '-');
+                return $t;
+            });
+
+        $transactions = $incomes->merge($expenses)->merge($transfersIn)->merge($transfersOut)->sortBy(function ($t) {
+            return $t->date . $t->created_at; // Sort by date then created_at
+        });
+
+        // 3. Calculate Running Balance
+        $currentBalance = $openingBalance;
+        $mutationHistory = [];
+
+        foreach ($transactions as $t) {
+            $currentBalance += $t->mutation_amount;
+            $mutationHistory[] = (object) [
+                'date' => $t->date,
+                'type' => $t->type,
+                'class' => $t->class,
+                'category' => $t->category ?? $t->type,
+                'description' => $t->description,
+                'amount' => $t->mutation_amount,
+                'balance' => $currentBalance
+            ];
+        }
+
+        $wallets = \App\Models\Wallet::all();
+
+        return view('reports.mutation', compact('mutationHistory', 'openingBalance', 'startDate', 'endDate', 'wallets', 'walletId'));
     }
 
     public function export(Request $request)

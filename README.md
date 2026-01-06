@@ -137,11 +137,12 @@ Sistem ini bekerja sebagai ekosistem keuangan yang terintegrasi. Berikut adalah 
 
 -   **Konsep**: Dashboard analisis keuangan yang komprehensif.
 -   **Fitur**:
-    -   **Laporan Harian**: Grafik & Tabel pengeluaran per hari.
-    -   **Laporan Kategori**: Diagram lingkaran (Pie Chart) pengeluaran per kategori.
+    -   **Laporan Harian**: Grafik & Tabel pengeluaran per hari (Line Chart).
+    -   **Laporan Kategori**: Diagram Donut (Pie Chart) pengeluaran per kategori.
+    -   **Laporan Bulanan**: Grafik Batang (Bar Chart) tren pemasukan vs pengeluaran selama 12 bulan.
+    -   **Laporan Tahunan**: Grafik Batang (Bar Chart) perbandingan tahunan.
+    -   **Mutasi Saldo**: Riwayat transaksi detail (Pemasukan, Pengeluaran, Transfer) dengan **Running Balance**.
     -   **Arus Kas (Cash Flow)**: Ringkasan Saldo Awal, Total Masuk, Total Keluar, dan Saldo Akhir.
-    -   **Tren Bulanan**: Grafik garis tren pemasukan vs pengeluaran selama 12 bulan.
-    -   **Mutasi Dompet**: Riwayat transaksi detail difilter per dompet.
     -   **Ekspor**: Unduh laporan ke **Excel** atau **PDF**.
 
 ### 7. **Teknologi yang Digunakan**

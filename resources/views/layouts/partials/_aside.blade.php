@@ -142,6 +142,15 @@
                                     <span class="menu-text">Kategori</span>
                                 </a>
                             </li>
+                            <li class="menu-item {{ request()->routeIs('reports.mutation') ? 'menu-item-active' : '' }}"
+                                aria-haspopup="true">
+                                <a href="{{ route('reports.mutation') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Mutasi Saldo</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
