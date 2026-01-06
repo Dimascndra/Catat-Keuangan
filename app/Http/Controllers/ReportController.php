@@ -111,14 +111,81 @@ class ReportController extends Controller
 
         $wallets = \App\Models\Wallet::all();
         return view('reports.monthly', compact('monthlyRecap', 'year', 'wallets', 'walletId', 'chartLabels', 'incomeData', 'expenseData'));
+        return view('reports.daily', compact('dailyRecap', 'startDate', 'endDate', 'wallets', 'walletId', 'chartLabels', 'incomeData', 'expenseData'));
+    }
+
+    public function weekly(Request $request)
+    {
+        $month = $request->input('month', date('m'));
+        $year = $request->input('year', date('Y'));
+        $walletId = $request->input('wallet_id');
+
+        $startDate = \Carbon\Carbon::createFromDate($year, $month, 1)->startOfMonth();
+        $endDate = \Carbon\Carbon::createFromDate($year, $month, 1)->endOfMonth();
+
+        // Retrieve income and expense data
+        $weeklyIncomes = \App\Models\Income::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
+            ->selectRaw("WEEK(date, 1) as week, MIN(date) as week_start, MAX(date) as week_end, SUM(amount) as total")
+            ->groupBy('week')
+            ->get()
+            ->keyBy('week');
+
+        $weeklyExpenses = \App\Models\Expense::whereBetween('date', [$startDate, $endDate])
+            ->when($walletId, function ($q) use ($walletId) {
+                return $q->where('wallet_id', $walletId);
+            })
+            ->selectRaw("WEEK(date, 1) as week, MIN(date) as week_start, MAX(date) as week_end, SUM(amount * quantity) as total")
+            ->groupBy('week')
+            ->get()
+            ->keyBy('week');
+
+        // Merge keys for weeks
+        $weeks = $weeklyIncomes->keys()->merge($weeklyExpenses->keys())->unique()->sort();
+
+        $weeklyRecap = [];
+        $chartLabels = [];
+        $incomeData = [];
+        $expenseData = [];
+
+        foreach ($weeks as $week) {
+            // Determine date range for display (approximate using min/max found in data, or calculate from week number)
+            // Using logic to get Start/End of week from week number is safer for labels
+            $dto = new \DateTime();
+            $dto->setISODate($year, $week);
+            $weekStart = $dto->format('d M');
+            $dto->modify('+6 days');
+            $weekEnd = $dto->format('d M');
+            $label = "W$week ($weekStart - $weekEnd)";
+
+            $inc = $weeklyIncomes[$week]->total ?? 0;
+            $exp = $weeklyExpenses[$week]->total ?? 0;
+
+            $weeklyRecap[] = [
+                'week' => $week,
+                'label' => $label,
+                'income' => $inc,
+                'expense' => $exp,
+            ];
+
+            $chartLabels[] = "Week $week";
+            $incomeData[] = $inc;
+            $expenseData[] = $exp;
+        }
+
+        $wallets = \App\Models\Wallet::all();
+        return view('reports.weekly', compact('weeklyRecap', 'month', 'year', 'wallets', 'walletId', 'chartLabels', 'incomeData', 'expenseData'));
     }
 
     public function yearly(Request $request)
     {
         // Simple 5 year trend
         $walletId = $request->input('wallet_id');
-        $startYear = date('Y') - 4;
-        $endYear = date('Y');
+        // $startYear = date('Y') - 4; // Previous logic
+        $startYear = 2026; // New logic: show only from 2026 onwards
+        $endYear = max(date('Y'), 2026); // Ensure we show at least 2026, or current year if greater
 
         $yearlyIncomes = \App\Models\Income::whereBetween(DB::raw('YEAR(date)'), [$startYear, $endYear])
             ->when($walletId, function ($q) use ($walletId) {

@@ -1,10 +1,10 @@
 @extends('layouts.index')
-@section('title', 'Laporan Bulanan')
+@section('title', 'Laporan Mingguan')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Laporan Bulanan
+            Laporan Mingguan
         @endslot
     @endcomponent
 @endsection
@@ -13,12 +13,23 @@
     <div class="container">
         <div class="card card-custom gutter-b">
             <div class="card-body">
-                <form action="{{ route('reports.monthly') }}" method="GET">
+                <form action="{{ route('reports.weekly') }}" method="GET">
                     <div class="form-group row mb-0">
+                        <div class="col-lg-3">
+                            <label>Month</label>
+                            <select name="month" class="form-control">
+                                @for ($m = 1; $m <= 12; $m++)
+                                    <option value="{{ sprintf('%02d', $m) }}"
+                                        {{ $month == sprintf('%02d', $m) ? 'selected' : '' }}>
+                                        {{ date('F', mktime(0, 0, 0, $m, 10)) }}
+                                    </option>
+                                @endfor
+                            </select>
+                        </div>
                         <div class="col-lg-3">
                             <label>Year</label>
                             <select name="year" class="form-control">
-                                @for ($y = date('Y'); $y >= 2026; $y--)
+                                @for ($y = date('Y') - 1; $y <= date('Y') + 1; $y++)
                                     <option value="{{ $y }}" {{ $year == $y ? 'selected' : '' }}>
                                         {{ $y }}
                                     </option>
@@ -47,18 +58,18 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Monthly Trend Chart</h3>
+                    <h3 class="card-label">Weekly Trend Chart</h3>
                 </div>
             </div>
             <div class="card-body">
-                <div id="chart_monthly_trend"></div>
+                <div id="chart_weekly_trend"></div>
             </div>
         </div>
 
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Monthly Recap ({{ $year }})</h3>
+                    <h3 class="card-label">Weekly Recap</h3>
                 </div>
             </div>
             <div class="card-body">
@@ -66,22 +77,22 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Month</th>
+                                <th>Week</th>
                                 <th class="text-right">Income</th>
                                 <th class="text-right">Expense</th>
                                 <th class="text-right">Net</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($monthlyRecap as $month)
+                            @foreach ($weeklyRecap as $week)
                                 <tr>
-                                    <td>{{ $month['month'] }}</td>
-                                    <td class="text-right text-success">{{ number_format($month['income'], 0, ',', '.') }}
+                                    <td>{{ $week['label'] }}</td>
+                                    <td class="text-right text-success">{{ number_format($week['income'], 0, ',', '.') }}
                                     </td>
-                                    <td class="text-right text-danger">{{ number_format($month['expense'], 0, ',', '.') }}
+                                    <td class="text-right text-danger">{{ number_format($week['expense'], 0, ',', '.') }}
                                     </td>
                                     <td class="text-right font-weight-bold">
-                                        {{ number_format($month['income'] - $month['expense'], 0, ',', '.') }}
+                                        {{ number_format($week['income'] - $week['expense'], 0, ',', '.') }}
                                     </td>
                                 </tr>
                             @endforeach
@@ -90,13 +101,13 @@
                             <tr class="font-weight-bold bg-light">
                                 <td>TOTAL</td>
                                 <td class="text-right">
-                                    {{ number_format(collect($monthlyRecap)->sum('income'), 0, ',', '.') }}
+                                    {{ number_format(collect($weeklyRecap)->sum('income'), 0, ',', '.') }}
                                 </td>
                                 <td class="text-right">
-                                    {{ number_format(collect($monthlyRecap)->sum('expense'), 0, ',', '.') }}
+                                    {{ number_format(collect($weeklyRecap)->sum('expense'), 0, ',', '.') }}
                                 </td>
                                 <td class="text-right">
-                                    {{ number_format(collect($monthlyRecap)->sum('income') - collect($monthlyRecap)->sum('expense'), 0, ',', '.') }}
+                                    {{ number_format(collect($weeklyRecap)->sum('income') - collect($weeklyRecap)->sum('expense'), 0, ',', '.') }}
                                 </td>
                             </tr>
                         </tfoot>
@@ -157,7 +168,7 @@
             colors: ['#1BC5BD', '#F64E60']
         };
 
-        var chart = new ApexCharts(document.querySelector("#chart_monthly_trend"), options);
+        var chart = new ApexCharts(document.querySelector("#chart_weekly_trend"), options);
         chart.render();
     </script>
 @endsection

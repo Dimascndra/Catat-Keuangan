@@ -115,6 +115,15 @@
                                     <span class="menu-text">Harian</span>
                                 </a>
                             </li>
+                            <li class="menu-item {{ request()->routeIs('reports.weekly') ? 'menu-item-active' : '' }}"
+                                aria-haspopup="true">
+                                <a href="{{ route('reports.weekly') }}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">Mingguan</span>
+                                </a>
+                            </li>
                             <li class="menu-item {{ request()->routeIs('reports.monthly') ? 'menu-item-active' : '' }}"
                                 aria-haspopup="true">
                                 <a href="{{ route('reports.monthly') }}" class="menu-link">
