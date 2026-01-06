@@ -18,8 +18,8 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal Anda:
 1.  **Clone Repository**
 
     ```bash
-    git clone <repository_url>
-    cd keuangan
+    git clone https://github.com/Dimascndra/Catat-Keuangan.git
+    cd Catat-Keuangan
     ```
 
 2.  **Install Dependensi PHP**
