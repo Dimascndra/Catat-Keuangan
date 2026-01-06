@@ -16,8 +16,28 @@ class ExpenseController extends Controller
         // Get all wallets for tabs
         $wallets = \App\Models\Wallet::all();
 
-        // Determine active wallet (default to first wallet if not provided)
-        $activeWalletId = $request->query('wallet_id', $wallets->first()->id ?? null);
+        // Global Date & Wallet Filter
+        $currentMonth = $request->input('month', session('global_month', now()->month));
+        $currentYear = $request->input('year', session('global_year', now()->year));
+        $globalWalletId = $request->input('wallet_id', session('global_wallet_id'));
+
+        session([
+            'global_month' => $currentMonth,
+            'global_year' => $currentYear,
+            'global_wallet_id' => $globalWalletId
+        ]);
+
+        // Determine active wallet (for Tabs if needed, OR for Filtering)
+        // If Global Filter is Set -> Use it.
+        // If Global Filter is "All" -> Use Request/Tab wallet OR show All?
+        // User asked for separation. If "All" is selected in header, we should probably allow the Tabs to work as they did before?
+        // OR simply showing "All" in the list is the expected behavior for "All Wallets".
+        // Let's implement: Global Filter overrides everything.
+        // If Global == Specific Wallet -> Filter by it.
+        // If Global == All -> Show All (Remove Tab filtering logic unless user clicks a tab? But tabs are redundant if we have global filter).
+        // Let's assume Global Filter replaces the Tabs functionality for filtering purposes.
+
+        $activeWalletId = $globalWalletId; // Logic simplification
 
         $query = Expense::query();
 
@@ -25,15 +45,28 @@ class ExpenseController extends Controller
             $query->where('wallet_id', $activeWalletId);
         }
 
-        // Filter by Current Month
-        $query->whereMonth('date', now()->month)
-            ->whereYear('date', now()->year);
+        // Date Filtering Logic
+        // If specific range is provided, use it. Otherwise, fallback to Global Month.
+        if ($request->filled('start_date') && $request->filled('end_date')) {
+            $query->whereBetween('date', [$request->start_date, $request->end_date]);
+        } else {
+            // Filter by Global Date
+            $query->whereMonth('date', $currentMonth)
+                ->whereYear('date', $currentYear);
+        }
+
+        // Local Filters (Category & Search)
+        if ($request->filled('category')) {
+            $query->where('category', $request->category);
+        }
+        if ($request->filled('search')) {
+            $query->where('description', 'like', '%' . $request->search . '%');
+        }
 
         // Sorting
         $sortField = $request->query('sort', 'date');
         $sortDirection = $request->query('direction', 'desc');
 
-        // Allow only specific columns to be sorted
         if (in_array($sortField, ['date', 'total_amount'])) {
             $query->orderBy($sortField, $sortDirection);
         } else {
@@ -42,12 +75,20 @@ class ExpenseController extends Controller
 
         $expenses = $query->paginate(10)->withQueryString();
 
-        // Financial Summary (Expense Focused)
-        $totalExpenseToday = \App\Models\Expense::where('wallet_id', $activeWalletId)->whereDate('date', now()->today())->sum('total_amount');
-        $totalExpenseThisWeek = \App\Models\Expense::where('wallet_id', $activeWalletId)->whereBetween('date', [now()->startOfWeek(), now()->endOfWeek()])->sum('total_amount');
-        $totalExpenseThisMonth = \App\Models\Expense::where('wallet_id', $activeWalletId)->whereMonth('date', now()->month)->whereYear('date', now()->year)->sum('total_amount');
+        // Financial Summary (Based on current filter)
+        $summaryQuery = \App\Models\Expense::query();
+        if ($activeWalletId) {
+            $summaryQuery->where('wallet_id', $activeWalletId);
+        }
 
-        return view('expenses.index', compact('expenses', 'wallets', 'activeWalletId', 'sortField', 'sortDirection', 'totalExpenseToday', 'totalExpenseThisWeek', 'totalExpenseThisMonth'));
+        $totalExpenseToday = (clone $summaryQuery)->whereDate('date', now()->today())->sum('total_amount');
+        $totalExpenseThisWeek = (clone $summaryQuery)->whereBetween('date', [now()->startOfWeek(), now()->endOfWeek()])->sum('total_amount');
+        $totalExpenseThisMonth = (clone $summaryQuery)->whereMonth('date', $currentMonth)->whereYear('date', $currentYear)->sum('total_amount');
+
+        // Fetch Categories for Filter Dropdown
+        $categories = \App\Models\Category::where('type', 'expense')->orderBy('name')->get();
+
+        return view('expenses.index', compact('expenses', 'wallets', 'activeWalletId', 'sortField', 'sortDirection', 'totalExpenseToday', 'totalExpenseThisWeek', 'totalExpenseThisMonth', 'currentMonth', 'currentYear', 'categories'));
     }
 
     /**

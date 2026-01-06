@@ -2,6 +2,15 @@
 @section('title', 'System Reports')
 
 @section('subheader')
+    <style>
+        .accordion-toggle .toggle-icon {
+            transition: transform 0.3s;
+        }
+
+        .accordion-toggle[aria-expanded="true"] .toggle-icon {
+            transform: rotate(180deg);
+        }
+    </style>
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
             Financial Report System
@@ -102,7 +111,8 @@
         <!-- Budget Realization -->
         <div class="card card-custom gutter-b">
             <div class="card-header border-0 pb-0">
-                <h3 class="card-title font-weight-bolder text-dark">Budget Realization ({{ date('F Y') }})</h3>
+                <h3 class="card-title font-weight-bolder text-dark">Budget Realization
+                    ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
                 <div class="card-toolbar">
                     <a href="{{ route('budgets.index') }}" class="btn btn-light-primary btn-sm font-weight-bold">Manage
                         Budgets</a>
@@ -144,7 +154,8 @@
                 <div class="card card-custom gutter-b">
                     <div class="card-header">
                         <div class="card-title">
-                            <h3 class="card-label">Financial Overview ({{ date('F Y') }})</h3>
+                            <h3 class="card-label">Financial Overview
+                                ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -161,6 +172,100 @@
                     </div>
                     <div class="card-body">
                         <div id="chart_category" style="height: 350px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Expense Breakdown Table -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-custom gutter-b">
+                    <div class="card-header border-0">
+                        <h3 class="card-title font-weight-bolder text-dark">Expense Breakdown
+                            ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="table-responsive">
+                            <table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_3">
+                                <thead>
+                                    <tr class="text-uppercase">
+                                        <th style="min-width: 150px">Category</th>
+                                        <th class="text-right" style="min-width: 130px">Total Amount</th>
+                                        <th class="text-right" style="min-width: 100px">% of Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($allCategoryStats as $index => $stat)
+                                        @php
+                                            $percentage = $totalExpense > 0 ? ($stat->total / $totalExpense) * 100 : 0;
+                                        @endphp
+                                        <!-- Main Row -->
+                                        <tr data-toggle="collapse" data-target="#collapse-{{ $index }}"
+                                            class="accordion-toggle" style="cursor: pointer">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="symbol symbol-35 symbol-light-success mr-2">
+                                                        <span class="symbol-label font-size-h5 font-weight-bold">
+                                                            <i
+                                                                class="fa fa-chevron-down text-success font-size-sm toggle-icon"></i>
+                                                        </span>
+                                                    </span>
+                                                    <span
+                                                        class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $stat->category }}</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-right">
+                                                <span class="text-dark-75 font-weight-bolder font-size-lg">
+                                                    Rp {{ number_format($stat->total, 0, ',', '.') }}
+                                                </span>
+                                            </td>
+                                            <td class="text-right">
+                                                <span
+                                                    class="text-muted font-weight-bold">{{ number_format($percentage, 1) }}%</span>
+                                            </td>
+                                        </tr>
+                                        <!-- Collapsible Row -->
+                                        <tr>
+                                            <td colspan="3" class="p-0 border-0">
+                                                <div class="collapse" id="collapse-{{ $index }}">
+                                                    <div class="card card-body bg-light pl-10 py-5">
+                                                        <table class="table table-borderless table-sm mb-0">
+                                                            <thead>
+                                                                <tr class="text-muted text-uppercase font-size-xs">
+                                                                    <th>Date</th>
+                                                                    <th>Description</th>
+                                                                    <th class="text-right">Amount</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @foreach ($stat->expenses as $expense)
+                                                                    <tr>
+                                                                        <td>{{ $expense->date->format('d M') }}</td>
+                                                                        <td>{{ $expense->description }}</td>
+                                                                        <td class="text-right font-weight-bold">
+                                                                            Rp
+                                                                            {{ number_format($expense->total_amount, 0, ',', '.') }}
+                                                                        </td>
+                                                                    </tr>
+                                                                @endforeach
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    @if ($allCategoryStats->isEmpty())
+                                        <tr>
+                                            <td colspan="3" class="text-center text-muted">No expenses recorded for
+                                                this month.</td>
+                                        </tr>
+                                    @endif
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

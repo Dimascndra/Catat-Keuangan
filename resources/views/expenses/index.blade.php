@@ -103,10 +103,65 @@
             </div>
         </div>
 
+        <!-- Filter Data -->
+        <div class="card card-custom gutter-b">
+            <div class="card-body">
+                <form action="{{ route('expenses.index') }}" method="GET">
+                    <div class="row align-items-center">
+                        <!-- Category -->
+                        <div class="col-lg-3 col-md-4 col-sm-12 my-2">
+                            <select name="category" class="form-control form-control-solid select2" style="width: 100%;">
+                                <option value="">All Categories</option>
+                                @foreach ($categories as $cat)
+                                    <option value="{{ $cat->name }}"
+                                        {{ request('category') == $cat->name ? 'selected' : '' }}>
+                                        {{ $cat->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <!-- Date Range -->
+                        <div class="col-lg-2 col-md-4 col-sm-6 my-2">
+                            <input type="date" class="form-control form-control-solid" name="start_date"
+                                placeholder="Start Date" value="{{ request('start_date') }}" title="Start Date">
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 my-2">
+                            <input type="date" class="form-control form-control-solid" name="end_date"
+                                placeholder="End Date" value="{{ request('end_date') }}" title="End Date">
+                        </div>
+
+                        <!-- Search -->
+                        <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+                            <div class="input-icon">
+                                <input type="text" class="form-control form-control-solid" name="search"
+                                    placeholder="Search..." value="{{ request('search') }}">
+                                <span><i class="flaticon2-search-1 text-muted"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="col-lg-2 col-md-6 col-sm-12 my-2">
+                            <div class="d-flex">
+                                <button type="submit"
+                                    class="btn btn-primary font-weight-bold mr-2 flex-grow-1">Filter</button>
+                                <a href="{{ route('expenses.index') }}" class="btn btn-icon btn-light-primary"
+                                    title="Reset">
+                                    <i class="flaticon2-reload"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Expense List ({{ date('F Y') }})</h3>
+                    <h3 class="card-label">Expense List
+                        ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})
+                    </h3>
                 </div>
             </div>
             <div class="card-body">
@@ -168,9 +223,10 @@
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Write.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
-                                                    viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                    height="24px" viewBox="0 0 24 24" version="1.1">
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
                                                         <rect x="0" y="0" width="24" height="24" />
                                                         <path
                                                             d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114732 12.1704122,4.68075471 12.453976,4.41323195 L18.0687648,1.22912442 C18.7302484,0.854964648 19.5702229,1.10757788 19.9272379,1.7857418 C20.1068665,2.12662955 20.1976079,2.50529882 20.1976079,2.89066665 L20.1976079,15.1438302 C20.1976079,15.8929947 19.5786358,16.5 18.8294713,16.5 L12.2674799,16.5 C12.2674799,16.5 12.2674799,17.6565196 12.2674799,18.2323597 Z"
@@ -227,4 +283,15 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2({
+                placeholder: "Select Category",
+                allowClear: true
+            });
+        });
+    </script>
 @endsection

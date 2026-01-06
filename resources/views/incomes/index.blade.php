@@ -35,7 +35,7 @@
                         <div class="d-flex align-items-center justify-content-between p-4 flex-lg-wrap flex-xl-nowrap">
                             <div class="d-flex flex-column mr-5">
                                 <a href="#" class="h4 text-dark text-hover-primary mb-5">
-                                    Total Income ({{ date('F') }})
+                                    Total Income ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})
                                 </a>
                                 <p class="text-dark-50">
                                     Total amount collected from all sources.
@@ -55,7 +55,8 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Income History ({{ date('F Y') }})</h3>
+                    <h3 class="card-label">Income History
+                        ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
                 </div>
             </div>
             <div class="card-body">

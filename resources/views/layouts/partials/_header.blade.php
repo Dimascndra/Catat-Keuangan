@@ -703,6 +703,45 @@
         <!--end::Header Menu Wrapper-->
         <!--begin::Topbar-->
         <div class="topbar">
+            <!--begin::Date Filter-->
+            <div class="topbar-item mr-3">
+                <form action="{{ route('dashboard') }}" method="GET" class="d-flex align-items-center">
+                    <select name="wallet_id" class="form-control form-control-sm form-control-solid mr-2 shadow-sm"
+                        onchange="this.form.submit()" style="width: 130px; border-radius: 4px;">
+                        <option value=""
+                            {{ request('wallet_id', session('global_wallet_id')) == '' ? 'selected' : '' }}>
+                            All Wallets
+                        </option>
+                        @foreach (\App\Models\Wallet::all() as $wallet)
+                            <option value="{{ $wallet->id }}"
+                                {{ request('wallet_id', session('global_wallet_id')) == $wallet->id ? 'selected' : '' }}>
+                                {{ $wallet->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                    <div class="border-right mx-2" style="height: 20px; border-color: #e4e6ef;"></div>
+                    <select name="month" class="form-control form-control-sm form-control-solid mr-2"
+                        onchange="this.form.submit()" style="width: 110px;">
+                        @foreach (range(1, 12) as $m)
+                            <option value="{{ $m }}"
+                                {{ request('month', session('global_month', date('n'))) == $m ? 'selected' : '' }}>
+                                {{ date('F', mktime(0, 0, 0, $m, 1)) }}
+                            </option>
+                        @endforeach
+                    </select>
+                    <select name="year" class="form-control form-control-sm form-control-solid"
+                        onchange="this.form.submit()" style="width: 80px;">
+                        @foreach (range(date('Y') - 5, date('Y') + 1) as $y)
+                            <option value="{{ $y }}"
+                                {{ request('year', session('global_year', date('Y'))) == $y ? 'selected' : '' }}>
+                                {{ $y }}
+                            </option>
+                        @endforeach
+                    </select>
+                </form>
+            </div>
+            <!--end::Date Filter-->
+
             <!--begin::Search-->
             <div class="dropdown" id="kt_quick_search_toggle">
                 <!--begin::Toggle-->

@@ -73,10 +73,10 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal Anda:
 
 9.  **Jalankan Server Development**
 
-
     ```bash
     php artisan serve
     ```
+
     Akses aplikasi di `http://127.0.0.1:8000`.
 
 ---
@@ -91,6 +91,7 @@ Sistem ini bekerja sebagai ekosistem keuangan yang terintegrasi. Berikut adalah 
 -   **Alur Kerja**:
     -   Buat dompet dengan saldo awal.
     -   Saldo akan otomatis diperbarui saat Anda mencatat **Pemasukan**, **Pengeluaran**, **Transfer**, atau **Pembayaran Hutang**.
+-   **Global Filter**: Filter data di Dashboard dan daftar transaksi berdasarkan Dompet spesifik atau "All Wallets" melalui navbar atas.
 
 ### 2. **Transaksi (Pemasukan & Pengeluaran)**
 
@@ -98,7 +99,14 @@ Sistem ini bekerja sebagai ekosistem keuangan yang terintegrasi. Berikut adalah 
     -   _Fitur_: Pilih Kategori (Gaji, Hadiah, dll), Sumber, Tanggal, Deskripsi.
 -   **Expense (Pengeluaran)**: Saldo dompet yang dipilih akan **berkurang**.
     -   _Fitur_: Pilih Kategori (Makanan, Transport, dll), perhitungan Jumlah x Harga, **Upload Bukti** (struk/nota).
+    -   **Advanced Filter**: Filter pengeluaran berdasarkan Kategori (Select2), Rentang Tanggal (Start - End Date), dan Pencarian Deskripsi.
 -   **Kategori Dinamis**: Anda dapat menambah, mengubah, atau menghapus kategori pemasukan dan pengeluaran sesuai kebutuhan melalui menu **Categories**.
+
+### 2b. **Dashboard & Analisis**
+
+-   **Collapsible Breakdown**: Lihat detail transaksi per kategori pengeluaran langsung di dashboard dengan fitur expand/collapse.
+-   **Global Date Filter**: Filter seluruh data dashboard berdasarkan Bulan dan Tahun yang dipilih di navbar.
+-   **Wallet Separation**: Data dashboard (Total, Grafik, List) akan menyesuaikan dengan Dompet yang dipilih di Global Filter.
 
 ### 3. **Transfers (Transfer Dana)**
 

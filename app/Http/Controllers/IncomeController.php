@@ -10,18 +10,29 @@ class IncomeController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $incomes = Income::whereMonth('date', now()->month)
-            ->whereYear('date', now()->year)
-            ->orderBy('date', 'desc')
-            ->paginate(10);
+        $currentMonth = $request->input('month', session('global_month', now()->month));
+        $currentYear = $request->input('year', session('global_year', now()->year));
+        $walletId = $request->input('wallet_id', session('global_wallet_id'));
 
-        $totalIncome = Income::whereMonth('date', now()->month)
-            ->whereYear('date', now()->year)
-            ->sum('amount');
+        session([
+            'global_month' => $currentMonth,
+            'global_year' => $currentYear,
+            'global_wallet_id' => $walletId
+        ]);
 
-        return view('incomes.index', compact('incomes', 'totalIncome'));
+        $query = Income::whereMonth('date', $currentMonth)
+            ->whereYear('date', $currentYear);
+
+        if ($walletId) {
+            $query->where('wallet_id', $walletId);
+        }
+
+        $incomes = (clone $query)->orderBy('date', 'desc')->paginate(10);
+        $totalIncome = (clone $query)->sum('amount');
+
+        return view('incomes.index', compact('incomes', 'totalIncome', 'currentMonth', 'currentYear'));
     }
 
     /**
