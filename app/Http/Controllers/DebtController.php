@@ -53,9 +53,29 @@ class DebtController extends Controller
                 if ($validated['type'] == 'payable') {
                     // Hutang (Borrowing money) -> Money comes IN to wallet
                     $wallet->balance += $validated['amount'];
+
+                    // Creates Income Record
+                    \App\Models\Income::create([
+                        'date' => now(),
+                        'wallet_id' => $wallet->id,
+                        'source' => 'Hutang: ' . $validated['name'],
+                        'description' => $validated['description'] ?? 'Pinjaman dari ' . $validated['name'],
+                        'amount' => $validated['amount'],
+                    ]);
                 } else {
                     // Piutang (Lending money) -> Money goes OUT from wallet
                     $wallet->balance -= $validated['amount'];
+
+                    // Create Expense Record
+                    \App\Models\Expense::create([
+                        'date' => now(),
+                        'wallet_id' => $wallet->id,
+                        'category' => 'Piutang',
+                        'description' => $validated['description'] ?? 'Pinjaman ke ' . $validated['name'],
+                        'quantity' => 1,
+                        'amount' => $validated['amount'],
+                        'total_amount' => $validated['amount'],
+                    ]);
                 }
                 $wallet->save();
             }
