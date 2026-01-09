@@ -81,6 +81,66 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal Anda:
 
 ---
 
+## 🔒 Konfigurasi Keamanan
+
+Aplikasi ini dilengkapi dengan fitur keamanan tingkat tinggi untuk melindungi data Anda:
+
+### Security Headers yang Diimplementasikan
+
+-   **HSTS (HTTP Strict Transport Security)**: Memaksa browser menggunakan HTTPS
+-   **X-Frame-Options**: Melindungi dari serangan Clickjacking
+-   **X-Content-Type-Options**: Mencegah MIME-type sniffing
+-   **Permissions-Policy**: Membatasi akses ke fitur browser (kamera, mikrofon, geolokasi)
+-   **Referrer-Policy**: Mengontrol informasi yang dikirim ke situs eksternal
+-   **Cookie Security**: Semua cookie menggunakan flag `Secure`, `HttpOnly`, dan `SameSite=Strict`
+
+### Konfigurasi Environment
+
+Setelah menyalin `.env.example` ke `.env`, pastikan pengaturan keamanan berikut sudah sesuai:
+
+```bash
+# Session Security
+SESSION_SECURE_COOKIE=true        # Hanya kirim cookie melalui HTTPS (production)
+SESSION_HTTP_ONLY=true            # Cegah akses JavaScript ke cookie
+SESSION_SAME_SITE=strict          # Perlindungan CSRF maksimal
+
+# Security Headers
+SECURITY_HSTS_ENABLED=true        # Aktifkan HSTS
+SECURITY_HSTS_MAX_AGE=31536000    # Durasi HSTS (1 tahun)
+SECURITY_HSTS_SUBDOMAINS=true     # Terapkan ke semua subdomain
+SECURITY_REFERRER_POLICY=strict-origin-when-cross-origin
+SECURITY_PERMISSIONS_POLICY="camera=(), microphone=(), geolocation=()"
+```
+
+> **⚠️ Catatan Penting untuk Development:**
+>
+> -   Jika menggunakan HTTP di lokal (bukan HTTPS), set `SESSION_SECURE_COOKIE=false`
+> -   Untuk production, **WAJIB** menggunakan HTTPS dan `SESSION_SECURE_COOKIE=true`
+
+### Verifikasi Security Headers
+
+Setelah aplikasi berjalan, Anda dapat memverifikasi security headers:
+
+1.  **Menggunakan Browser DevTools:**
+
+    -   Buka aplikasi di browser
+    -   Tekan F12 → Tab Network
+    -   Refresh halaman
+    -   Klik request pertama → Lihat Response Headers
+
+2.  **Menggunakan curl:**
+    ```bash
+    curl -I http://127.0.0.1:8000
+    ```
+
+Headers yang harus muncul:
+
+-   `Strict-Transport-Security: max-age=31536000; includeSubDomains`
+-   `X-Frame-Options: SAMEORIGIN`
+-   `X-Content-Type-Options: nosniff`
+-   `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+-   `Referrer-Policy: strict-origin-when-cross-origin`
+
 ## 🔄 Alur Kerja Sistem & Modul
 
 Sistem ini bekerja sebagai ekosistem keuangan yang terintegrasi. Berikut adalah interaksi antar modul:
