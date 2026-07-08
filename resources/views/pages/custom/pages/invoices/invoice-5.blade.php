@@ -76,10 +76,10 @@
                                     <table class="table">
                                         <thead>
                                             <tr class="font-weight-boldest text-white h-65px">
-                                                <td class="align-middle font-size-h4 pl-0 border-0">DESCRIPTION</td>
+                                                <td class="align-middle font-size-h4 pl-0 border-0">KETERANGAN</td>
                                                 <td class="align-middle font-size-h4 text-right border-0">HOURS</td>
                                                 <td class="align-middle font-size-h4 text-right border-0">RATE</td>
-                                                <td class="align-middle font-size-h4 text-right pr-0 border-0">AMOUNT</td>
+                                                <td class="align-middle font-size-h4 text-right pr-0 border-0">NOMINAL</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -128,7 +128,7 @@
                             <div class="col-md-9">
                                 <div class="rounded d-flex align-items-center justify-content-between text-white max-w-425px position-relative ml-auto px-7 py-5 bgi-no-repeat bgi-size-cover bgi-position-center"
                                     style="background-image: url(assets/media/svg/shapes/abstract-9.svg);">
-                                    <div class="font-weight-boldest font-size-h5">TOTAL AMOUNT</div>
+                                    <div class="font-weight-boldest font-size-h5">TOTAL NOMINAL</div>
                                     <div class="text-right d-flex flex-column">
                                         <span class="font-weight-boldest font-size-h3 line-height-sm">$20,600.00</span>
                                         <span class="font-size-sm">Taxes included</span>
@@ -154,7 +154,7 @@
                                                 <span class="text-right">Barclays UK</span>
                                             </div>
                                             <div class="d-flex justify-content-between font-size-lg mb-3">
-                                                <span class="font-weight-bold mr-15">Account Number:</span>
+                                                <span class="font-weight-bold mr-15">Nomor Rekening:</span>
                                                 <span class="text-right">1234567890934</span>
                                             </div>
                                             <div class="d-flex justify-content-between font-size-lg">
@@ -178,7 +178,7 @@
                                     <div class="font-size-lg font-weight-bold mb-10 text-right">56758</div>
                                     <!--end::Invoice No-->
                                     <!--begin::Invoice Date-->
-                                    <div class="text-dark-50 font-size-lg font-weight-bold mb-3 text-right">DATE</div>
+                                    <div class="text-dark-50 font-size-lg font-weight-bold mb-3 text-right">TANGGAL</div>
                                     <div class="font-size-lg font-weight-bold text-right">12 May, 2020</div>
                                     <!--end::Invoice Date-->
                                 </div>

@@ -5,7 +5,7 @@
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Edit User
+            Ubah User
         @endslot
         @slot('other')
             <div class="d-flex align-items-center" id="kt_subheader_search">
@@ -19,7 +19,7 @@
                 <!--end::Button-->
                 <!--begin::Dropdown-->
                 <div class="btn-group ml-2">
-                    <button type="button" class="btn btn-primary font-weight-bold btn-sm px-3 font-size-base">Save Changes</button>
+                    <button type="button" class="btn btn-primary font-weight-bold btn-sm px-3 font-size-base">Simpan Changes</button>
                     <button type="button"
                         class="btn btn-primary font-weight-bold btn-sm px-3 font-size-base dropdown-toggle dropdown-toggle-split"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -30,7 +30,7 @@
                                     <span class="navi-icon">
                                         <i class="flaticon2-writing"></i>
                                     </span>
-                                    <span class="navi-text">Save &amp; continue</span>
+                                    <span class="navi-text">Simpan &amp; continue</span>
                                 </a>
                             </li>
                             <li class="navi-item">
@@ -38,7 +38,7 @@
                                     <span class="navi-icon">
                                         <i class="flaticon2-medical-records"></i>
                                     </span>
-                                    <span class="navi-text">Save &amp; add new</span>
+                                    <span class="navi-text">Simpan &amp; add new</span>
                                 </a>
                             </li>
                             <li class="navi-item">
@@ -46,7 +46,7 @@
                                     <span class="navi-icon">
                                         <i class="flaticon2-hourglass-1"></i>
                                     </span>
-                                    <span class="navi-text">Save &amp; exit</span>
+                                    <span class="navi-text">Simpan &amp; exit</span>
                                 </a>
                             </li>
                         </ul>
@@ -212,7 +212,7 @@
                                                 </label>
                                                 <span
                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
-                                                    data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                    data-action="cancel" data-toggle="tooltip" title="Batal avatar">
                                                     <i class="ki ki-bold-close icon-xs text-muted"></i>
                                                 </span>
                                                 <span
@@ -418,8 +418,8 @@
                                             <label class="col-form-label col-3 text-lg-right text-left">Time Zone</label>
                                             <div class="col-9">
                                                 <select class="form-control form-control-lg form-control-solid">
-                                                    <option data-offset="-39600" value="International Date Line West">
-                                                        (GMT-11:00) International Date Line West</option>
+                                                    <option data-offset="-39600" value="International Tanggal Line West">
+                                                        (GMT-11:00) International Tanggal Line West</option>
                                                     <option data-offset="-39600" value="Midway Island">(GMT-11:00) Midway
                                                         Island</option>
                                                     <option data-offset="-39600" value="Samoa">(GMT-11:00) Samoa</option>
@@ -832,9 +832,9 @@
                                         <div class="row">
                                             <div class="col-3"></div>
                                             <div class="col-9">
-                                                <a href="#" class="btn btn-light-primary font-weight-bold">Save
+                                                <a href="#" class="btn btn-light-primary font-weight-bold">Simpan
                                                     changes</a>
-                                                <a href="#" class="btn btn-clean font-weight-bold">Cancel</a>
+                                                <a href="#" class="btn btn-clean font-weight-bold">Batal</a>
                                             </div>
                                         </div>
                                     </div>

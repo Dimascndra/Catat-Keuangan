@@ -1001,7 +1001,7 @@
                                                     $560,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1111,7 +1111,7 @@
                                                     $57,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1221,7 +1221,7 @@
                                                     $45,200,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1330,7 +1330,7 @@
                                                     $2,000,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1440,7 +1440,7 @@
                                                     $4,600,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1577,7 +1577,7 @@
                                                     $4,600,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1688,7 +1688,7 @@
                                                     $560,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1801,7 +1801,7 @@
                                                     $57,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -1914,7 +1914,7 @@
                                                     $2,000,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -2027,7 +2027,7 @@
                                                     $45,200,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -2167,7 +2167,7 @@
                                                     $2,000,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -2280,7 +2280,7 @@
                                                     $4,600,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -2393,7 +2393,7 @@
                                                     $560,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -2506,7 +2506,7 @@
                                                     $57,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -2619,7 +2619,7 @@
                                                     $45,200,000
                                                 </span>
                                                 <span class="text-muted font-weight-bold">
-                                                    Paid
+                                                    Lunas
                                                 </span>
                                             </td>
                                             <td class="text-right">
@@ -4318,7 +4318,7 @@
                                                 $520
                                             </span>
                                             <span class="text-muted font-weight-bold">
-                                                Paid
+                                                Lunas
                                             </span>
                                         </td>
                                         <td>
@@ -4420,7 +4420,7 @@
                                                 $34,000,000
                                             </span>
                                             <span class="text-muted font-weight-bold">
-                                                Paid
+                                                Lunas
                                             </span>
                                         </td>
                                         <td>
@@ -4428,7 +4428,7 @@
                                                 $6,700
                                             </span>
                                             <span class="text-muted font-weight-bold">
-                                                Paid
+                                                Lunas
                                             </span>
                                         </td>
                                         <td>
@@ -4436,7 +4436,7 @@
                                                 RoadGee
                                             </span>
                                             <span class="text-muted font-weight-bold">
-                                                Paid
+                                                Lunas
                                             </span>
                                         </td>
                                         <td>
@@ -4475,7 +4475,7 @@
                                                 $2,600,000
                                             </span>
                                             <span class="text-muted font-weight-bold">
-                                                Paid
+                                                Lunas
                                             </span>
                                         </td>
                                         <td>

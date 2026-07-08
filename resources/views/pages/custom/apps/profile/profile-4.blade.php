@@ -701,11 +701,11 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,790</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Bradly
@@ -857,12 +857,12 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$23,800</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Zoey
@@ -935,12 +935,12 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Brandon

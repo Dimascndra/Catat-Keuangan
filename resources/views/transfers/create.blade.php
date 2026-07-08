@@ -8,7 +8,7 @@
         @endslot
         @slot('action')
             <a href="{{ route('transfers.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">
-                Back to List
+                Kembali ke Daftar
             </a>
         @endslot
     @endcomponent
@@ -45,11 +45,11 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <div class="col-lg-6">
-                            <label>From Wallet <span class="text-danger">*</span></label>
+                            <label>Dari Buku Kas <span class="text-danger">*</span></label>
                             <select
                                 class="form-control form-control-solid select2 @error('from_wallet_id') is-invalid @enderror"
                                 id="kt_select2_from" name="from_wallet_id" required>
-                                <option value="">Select Source Wallet</option>
+                                <option value="">Select Sumber Wallet</option>
                                 @foreach ($wallets as $wallet)
                                     <option value="{{ $wallet->id }}"
                                         {{ old('from_wallet_id') == $wallet->id ? 'selected' : '' }}>
@@ -59,7 +59,7 @@
                             </select>
                         </div>
                         <div class="col-lg-6">
-                            <label>To Wallet <span class="text-danger">*</span></label>
+                            <label>Ke Buku Kas <span class="text-danger">*</span></label>
                             <select
                                 class="form-control form-control-solid select2 @error('to_wallet_id') is-invalid @enderror"
                                 id="kt_select2_to" name="to_wallet_id" required>
@@ -75,13 +75,13 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-lg-6">
-                            <label>Date <span class="text-danger">*</span></label>
+                            <label>Tanggal <span class="text-danger">*</span></label>
                             <input type="date"
                                 class="form-control form-control-solid @error('date') is-invalid @enderror" name="date"
                                 value="{{ old('date', date('Y-m-d')) }}" required />
                         </div>
                         <div class="col-lg-6">
-                            <label>Amount (Rp) <span class="text-danger">*</span></label>
+                            <label>Nominal (Rp) <span class="text-danger">*</span></label>
                             <input type="number"
                                 class="form-control form-control-solid @error('amount') is-invalid @enderror" name="amount"
                                 id="amount" placeholder="0" value="{{ old('amount') }}" step="0.01" min="0"
@@ -90,14 +90,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
+                        <label>Keterangan</label>
                         <input type="text" class="form-control form-control-solid" name="description"
                             placeholder="Transfer details" value="{{ old('description') }}" />
                     </div>
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary mr-2">Transfer</button>
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
                 </div>
             </form>
         </div>
@@ -108,7 +108,7 @@
     <script>
         $(document).ready(function() {
             $('#kt_select2_from').select2({
-                placeholder: "Select Source Wallet",
+                placeholder: "Select Sumber Wallet",
                 allowClear: true
             });
             $('#kt_select2_to').select2({

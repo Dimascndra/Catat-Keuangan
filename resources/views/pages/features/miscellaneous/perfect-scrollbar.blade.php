@@ -398,7 +398,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="kt_blockui_4_1">Submit</button>
+                        <button type="button" class="btn btn-primary" id="kt_blockui_4_1">Kirim</button>
                     </div>
                 </div>
             </div>

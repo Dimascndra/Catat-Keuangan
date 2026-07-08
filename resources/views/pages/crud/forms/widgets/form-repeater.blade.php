@@ -303,7 +303,7 @@
                                     <div class="col-md-4">
                                         <a href="javascript:;" data-repeater-delete=""
                                             class="btn btn-sm font-weight-bolder btn-light-danger">
-                                            <i class="la la-trash-o"></i>Delete</a>
+                                            <i class="la la-trash-o"></i>Hapus</a>
                                     </div>
                                 </div>
                             </div>
@@ -322,8 +322,8 @@
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-2">
-                            <button type="reset" class="btn font-weight-bold btn-success mr-2">Submit</button>
-                            <button type="reset" class="btn font-weight-bold btn-secondary">Cancel</button>
+                            <button type="reset" class="btn font-weight-bold btn-success mr-2">Kirim</button>
+                            <button type="reset" class="btn font-weight-bold btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -593,8 +593,8 @@
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
-                                    <button type="reset" class="btn font-weight-bold btn-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn font-weight-bold btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn font-weight-bold btn-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn font-weight-bold btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -885,9 +885,9 @@
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
                                     <button type="reset"
-                                        class="btn font-weight-bold btn-primary btn-shadow mr-2">Submit</button>
+                                        class="btn font-weight-bold btn-primary btn-shadow mr-2">Kirim</button>
                                     <button type="reset"
-                                        class="btn font-weight-bold btn-secondary btn-shadow">Cancel</button>
+                                        class="btn font-weight-bold btn-secondary btn-shadow">Batal</button>
                                 </div>
                             </div>
                         </div>

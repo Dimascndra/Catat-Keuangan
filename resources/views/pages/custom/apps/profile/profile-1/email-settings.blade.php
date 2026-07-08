@@ -368,8 +368,8 @@
                             <span class="text-muted font-weight-bold font-size-sm mt-1">Change your email settings</span>
                         </div>
                         <div class="card-toolbar">
-                            <button type="reset" class="btn btn-success mr-2">Save Changes</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-success mr-2">Simpan Changes</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                     <!--end::Header-->

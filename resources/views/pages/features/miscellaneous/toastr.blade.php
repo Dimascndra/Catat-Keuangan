@@ -94,7 +94,7 @@
                         </div>
                         <div class="col-lg-2">
                             <div class="form-group">
-                                <label>Toast Type</label>
+                                <label>Toast Tipe</label>
                                 <div class="radio-list" id="toastTypeGroup">
                                     <label class="radio">
                                         <input type="radio" name="toasts" checked="checked" value="success" />Success

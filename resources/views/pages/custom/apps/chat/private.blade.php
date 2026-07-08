@@ -754,7 +754,7 @@
                             <!--begin::Footer-->
                             <div class="card-footer align-items-center">
                                 <!--begin::Compose-->
-                                <textarea class="form-control border-0 p-0" rows="2" placeholder="Type a message"></textarea>
+                                <textarea class="form-control border-0 p-0" rows="2" placeholder="Tipe a message"></textarea>
                                 <div class="d-flex align-items-center justify-content-between mt-5">
                                     <div class="mr-3">
                                         <a href="#" class="btn btn-clean btn-icon btn-md mr-1">

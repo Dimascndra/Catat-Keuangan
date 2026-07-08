@@ -462,7 +462,7 @@
                                                 <th class="pl-0" style="min-width: 120px">Order id</th>
                                                 <th style="min-width: 110px">Country</th>
                                                 <th style="min-width: 110px">
-                                                    <span class="text-info">Date</span>
+                                                    <span class="text-info">Tanggal</span>
                                                     <span class="svg-icon svg-icon-sm svg-icon-primary">
                                                         <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Down-2.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -507,7 +507,7 @@
                                                 <td>
                                                     <span
                                                         class="text-info font-weight-bolder d-block font-size-lg">05/28/2020</span>
-                                                    <span class="text-muted font-weight-bold">Paid</span>
+                                                    <span class="text-muted font-weight-bold">Lunas</span>
                                                 </td>
                                                 <td>
                                                     <span
@@ -703,7 +703,7 @@
                                                 <td>
                                                     <span
                                                         class="text-info font-weight-bolder d-block font-size-lg">23/12/2020</span>
-                                                    <span class="text-muted font-weight-bold">Paid</span>
+                                                    <span class="text-muted font-weight-bold">Lunas</span>
                                                 </td>
                                                 <td>
                                                     <span

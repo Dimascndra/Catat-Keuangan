@@ -228,7 +228,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-23.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -254,7 +254,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-25.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -287,7 +287,7 @@
                                     <div class="card-body rounded p-0 d-flex bg-light">
                                         <div
                                             class="d-flex flex-column flex-lg-row-auto w-auto w-lg-350px w-xl-450px w-xxl-650px py-10 py-md-14 px-10 px-md-20 pr-lg-0">
-                                            <h1 class="font-weight-bolder text-dark mb-0">Search Goods</h1>
+                                            <h1 class="font-weight-bolder text-dark mb-0">Cari Goods</h1>
                                             <div class="font-size-h4 mb-8">Get Amazing Gadgets</div>
                                             <!--begin::Form-->
                                             <form class="d-flex flex-center py-2 px-6 bg-white rounded">
@@ -310,7 +310,7 @@
                                                     <!--end::Svg Icon-->
                                                 </span>
                                                 <input type="text" class="form-control border-0 font-weight-bold pl-2"
-                                                    placeholder="Search Goods" />
+                                                    placeholder="Cari Goods" />
                                             </form>
                                             <!--end::Form-->
                                         </div>

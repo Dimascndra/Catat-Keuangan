@@ -51,7 +51,7 @@
         <!--begin::Card-->
         <div class="card card-custom gutter-b example example-compact">
             <div class="card-header">
-                <h3 class="card-title">Bootstrap Date Range Picker Examples</h3>
+                <h3 class="card-title">Bootstrap Tanggal Range Picker Examples</h3>
                 <div class="card-toolbar">
                     <div class="example-tools justify-content-center">
                         <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
@@ -80,7 +80,7 @@
       &lt;div class="card card-custom"&gt;
        &lt;div class="card-header"&gt;
         &lt;h3 class="card-title"&gt;
-         Bootstrap Date Range Picker Examples
+         Bootstrap Tanggal Range Picker Examples
         &lt;/h3&gt;
        &lt;/div&gt;
        &lt;!--begin::Form--&gt;
@@ -150,7 +150,7 @@
          &lt;div class="form-group row"&gt;
           &lt;label class="col-form-label text-right col-lg-3 col-sm-12"&gt;Modal Demos&lt;/label&gt;
           &lt;div class="col-lg-4 col-md-9 col-sm-12"&gt;
-           &lt;a href="" class="btn btn-light-primary font-weight-bold" data-toggle="modal" data-target="#kt_daterangepicker_modal"&gt;Launch modal Date Range Pickers&lt;/a&gt;
+           &lt;a href="" class="btn btn-light-primary font-weight-bold" data-toggle="modal" data-target="#kt_daterangepicker_modal"&gt;Launch modal Tanggal Range Pickers&lt;/a&gt;
           &lt;/div&gt;
          &lt;/div&gt;
         &lt;/div&gt;
@@ -328,7 +328,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label text-right col-lg-3 col-sm-12">Date &amp; Time Picker</label>
+                        <label class="col-form-label text-right col-lg-3 col-sm-12">Tanggal &amp; Time Picker</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class='input-group' id='kt_daterangepicker_4'>
                                 <input type='text' class="form-control" readonly="readonly"
@@ -342,7 +342,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label text-right col-lg-3 col-sm-12">Date Picker</label>
+                        <label class="col-form-label text-right col-lg-3 col-sm-12">Tanggal Picker</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class='input-group' id='kt_daterangepicker_5'>
                                 <input type='text' class="form-control" readonly="readonly"
@@ -373,15 +373,15 @@
                         <label class="col-form-label text-right col-lg-3 col-sm-12">Modal Demos</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <a href="" class="btn btn-light-primary font-weight-bold" data-toggle="modal"
-                                data-target="#kt_daterangepicker_modal">Launch modal Date Range Pickers</a>
+                                data-target="#kt_daterangepicker_modal">Launch modal Tanggal Range Pickers</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -394,7 +394,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Bootstrap Date Range Picker Examples</h5>
+                        <h5 class="modal-title">Bootstrap Tanggal Range Picker Examples</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <i aria-hidden="true" class="ki ki-close"></i>
                         </button>
@@ -438,7 +438,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-secondary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Kirim</button>
                         </div>
                     </form>
                 </div>
@@ -619,8 +619,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

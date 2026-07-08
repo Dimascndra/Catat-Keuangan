@@ -1,10 +1,10 @@
 @extends('layouts.index')
-@section('title', 'Financial Reports')
+@section('title', 'Laporan Keuangan')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Financial Reports
+            Laporan Keuangan
         @endslot
     @endcomponent
 @endsection
@@ -15,26 +15,26 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Filter & Export</h3>
+                    <h3 class="card-label">Filter & Ekspor</h3>
                 </div>
             </div>
             <div class="card-body">
                 <form action="{{ route('reports.index') }}" method="GET" id="filterForm">
                     <div class="row align-items-end">
                         <div class="col-lg-4">
-                            <label>Start Date</label>
+                            <label>Tanggal Mulai</label>
                             <input type="date" class="form-control form-control-solid" name="start_date"
                                 value="{{ $startDate }}" />
                         </div>
                         <div class="col-lg-4">
-                            <label>End Date</label>
+                            <label>Tanggal Akhir</label>
                             <input type="date" class="form-control form-control-solid" name="end_date"
                                 value="{{ $endDate }}" />
                         </div>
                         <div class="col-lg-4">
                             <button type="submit" class="btn btn-primary mr-2">Filter</button>
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exportModal">
-                                Export
+                                Ekspor
                             </button>
                         </div>
                     </div>
@@ -50,31 +50,31 @@
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#tab_daily">
                                 <span class="nav-icon"><i class="flaticon2-chart"></i></span>
-                                <span class="nav-text">Daily Recap</span>
+                                <span class="nav-text">Rekap Harian</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#tab_category">
                                 <span class="nav-icon"><i class="flaticon2-pie-chart-1"></i></span>
-                                <span class="nav-text">By Category</span>
+                                <span class="nav-text">Berdasarkan Kategori</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#tab_cashflow">
                                 <span class="nav-icon"><i class="flaticon2-list-3"></i></span>
-                                <span class="nav-text">Cash Flow</span>
+                                <span class="nav-text">Arus Kas</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#tab_trends">
                                 <span class="nav-icon"><i class="flaticon2-graph"></i></span>
-                                <span class="nav-text">Monthly Trends</span>
+                                <span class="nav-text">Tren Bulanan</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#tab_wallet">
                                 <span class="nav-icon"><i class="flaticon2-digital-marketing"></i></span>
-                                <span class="nav-text">Wallet History</span>
+                                <span class="nav-text">Riwayat Buku Kas</span>
                             </a>
                         </li>
                     </ul>
@@ -93,9 +93,9 @@
                                     <table class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Date</th>
-                                                <th>Income</th>
-                                                <th>Expense</th>
+                                                <th>Tanggal</th>
+                                                <th>Pemasukan</th>
+                                                <th>Pengeluaran</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -126,8 +126,8 @@
                                     <table class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Category</th>
-                                                <th>Count</th>
+                                                <th>Kategori</th>
+                                                <th>Jumlah Transaksi</th>
                                                 <th>Total</th>
                                             </tr>
                                         </thead>
@@ -146,40 +146,40 @@
                         </div>
                     </div>
 
-                    <!-- Tab 3: Cash Flow -->
+                    <!-- Tab 3: Arus Kas -->
                     <div class="tab-pane fade" id="tab_cashflow" role="tabpanel">
                         <div class="row text-center">
-                            <div class="col-md-3">
-                                <div class="card card-custom bg-light-primary mb-4">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card card-custom bg-light-primary">
                                     <div class="card-body">
-                                        <h4 class="font-weight-bold">Opening Balance</h4>
+                                        <h4 class="font-weight-bold">Saldo Awal</h4>
                                         <h5 class="text-primary">
                                             Rp {{ number_format($cashFlow['opening_balance'], 0, ',', '.') }}</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card card-custom bg-light-success mb-4">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card card-custom bg-light-success">
                                     <div class="card-body">
-                                        <h4 class="font-weight-bold">Total Income</h4>
+                                        <h4 class="font-weight-bold">Total Pemasukan</h4>
                                         <h5 class="text-success">
                                             Rp {{ number_format($cashFlow['income'], 0, ',', '.') }}</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card card-custom bg-light-danger mb-4">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card card-custom bg-light-danger">
                                     <div class="card-body">
-                                        <h4 class="font-weight-bold">Total Expense</h4>
+                                        <h4 class="font-weight-bold">Total Pengeluaran</h4>
                                         <h5 class="text-danger">
                                             Rp {{ number_format($cashFlow['expense'], 0, ',', '.') }}</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card card-custom bg-light-info mb-4">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="card card-custom bg-light-info">
                                     <div class="card-body">
-                                        <h4 class="font-weight-bold">Closing Balance</h4>
+                                        <h4 class="font-weight-bold">Saldo Akhir</h4>
                                         <h5 class="text-info">
                                             Rp {{ number_format($cashFlow['closing_balance'], 0, ',', '.') }}</h5>
                                     </div>
@@ -199,11 +199,11 @@
                             <input type="hidden" name="start_date" value="{{ $startDate }}">
                             <input type="hidden" name="end_date" value="{{ $endDate }}">
                             <div class="form-group row">
-                                <label class="col-lg-2 col-form-label">Select Wallet:</label>
+                                <label class="col-lg-2 col-form-label">Pilih Buku Kas:</label>
                                 <div class="col-lg-4">
                                     <select class="form-control form-control-solid" name="wallet_id"
                                         onchange="this.form.submit()">
-                                        <option value="">-- Choose Wallet --</option>
+                                        <option value="">-- Pilih Buku Kas --</option>
                                         @foreach ($wallets as $wallet)
                                             <option value="{{ $wallet->id }}"
                                                 {{ $walletId == $wallet->id ? 'selected' : '' }}>
@@ -220,11 +220,11 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Date</th>
-                                            <th>Type</th>
-                                            <th>Description</th>
-                                            <th class="text-right">Amount</th>
-                                            <th class="text-right">Balance</th>
+                                            <th>Tanggal</th>
+                                            <th>Tipe</th>
+                                            <th>Keterangan</th>
+                                            <th class="text-right">Nominal</th>
+                                            <th class="text-right">Saldo</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -235,8 +235,8 @@
                                                 <td>
                                                     <span
                                                         class="label label-inline 
-                                                    {{ $row['type'] == 'income' || $row['type'] == 'transfer_in' ? 'label-light-success' : 'label-light-danger' }}">
-                                                        {{ strtoupper(str_replace('_', ' ', $row['type'])) }}
+                                                     {{ $row['type'] == 'income' || $row['type'] == 'transfer_in' ? 'label-light-success' : 'label-light-danger' }}">
+                                                        {{ $row['type'] == 'income' ? 'PEMASUKAN' : ($row['type'] == 'expense' ? 'PENGELUARAN' : ($row['type'] == 'transfer_in' ? 'MUTASI MASUK' : 'MUTASI KELUAR')) }}
                                                     </span>
                                                 </td>
                                                 <td>{{ $row['description'] }}</td>
@@ -255,7 +255,7 @@
                         @else
                             <div class="alert alert-custom alert-light-primary fade show mb-5" role="alert">
                                 <div class="alert-icon"><i class="flaticon-info"></i></div>
-                                <div class="alert-text">Please select a wallet to view its transaction history.</div>
+                                <div class="alert-text">Silakan pilih buku kas untuk melihat riwayat transaksi.</div>
                             </div>
                         @endif
                     </div>
@@ -269,7 +269,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Export Report</h5>
+                    <h5 class="modal-title">Ekspor Laporan</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i aria-hidden="true" class="ki ki-close"></i>
                     </button>
@@ -296,8 +296,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Download</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Unduh</button>
                     </div>
                 </form>
             </div>
@@ -315,14 +315,14 @@
             data: {
                 labels: {!! json_encode(array_column($dailyRecap, 'date')) !!},
                 datasets: [{
-                        label: 'Income',
+                        label: 'Pemasukan',
                         data: {!! json_encode(array_column($dailyRecap, 'income')) !!},
                         backgroundColor: 'rgba(28, 200, 138, 0.5)',
                         borderColor: 'rgba(28, 200, 138, 1)',
                         borderWidth: 1
                     },
                     {
-                        label: 'Expense',
+                        label: 'Pengeluaran',
                         data: {!! json_encode(array_column($dailyRecap, 'expense')) !!},
                         backgroundColor: 'rgba(231, 74, 59, 0.5)',
                         borderColor: 'rgba(231, 74, 59, 1)',
@@ -362,14 +362,14 @@
             data: {
                 labels: {!! json_encode(array_column($monthlyTrends, 'month')) !!},
                 datasets: [{
-                        label: 'Income',
+                        label: 'Pemasukan',
                         data: {!! json_encode(array_column($monthlyTrends, 'income')) !!},
                         borderColor: 'rgba(28, 200, 138, 1)',
                         fill: false,
                         tension: 0.1
                     },
                     {
-                        label: 'Expense',
+                        label: 'Pengeluaran',
                         data: {!! json_encode(array_column($monthlyTrends, 'expense')) !!},
                         borderColor: 'rgba(231, 74, 59, 1)',
                         fill: false,

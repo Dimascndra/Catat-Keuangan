@@ -528,7 +528,7 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">05/28/2020</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span
@@ -716,7 +716,7 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">23/12/2020</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span

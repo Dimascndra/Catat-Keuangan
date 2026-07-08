@@ -1,14 +1,14 @@
 @extends('layouts.index')
-@section('title', 'Add Expense')
+@section('title', 'Tambah Pengeluaran')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Add Expense
+            Tambah Pengeluaran
         @endslot
         @slot('action')
             <a href="{{ route('expenses.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">
-                Back to List
+                Kembali ke Daftar
             </a>
         @endslot
     @endcomponent
@@ -19,7 +19,7 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">New Expense Entry</h3>
+                    <h3 class="card-label">Entri Pengeluaran Baru</h3>
                 </div>
             </div>
             <form action="{{ route('expenses.store') }}" method="POST" enctype="multipart/form-data">
@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <div class="col-lg-4">
-                            <label>Date <span class="text-danger">*</span></label>
+                            <label>Tanggal <span class="text-danger">*</span></label>
                             <input type="date"
                                 class="form-control form-control-solid @error('date') is-invalid @enderror" name="date"
                                 value="{{ old('date', date('Y-m-d')) }}" required />
@@ -54,7 +54,7 @@
                             <label>Category <span class="text-danger">*</span></label>
                             <select class="form-control form-control-solid select2 @error('category') is-invalid @enderror"
                                 id="categorySelect" name="category" required>
-                                <option value="">Select Category</option>
+                                <option value="">Pilih Kategori</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->name }}"
                                         {{ old('category') == $category->name ? 'selected' : '' }}>{{ $category->name }}
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Description <span class="text-danger">*</span></label>
+                        <label>Keterangan <span class="text-danger">*</span></label>
                         <input type="text"
                             class="form-control form-control-solid @error('description') is-invalid @enderror"
                             name="description" placeholder="Enter description" value="{{ old('description') }}" required />
@@ -87,7 +87,7 @@
                             @enderror
                         </div>
                         <div class="col-lg-4">
-                            <label>Amount (Rp) <span class="text-danger">*</span></label>
+                            <label>Nominal (Rp) <span class="text-danger">*</span></label>
                             <input type="number"
                                 class="form-control form-control-solid @error('amount') is-invalid @enderror" name="amount"
                                 id="amount" placeholder="0" value="{{ old('amount') }}" step="0.01" min="0"
@@ -97,7 +97,7 @@
                             @enderror
                         </div>
                         <div class="col-lg-4">
-                            <label>Total Amount (Rp)</label>
+                            <label>Total Nominal (Rp)</label>
                             <input type="text" class="form-control form-control-solid" id="total_display" readonly
                                 value="0" />
                         </div>
@@ -112,8 +112,8 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary mr-2">Save</button>
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary mr-2">Simpan</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
                 </div>
             </form>
         </div>
@@ -124,11 +124,11 @@
     <script>
         $(document).ready(function() {
             $('#kt_select2_wallet').select2({
-                placeholder: "Select Wallet",
+                placeholder: "Pilih Buku Kas",
                 allowClear: false
             });
             $('#categorySelect').select2({
-                placeholder: "Select Category",
+                placeholder: "Pilih Kategori",
                 allowClear: false
             });
         });

@@ -184,8 +184,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -239,7 +239,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="example-search-input" class="col-2 col-form-label">Search</label>
+                                <label for="example-search-input" class="col-2 col-form-label">Cari</label>
                                 <div class="col-10">
                                     <input class="form-control" type="search" value="How do I shoot web"
                                         id="example-search-input" />
@@ -281,7 +281,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="example-datetime-local-input" class="col-2 col-form-label">Date and
+                                <label for="example-datetime-local-input" class="col-2 col-form-label">Tanggal and
                                     time</label>
                                 <div class="col-10">
                                     <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
@@ -289,7 +289,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                                <label for="example-date-input" class="col-2 col-form-label">Tanggal</label>
                                 <div class="col-10">
                                     <input class="form-control" type="date" value="2011-08-19"
                                         id="example-date-input" />
@@ -458,8 +458,8 @@
                             <div class="row">
                                 <div class="col-2"></div>
                                 <div class="col-10">
-                                    <button type="reset" class="btn btn-success mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -582,8 +582,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -726,8 +726,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -895,8 +895,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-success mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -1027,8 +1027,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->

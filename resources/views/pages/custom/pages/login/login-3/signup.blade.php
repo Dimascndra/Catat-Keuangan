@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="wizard-label">
                                     <h3 class="wizard-title">Completed!</h3>
-                                    <div class="wizard-desc">Review and Submit</div>
+                                    <div class="wizard-desc">Review and Kirim</div>
                                 </div>
                             </div>
                         </div>
@@ -483,10 +483,10 @@
                             <!--end::Title-->
                             <!--begin::Form Group-->
                             <div class="form-group">
-                                <label class="font-size-h6 font-weight-bolder text-dark">Delivery Type:</label>
+                                <label class="font-size-h6 font-weight-bolder text-dark">Delivery Tipe:</label>
                                 <select name="delivery"
                                     class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6">
-                                    <option value="">Select a Service Type Option</option>
+                                    <option value="">Select a Service Tipe Option</option>
                                     <option value="overnight" selected="selected">Overnight Delivery (within 48 hours)
                                     </option>
                                     <option value="express">Express Delivery (within 5 working days)</option>
@@ -496,10 +496,10 @@
                             <!--end::Form Group-->
                             <!--begin::Form Group-->
                             <div class="form-group">
-                                <label class="font-size-h6 font-weight-bolder text-dark">Packaging Type:</label>
+                                <label class="font-size-h6 font-weight-bolder text-dark">Packaging Tipe:</label>
                                 <select name="packaging"
                                     class="form-control h-auto py-7 px-6 border-0 rounded-lg font-size-h6">
-                                    <option value="">Select a Packaging Type Option</option>
+                                    <option value="">Select a Packaging Tipe Option</option>
                                     <option value="regular" selected="selected">Regular Packaging</option>
                                     <option value="oversized">Oversized Packaging</option>
                                     <option value="fragile">Fragile Packaging</option>
@@ -583,7 +583,7 @@
                             <div>
                                 <button class="btn btn-primary font-weight-bolder font-size-h6 pl-5 pr-8 py-4 my-3"
                                     data-wizard-type="action-submit" type="submit"
-                                    id="kt_login_signup_form_submit_button">Submit
+                                    id="kt_login_signup_form_submit_button">Kirim
                                     <span class="svg-icon svg-icon-md ml-2">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Right-2.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

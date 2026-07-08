@@ -50,9 +50,9 @@
     <table>
         <thead>
             <tr>
-                <th>Date</th>
+                <th>Tanggal</th>
                 <th>Category</th>
-                <th>Description</th>
+                <th>Keterangan</th>
                 <th>Wallet</th>
                 <th>Qty</th>
                 <th class="text-right">Price</th>

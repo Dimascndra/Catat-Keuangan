@@ -1,14 +1,14 @@
 @extends('layouts.index')
-@section('title', 'Add Debt/Receivable')
+@section('title', 'Tambah Utang/Piutang/Receivable')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Add Debt/Receivable
+            Tambah Utang/Piutang/Receivable
         @endslot
         @slot('action')
             <a href="{{ route('debts.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">
-                Back to List
+                Kembali ke Daftar
             </a>
         @endslot
     @endcomponent
@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <div class="col-lg-6">
-                            <label>Type <span class="text-danger">*</span></label>
+                            <label>Tipe <span class="text-danger">*</span></label>
                             <select class="form-control form-control-solid select2" id="typeSelect" name="type" required>
                                 <option value="payable" {{ old('type') == 'payable' ? 'selected' : '' }}>Hutang (I owe
                                     someone)</option>
@@ -38,7 +38,7 @@
                         <div class="col-lg-6">
                             <label>Wallet (Optional)</label>
                             <select class="form-control form-control-solid select2" id="walletSelect" name="wallet_id">
-                                <option value="">Select Wallet (None)</option>
+                                <option value="">Pilih Buku Kas (None)</option>
                                 @foreach ($wallets as $wallet)
                                     <option value="{{ $wallet->id }}"
                                         {{ old('wallet_id') == $wallet->id ? 'selected' : '' }}>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-6">
-                                <label>Amount (Rp) <span class="text-danger">*</span></label>
+                                <label>Nominal (Rp) <span class="text-danger">*</span></label>
                                 <input type="number"
                                     class="form-control form-control-solid @error('amount') is-invalid @enderror"
                                     name="amount" id="amount" placeholder="0" value="{{ old('amount') }}"
@@ -73,20 +73,20 @@
                                 <span class="form-text text-muted" id="amount_display"></span>
                             </div>
                             <div class="col-lg-6">
-                                <label>Due Date</label>
+                                <label>Jatuh Tempo</label>
                                 <input type="date"
                                     class="form-control form-control-solid @error('due_date') is-invalid @enderror"
                                     name="due_date" value="{{ old('due_date') }}" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label>Keterangan</label>
                             <textarea class="form-control form-control-solid" name="description" rows="3">{{ old('description') }}</textarea>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary mr-2">Save</button>
-                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary mr-2">Simpan</button>
+                        <button type="reset" class="btn btn-secondary">Batal</button>
                     </div>
             </form>
         </div>
@@ -97,13 +97,13 @@
     <script>
         $(document).ready(function() {
             $('#typeSelect').select2({
-                placeholder: "Select Type",
+                placeholder: "Select Tipe",
                 allowClear: false,
                 minimumResultsForSearch: Infinity
             });
 
             $('#walletSelect').select2({
-                placeholder: "Select Wallet (Optional)",
+                placeholder: "Pilih Buku Kas (Optional)",
                 allowClear: true
             });
         });

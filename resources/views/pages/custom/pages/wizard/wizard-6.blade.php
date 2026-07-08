@@ -103,7 +103,7 @@
                                             </div>
                                             <div class="wizard-label">
                                                 <h3 class="wizard-title">Complete</h3>
-                                                <div class="wizard-desc">Submit form</div>
+                                                <div class="wizard-desc">Kirim form</div>
                                             </div>
                                         </div>
                                     </div>
@@ -522,7 +522,7 @@
                                 <div>
                                     <button type="button"
                                         class="btn btn-primary font-weight-bolder font-size-h6 pl-8 pr-4 py-4 my-3"
-                                        data-wizard-type="action-submit">Submit
+                                        data-wizard-type="action-submit">Kirim
                                         <span class="svg-icon svg-icon-md ml-2">
                                             <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Right-2.svg-->
                                             <svg xmlns="http://www.w3.org/2000/svg"

@@ -78,7 +78,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                <button type="button" class="btn btn-primary">Simpan changes</button>
                                             </div>
                                         </div>
                                     </div>
@@ -153,7 +153,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -235,7 +235,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -323,7 +323,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -351,7 +351,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -387,7 +387,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -429,7 +429,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -598,7 +598,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -715,7 +715,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -836,7 +836,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -922,7 +922,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-light-primary font-weight-bold"
                                                     data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                     changes</button>
                                             </div>
                                         </div>
@@ -1002,7 +1002,7 @@
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-light-primary font-weight-bold"
                                                         data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary font-weight-bold">Save
+                                                    <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                         changes</button>
                                                 </div>
                                                 <div class="example-code">

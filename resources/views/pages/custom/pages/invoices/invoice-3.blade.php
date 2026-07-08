@@ -60,7 +60,7 @@
                                             <tr>
                                                 <th
                                                     class="pt-1 pb-9 pl-0 font-weight-bolder text-muted font-size-lg text-uppercase">
-                                                    Description</th>
+                                                    Keterangan</th>
                                                 <th
                                                     class="pt-1 pb-9 text-right font-weight-bolder text-muted font-size-lg text-uppercase">
                                                     Hours</th>
@@ -69,7 +69,7 @@
                                                     Rate</th>
                                                 <th
                                                     class="pt-1 pb-9 text-right pr-0 font-weight-bolder text-muted font-size-lg text-uppercase">
-                                                    Amount</th>
+                                                    Nominal</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -120,7 +120,7 @@
                                             <span class="text-right">Barclays UK</span>
                                         </div>
                                         <div class="d-flex justify-content-between font-size-lg mb-3">
-                                            <span class="font-weight-bold mr-15">Account Number:</span>
+                                            <span class="font-weight-bold mr-15">Nomor Rekening:</span>
                                             <span class="text-right">1234567890934</span>
                                         </div>
                                         <div class="d-flex justify-content-between font-size-lg">
@@ -131,11 +131,11 @@
                                 </div>
                             </div>
                             <div class="col-md-3 border-left-md pl-md-10 py-md-10 text-right">
-                                <!--begin::Total Amount-->
-                                <div class="font-size-h4 font-weight-bolder text-muted mb-3">TOTAL AMOUNT</div>
+                                <!--begin::Total Nominal-->
+                                <div class="font-size-h4 font-weight-bolder text-muted mb-3">TOTAL NOMINAL</div>
                                 <div class="font-size-h1 font-weight-boldest">$20,600.00</div>
                                 <div class="text-muted font-weight-bold mb-16">Taxes included</div>
-                                <!--end::Total Amount-->
+                                <!--end::Total Nominal-->
                                 <div class="border-bottom w-100 mb-16"></div>
                                 <!--begin::Invoice To-->
                                 <div class="text-dark-50 font-size-lg font-weight-bold mb-3">INVOICE TO.</div>
@@ -148,7 +148,7 @@
                                 <div class="font-size-lg font-weight-bold mb-10">56758</div>
                                 <!--end::Invoice No-->
                                 <!--begin::Invoice Date-->
-                                <div class="text-dark-50 font-size-lg font-weight-bold mb-3">DATE</div>
+                                <div class="text-dark-50 font-size-lg font-weight-bold mb-3">TANGGAL</div>
                                 <div class="font-size-lg font-weight-bold">12 May, 2020</div>
                                 <!--end::Invoice Date-->
                             </div>

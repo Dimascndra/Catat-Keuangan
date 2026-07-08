@@ -18,7 +18,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>{{ trim($__env->yieldContent('title')) ?: getPageTitle() }} | Metronic729-Larvel12</title>
+        <title>{{ trim($__env->yieldContent('title')) ?: getPageTitle() }} | KEUANGAN KKN</title>
         <meta name="description" content="1" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -37,6 +37,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+        <style>
+            table, table th, table td {
+                white-space: nowrap !important;
+            }
+        </style>
 
         <!--end::Global Theme Styles-->
 
@@ -108,9 +113,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <!--[html-partial:include:{"file":"partials/_extras/scrolltop.html"}]/-->
         @include('layouts.partials._extras.scrolltop')
         <!--[html-partial:include:{"file":"partials/_extras/toolbar.html"}]/-->
-        @include('layouts.partials._extras.toolbar')
+        {{-- @include('layouts.partials._extras.toolbar') --}}
         <!--[html-partial:include:{"file":"partials/_extras/offcanvas/demo-panel.html"}]/-->
-        @include('layouts.partials._extras.offcanvas.demo-panel')
+        {{-- @include('layouts.partials._extras.offcanvas.demo-panel') --}}
 
         <script>
             var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";
@@ -184,7 +189,6 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
         <script src="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
         <script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
-        <script src="https://keenthemes.com/metronic/assets/js/engage_code.js"></script>
 
         <!--end::Global Theme Bundle-->
 

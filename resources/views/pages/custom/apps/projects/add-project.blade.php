@@ -19,7 +19,7 @@
                 <!--end::Button-->
                 <!--begin::Dropdown-->
                 <div class="btn-group ml-2">
-                    <button type="button" class="btn btn-primary font-weight-bold btn-sm px-3 font-size-base">Submit</button>
+                    <button type="button" class="btn btn-primary font-weight-bold btn-sm px-3 font-size-base">Kirim</button>
                     <button type="button"
                         class="btn btn-primary font-weight-bold btn-sm px-3 font-size-base dropdown-toggle dropdown-toggle-split"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -30,7 +30,7 @@
                                     <span class="navi-icon">
                                         <i class="flaticon2-writing"></i>
                                     </span>
-                                    <span class="navi-text">Save &amp; continue</span>
+                                    <span class="navi-text">Simpan &amp; continue</span>
                                 </a>
                             </li>
                             <li class="navi-item">
@@ -38,7 +38,7 @@
                                     <span class="navi-icon">
                                         <i class="flaticon2-medical-records"></i>
                                     </span>
-                                    <span class="navi-text">Save &amp; add new</span>
+                                    <span class="navi-text">Simpan &amp; add new</span>
                                 </a>
                             </li>
                             <li class="navi-item">
@@ -46,7 +46,7 @@
                                     <span class="navi-icon">
                                         <i class="flaticon2-hourglass-1"></i>
                                     </span>
-                                    <span class="navi-text">Save &amp; exit</span>
+                                    <span class="navi-text">Simpan &amp; exit</span>
                                 </a>
                             </li>
                         </ul>
@@ -198,7 +198,7 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <h3 class="wizard-title">Review and Submit</h3>
+                                    <h3 class="wizard-title">Review and Kirim</h3>
                                 </div>
                                 <span class="svg-icon svg-icon-xl wizard-arrow last">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
@@ -375,8 +375,8 @@
                                                 <div class="col-lg-9 col-xl-9">
                                                     <select name="timezone"
                                                         class="form-control form-control-lg form-control-solid">
-                                                        <option data-offset="-39600" value="International Date Line West">
-                                                            (GMT-11:00) International Date Line West</option>
+                                                        <option data-offset="-39600" value="International Tanggal Line West">
+                                                            (GMT-11:00) International Tanggal Line West</option>
                                                         <option data-offset="-39600" value="Midway Island">(GMT-11:00)
                                                             Midway Island</option>
                                                         <option data-offset="-39600" value="Samoa">(GMT-11:00) Samoa
@@ -996,7 +996,7 @@
                                 <!--end::Step 3-->
                                 <!--begin::Step 4-->
                                 <div class="pb-5" data-wizard-type="step-content">
-                                    <h4 class="mb-10 font-weight-bold">Review your Details and Submit</h4>
+                                    <h4 class="mb-10 font-weight-bold">Review your Details and Kirim</h4>
                                     <h6 class="font-weight-bold mb-3">Project Details:</h6>
                                     <table class="w-100">
                                         <tr>
@@ -1060,7 +1060,7 @@
                                     <div>
                                         <button type="button"
                                             class="btn btn-success font-weight-bolder text-uppercase px-9 py-4"
-                                            data-wizard-type="action-submit">Submit</button>
+                                            data-wizard-type="action-submit">Kirim</button>
                                         <button type="button"
                                             class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4"
                                             data-wizard-type="action-next">Next Step</button>

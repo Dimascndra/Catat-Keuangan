@@ -123,7 +123,7 @@
                                 <a class="btn btn-secondary mr-2" href="#" role="button">Link</a>
                                 <button class="btn btn-secondary mr-2" type="submit">Button</button>
                                 <input class="btn btn-secondary mr-2" type="button" value="Input" />
-                                <input class="btn btn-secondary mr-2" type="submit" value="Submit" />
+                                <input class="btn btn-secondary mr-2" type="submit" value="Kirim" />
                                 <input class="btn btn-secondary" type="reset" value="Reset" />
                             </div>
                             <div class="example-code">
@@ -134,7 +134,7 @@
                         &lt;a class="btn btn-secondary" href="#" role="button"&gt;Link&lt;/a&gt;
                         &lt;button class="btn btn-secondary" type="submit"&gt;Button&lt;/button&gt;
                         &lt;input class="btn btn-secondary" type="button" value="Input"/&gt;
-                        &lt;input class="btn btn-secondary" type="submit" value="Submit"/&gt;
+                        &lt;input class="btn btn-secondary" type="submit" value="Kirim"/&gt;
                         &lt;input class="btn btn-secondary" type="reset" value="Reset"/&gt;</code>
 </pre>
                                 </div>

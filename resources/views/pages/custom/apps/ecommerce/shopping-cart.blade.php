@@ -290,7 +290,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-23.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -316,7 +316,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-25.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->

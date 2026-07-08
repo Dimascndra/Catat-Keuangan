@@ -19,7 +19,15 @@ class BudgetController extends Controller
             // Check implicit spent_amount
             $budget->spent_amount = $budget->spent_amount;
         }
-        return view('budgets.index', compact('budgets'));
+        
+        // Get categories that are not budgeted yet for the create modal
+        $allCategories = \App\Models\Category::where('type', 'expense')->orderBy('name')->get();
+        $budgetedCategoryNames = Budget::pluck('category')->toArray();
+        $categories = $allCategories->filter(function ($category) use ($budgetedCategoryNames) {
+            return !in_array($category->name, $budgetedCategoryNames);
+        });
+
+        return view('budgets.index', compact('budgets', 'categories'));
     }
 
     /**

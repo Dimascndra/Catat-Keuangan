@@ -119,8 +119,8 @@
                             <!-- end: Example Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -223,8 +223,8 @@
                             <!-- end: Example Code-->
                         </div>
                         <div class="card-footer text-right">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -336,11 +336,11 @@
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col text-left">
-                                    <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                                 <div class="col text-right">
-                                    <button type="reset" class="btn btn-danger">Delete</button>
+                                    <button type="reset" class="btn btn-danger">Hapus</button>
                                 </div>
                             </div>
                         </div>
@@ -445,9 +445,9 @@
                             <!-- end: Example Code-->
                         </div>
                         <div class="card-footer text-right">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
                             <span class="ml-2">or
-                                <a href="#" class="font-weight-bold ml-2">Cancel</a></span>
+                                <a href="#" class="font-weight-bold ml-2">Batal</a></span>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -561,11 +561,11 @@
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col text-left">
-                                    <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                                 <div class="col text-right">
-                                    <button type="reset" class="btn btn-danger">Delete</button>
+                                    <button type="reset" class="btn btn-danger">Hapus</button>
                                 </div>
                             </div>
                         </div>
@@ -671,9 +671,9 @@
                             <!-- end: Example Code-->
                         </div>
                         <div class="card-footer text-right bg-gray-100 border-top-0">
-                            <button type="reset" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-primary">Kirim</button>
                             <span class="mx-2">or</span>
-                            <a href="#" class="btn btn-link btn-link-primary">Cancel</a>
+                            <a href="#" class="btn btn-link btn-link-primary">Batal</a>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -682,7 +682,7 @@
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header border-bottom-0">
-                        <h3 class="card-title">Top &amp; Bottom Actions Bars</h3>
+                        <h3 class="card-title">Top &amp; Bottom Aksi Bars</h3>
                         <div class="card-toolbar">
                             <div class="example-tools justify-content-center">
                                 <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
@@ -694,10 +694,10 @@
                     <form class="form">
                         <div class="card-footer bg-gray-100 border-top-0">
                             <div class="row align-items-center">
-                                <div class="col text-left">Top Actions:</div>
+                                <div class="col text-left">Top Aksi:</div>
                                 <div class="col text-right">
-                                    <button type="reset" class="btn btn-primary font-weight-bold mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-light-primary font-weight-bold">Cancel</button>
+                                    <button type="reset" class="btn btn-primary font-weight-bold mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-light-primary font-weight-bold">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -742,7 +742,7 @@
          &lt;div class="card-footer bg-gray-100 border-top-0"&gt;
           &lt;div class="row align-items-center"&gt;
            &lt;div class="col text-left"&gt;
-            Top Actions:
+            Top Aksi:
            &lt;/div&gt;
            &lt;div class="col text-right"&gt;
             &lt;button type="reset" class="btn btn-primary font-weight-bold mr-2"&gt;Submit&lt;/button&gt;
@@ -796,8 +796,8 @@
                             <!-- end: Example Code-->
                         </div>
                         <div class="card-footer bg-gray-100 border-top-0 text-right">
-                            <button type="reset" class="btn btn-primary font-weight-bold mr-2">Submit</button>
-                            <button type="reset" class="btn btn-light-primary font-weight-bold">Cancel</button>
+                            <button type="reset" class="btn btn-primary font-weight-bold mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-light-primary font-weight-bold">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -922,8 +922,8 @@
                             <div class="row">
                                 <div class="col-3"></div>
                                 <div class="col-9">
-                                    <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>

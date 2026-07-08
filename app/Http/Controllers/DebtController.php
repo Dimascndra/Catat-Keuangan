@@ -64,6 +64,11 @@ class DebtController extends Controller
                     ]);
                 } else {
                     // Piutang (Lending money) -> Money goes OUT from wallet
+                    if ($wallet->balance < $validated['amount']) {
+                        throw \Illuminate\Validation\ValidationException::withMessages([
+                            'amount' => 'Saldo tidak mencukupi. Saldo saat ini: Rp ' . number_format($wallet->balance, 0, ',', '.'),
+                        ]);
+                    }
                     $wallet->balance -= $validated['amount'];
 
                     // Create Expense Record
@@ -143,6 +148,22 @@ class DebtController extends Controller
         ]);
 
         DB::transaction(function () use ($debt, $validated) {
+            // Update Wallet Balance
+            $wallet = Wallet::findOrFail($validated['wallet_id']);
+            if ($debt->type == 'payable') {
+                // Paying a debt (Spending money)
+                if ($wallet->balance < $validated['amount']) {
+                    throw \Illuminate\Validation\ValidationException::withMessages([
+                        'amount' => 'Saldo tidak mencukupi. Saldo saat ini: Rp ' . number_format($wallet->balance, 0, ',', '.'),
+                    ]);
+                }
+                $wallet->balance -= $validated['amount'];
+            } else {
+                // Receiving a payment (Receiving money)
+                $wallet->balance += $validated['amount'];
+            }
+            $wallet->save();
+
             // Create Payment Record
             DebtPayment::create([
                 'debt_id' => $debt->id,
@@ -157,17 +178,6 @@ class DebtController extends Controller
                 $debt->status = 'paid';
             }
             $debt->save();
-
-            // Update Wallet Balance
-            $wallet = Wallet::findOrFail($validated['wallet_id']);
-            if ($debt->type == 'payable') {
-                // Paying a debt (Spending money)
-                $wallet->balance -= $validated['amount'];
-            } else {
-                // Receiving a payment (Receiving money)
-                $wallet->balance += $validated['amount'];
-            }
-            $wallet->save();
         });
 
         return redirect()->route('debts.index')

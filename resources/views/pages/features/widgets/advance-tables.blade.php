@@ -532,7 +532,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">Laravel, Metronic</span>
@@ -627,7 +627,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -722,7 +722,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">ReactJS, Ruby</span>
@@ -818,7 +818,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">ReactJs, HTML</span>
@@ -913,7 +913,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">Python, MySQL</span>
@@ -1031,7 +1031,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">Python, MySQL</span>
@@ -1127,7 +1127,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">Laravel, Metronic</span>
@@ -1222,7 +1222,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -1317,7 +1317,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">ReactJs, HTML</span>
@@ -1412,7 +1412,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">ReactJS, Ruby</span>
@@ -1531,7 +1531,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">ReactJs, HTML</span>
@@ -1626,7 +1626,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">Python, MySQL</span>
@@ -1722,7 +1722,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">Laravel, Metronic</span>
@@ -1817,7 +1817,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -1912,7 +1912,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-500">ReactJS, Ruby</span>
@@ -2062,11 +2062,11 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,790</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Bradly Beal</span>
@@ -2207,11 +2207,11 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$23,800</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Zoey McGee</span>
@@ -2280,11 +2280,11 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Brandon
@@ -2400,7 +2400,7 @@
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span
@@ -2480,15 +2480,15 @@
                                     <td>
                                         <span
                                             class="text-dark-75 font-weight-bolder d-block font-size-lg">$34,000,000</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">RoadGee</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <img src="assets/media/logos/stars.png" alt="image"
@@ -2521,7 +2521,7 @@
                                     <td class="text-left pr-0">
                                         <span
                                             class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,600,000</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
@@ -2621,7 +2621,7 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">05/28/2020</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Intertico</span>
@@ -2801,7 +2801,7 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">23/12/2020</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">RoadGee</span>
@@ -3517,7 +3517,7 @@
                                         <td class="text-right pr-0">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -3610,7 +3610,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">ReactJS, Ruby</span>
@@ -3706,7 +3706,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">ReactJs, HTML</span>
@@ -3799,7 +3799,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">Python, MySQL</span>
@@ -3893,7 +3893,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">Laravel, Metronic</span>
@@ -4009,7 +4009,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">Python, MySQL</span>
@@ -4103,7 +4103,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">Laravel, Metronic</span>
@@ -4194,7 +4194,7 @@
                                         <td class="text-right pr-0">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -4289,7 +4289,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">ReactJs, HTML</span>
@@ -4382,7 +4382,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">ReactJS, Ruby</span>
@@ -4501,7 +4501,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">ReactJs, HTML</span>
@@ -4594,7 +4594,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">Python, MySQL</span>
@@ -4688,7 +4688,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">Laravel, Metronic</span>
@@ -4779,7 +4779,7 @@
                                         <td class="text-right pr-0">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -4872,7 +4872,7 @@
                                         <td class="text-right">
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td class="text-right">
                                             <span class="text-muted font-weight-bold">ReactJS, Ruby</span>
@@ -5022,11 +5022,11 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,790</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Bradly Beal</span>
@@ -5167,11 +5167,11 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$23,800</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Zoey McGee</span>
@@ -5240,11 +5240,11 @@
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Brandon
@@ -5360,7 +5360,7 @@
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span
@@ -5437,11 +5437,11 @@
                                     <td>
                                         <span
                                             class="text-dark-75 font-weight-bolder d-block font-size-lg">$34,000,000</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">RoadGee</span>
@@ -5477,7 +5477,7 @@
                                     <td>
                                         <span
                                             class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,600,000</span>
-                                        <span class="text-muted font-weight-bold">Paid</span>
+                                        <span class="text-muted font-weight-bold">Lunas</span>
                                     </td>
                                     <td>
                                         <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
@@ -5534,7 +5534,7 @@
                                 <th class="pl-0" style="min-width: 120px">Order id</th>
                                 <th style="min-width: 110px">Country</th>
                                 <th style="min-width: 110px">
-                                    <span class="text-info">Date</span>
+                                    <span class="text-info">Tanggal</span>
                                     <span class="svg-icon svg-icon-sm svg-icon-primary">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Down-2.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -5576,7 +5576,7 @@
                                 </td>
                                 <td>
                                     <span class="text-info font-weight-bolder d-block font-size-lg">05/28/2020</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Intertico</span>
@@ -5756,7 +5756,7 @@
                                 </td>
                                 <td>
                                     <span class="text-info font-weight-bolder d-block font-size-lg">23/12/2020</span>
-                                    <span class="text-muted font-weight-bold">Paid</span>
+                                    <span class="text-muted font-weight-bold">Lunas</span>
                                 </td>
                                 <td>
                                     <span class="text-dark-75 font-weight-bolder d-block font-size-lg">RoadGee</span>

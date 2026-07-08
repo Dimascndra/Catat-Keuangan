@@ -1,18 +1,31 @@
+@php
+    $wallets = \App\Models\Wallet::all();
+    $categories = \App\Models\Category::where('type', 'expense')->get();
+    
+    $monthsId = [
+        1 => 'Januari', 2 => 'Februari', 3 => 'Maret', 4 => 'April', 5 => 'Mei', 6 => 'Juni',
+        7 => 'Juli', 8 => 'Agustus', 9 => 'September', 10 => 'Oktober', 11 => 'November', 12 => 'Desember'
+    ];
+    $formattedDate = ($monthsId[(int)$currentMonth] ?? date('F', mktime(0,0,0,$currentMonth,1))) . ' ' . $currentYear;
+@endphp
+
 @extends('layouts.index')
-@section('title', 'Expense List')
+@section('title', 'Daftar Pengeluaran')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Daily Expenses
+            Pengeluaran Harian
         @endslot
         @slot('action')
-            <a href="{{ route('expenses.create') }}" class="btn btn-primary font-weight-bolder btn-sm">
-                Add New Expense
-            </a>
-            <a href="{{ route('expenses.reports') }}" class="btn btn-info font-weight-bolder btn-sm ml-2">
-                View Reports
-            </a>
+            <div class="d-flex align-items-center flex-wrap">
+                <button type="button" class="btn btn-primary font-weight-bolder btn-sm mr-2 mb-2 mb-sm-0" data-toggle="modal" data-target="#createExpenseModal">
+                    Tambah Pengeluaran
+                </button>
+                <a href="{{ route('expenses.reports') }}" class="btn btn-info font-weight-bolder btn-sm mb-2 mb-sm-0">
+                    Lihat Laporan
+                </a>
+            </div>
         @endslot
     @endcomponent
 @endsection
@@ -54,12 +67,12 @@
         <div class="card card-custom gutter-b">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
                         <div class="card card-custom bg-light-success">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex flex-column">
-                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Today</span>
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Hari Ini</span>
                                         <span class="text-muted font-weight-bold mt-2">Total Hari Ini</span>
                                     </div>
                                     <span class="text-success font-weight-bolder font-size-h3">
@@ -69,12 +82,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
                         <div class="card card-custom bg-light-danger">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex flex-column">
-                                        <span class="text-dark-75 font-weight-bolder font-size-h5">This Week</span>
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Minggu Ini</span>
                                         <span class="text-muted font-weight-bold mt-2">Total Minggu Ini</span>
                                     </div>
                                     <span class="text-danger font-weight-bolder font-size-h3">
@@ -84,12 +97,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-12 col-md-4">
                         <div class="card card-custom bg-light-primary">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex flex-column">
-                                        <span class="text-dark-75 font-weight-bolder font-size-h5">This Month</span>
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Bulan Ini</span>
                                         <span class="text-muted font-weight-bold mt-2">Total Bulan Ini</span>
                                     </div>
                                     <span class="text-primary font-weight-bolder font-size-h3">
@@ -111,31 +124,31 @@
                         <!-- Category -->
                         <div class="col-lg-3 col-md-4 col-sm-12 my-2">
                             <select name="category" class="form-control form-control-solid select2" style="width: 100%;">
-                                <option value="">All Categories</option>
+                                <option value="">Semua Kategori</option>
                                 @foreach ($categories as $cat)
                                     <option value="{{ $cat->name }}"
                                         {{ request('category') == $cat->name ? 'selected' : '' }}>
                                         {{ $cat->name }}
                                     </option>
                                 @endforeach
-                            </select>
+                             </select>
                         </div>
 
-                        <!-- Date Range -->
+                        <!-- Tanggal Range -->
                         <div class="col-lg-2 col-md-4 col-sm-6 my-2">
                             <input type="date" class="form-control form-control-solid" name="start_date"
-                                placeholder="Start Date" value="{{ request('start_date') }}" title="Start Date">
+                                placeholder="Tanggal Mulai" value="{{ request('start_date') }}" title="Tanggal Mulai">
                         </div>
                         <div class="col-lg-2 col-md-4 col-sm-6 my-2">
                             <input type="date" class="form-control form-control-solid" name="end_date"
-                                placeholder="End Date" value="{{ request('end_date') }}" title="End Date">
+                                placeholder="Tanggal Akhir" value="{{ request('end_date') }}" title="Tanggal Akhir">
                         </div>
 
-                        <!-- Search -->
+                        <!-- Cari -->
                         <div class="col-lg-3 col-md-6 col-sm-12 my-2">
                             <div class="input-icon">
                                 <input type="text" class="form-control form-control-solid" name="search"
-                                    placeholder="Search..." value="{{ request('search') }}">
+                                    placeholder="Cari..." value="{{ request('search') }}">
                                 <span><i class="flaticon2-search-1 text-muted"></i></span>
                             </div>
                         </div>
@@ -159,9 +172,8 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Expense List
-                        ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})
-                    </h3>
+                    <h3 class="card-label">Daftar Pengeluaran
+                                        ({{ $formattedDate }})</h3>
                 </div>
             </div>
             <div class="card-body">
@@ -172,16 +184,16 @@
                                 <th>
                                     <a
                                         href="{{ route('expenses.index', ['sort' => 'date', 'direction' => $sortField === 'date' && $sortDirection === 'asc' ? 'desc' : 'asc']) }}">
-                                        Date
+                                        Tanggal
                                         @if ($sortField === 'date')
                                             <i class="fa fa-sort-{{ $sortDirection === 'asc' ? 'up' : 'down' }}"></i>
                                         @endif
                                     </a>
                                 </th>
-                                <th>Category</th>
-                                <th>Description</th>
+                                <th>Kategori</th>
+                                <th>Keterangan</th>
                                 <th>Quantity</th>
-                                <th>Amount</th>
+                                <th>Nominal</th>
                                 <th>
                                     <a
                                         href="{{ route('expenses.index', ['sort' => 'total_amount', 'direction' => $sortField === 'total_amount' && $sortDirection === 'asc' ? 'desc' : 'asc']) }}">
@@ -191,7 +203,8 @@
                                         @endif
                                     </a>
                                 </th>
-                                <th class="text-right">Actions</th>
+                                <th>Terakhir Diperbarui</th>
+                                <th class="text-right">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -204,49 +217,46 @@
                                     <td>{{ $expense->description }}</td>
                                     <td>{{ $expense->quantity }}</td>
                                     <td>{{ $expense->formatted_amount }}</td>
-                                    <td>{{ $expense->formatted_amount }}</td>
                                     <td>
                                         <div class="d-flex align-items-center">
                                             <span>{{ $expense->formatted_total_amount }}</span>
                                             @if ($expense->image_path)
-                                                <a href="{{ asset('storage/' . $expense->image_path) }}" target="_blank"
-                                                    class="btn btn-icon btn-xs btn-light-success btn-circle ml-2"
-                                                    title="View Receipt">
-                                                    <i class="flaticon-attachment font-size-sm"></i>
-                                                </a>
+                                                <button type="button" 
+                                                    class="btn btn-icon btn-xs btn-light-info btn-circle ml-2 btn-preview-receipt"
+                                                    data-toggle="modal"
+                                                    data-target="#previewReceiptModal"
+                                                    data-image="{{ asset('storage/' . $expense->image_path) }}"
+                                                    title="Pratinjau Bukti">
+                                                    <i class="fa fa-eye font-size-xs"></i>
+                                                </button>
                                             @endif
                                         </div>
                                     </td>
+                                    <td>{{ $expense->updated_at ? $expense->updated_at->format('d M Y H:i') : '-' }}</td>
                                     <td class="text-right pr-0">
-                                        <a href="{{ route('expenses.edit', $expense) }}"
-                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                        <button type="button"
+                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 btn-edit-expense"
+                                            data-toggle="modal"
+                                            data-target="#editExpenseModal"
+                                            data-id="{{ $expense->id }}"
+                                            data-date="{{ $expense->date->format('Y-m-d') }}"
+                                            data-wallet-id="{{ $expense->wallet_id }}"
+                                            data-category="{{ $expense->category }}"
+                                            data-description="{{ $expense->description }}"
+                                            data-quantity="{{ $expense->quantity }}"
+                                            data-amount="{{ (float)$expense->amount }}"
+                                            data-image="{{ $expense->image_path ? asset('storage/' . $expense->image_path) : '' }}"
+                                            title="Ubah">
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
-                                                <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Write.svg-->
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                    height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none"
-                                                        fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <path
-                                                            d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114732 12.1704122,4.68075471 12.453976,4.41323195 L18.0687648,1.22912442 C18.7302484,0.854964648 19.5702229,1.10757788 19.9272379,1.7857418 C20.1068665,2.12662955 20.1976079,2.50529882 20.1976079,2.89066665 L20.1976079,15.1438302 C20.1976079,15.8929947 19.5786358,16.5 18.8294713,16.5 L12.2674799,16.5 C12.2674799,16.5 12.2674799,17.6565196 12.2674799,18.2323597 Z"
-                                                            fill="#000000" fill-rule="nonzero"
-                                                            transform="translate(16.103063, 8.864705) rotate(-270.000000) translate(-16.103063, -8.864705) " />
-                                                        <path
-                                                            d="M6.71185332,6.7610573 L6.9627721,19.5078926 C6.97127448,19.9070386 6.80211565,20.2882586 6.51868351,20.5562098 L0.9038947,23.7403173 C0.242410103,24.1144771 -0.5975644,23.8618639 -0.954579366,23.1836999 C-1.13420803,22.8428122 -1.22494936,22.4641429 -1.22494936,22.0787751 L-1.22494936,9.82561153 C-1.22494936,9.07644703 -0.60597725,8.46944173 0.14318725,8.46944173 L6.71185332,8.46944173 C6.71185332,8.46944173 6.71185332,7.31292203 6.71185332,6.7610573 Z"
-                                                            fill="#000000" fill-rule="nonzero" opacity="0.3"
-                                                            transform="translate(2.872856, 16.104880) rotate(-270.000000) translate(-2.872856, -16.104880) " />
-                                                    </g>
-                                                </svg>
-                                                <!--end::Svg Icon-->
+                                                <i class="flaticon-edit"></i>
                                             </span>
-                                        </a>
+                                        </button>
                                         <form action="{{ route('expenses.destroy', $expense) }}" method="POST"
                                             style="display: inline-block;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-icon btn-light btn-hover-danger btn-sm"
-                                                onclick="return confirm('Are you sure you want to delete this item?');">
+                                                onclick="return confirm('Apakah Anda yakin ingin menghapus pengeluaran ini?');">
                                                 <span class="svg-icon svg-icon-md svg-icon-danger">
                                                     <!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +281,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="7" class="text-center text-muted">No expenses recorded.</td>
+                                    <td colspan="7" class="text-center text-muted">Tidak ada data pengeluaran.</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -283,14 +293,266 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Edit Pengeluaran -->
+    <div class="modal fade" id="editExpenseModal" tabindex="-1" role="dialog" aria-labelledby="editExpenseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editExpenseModalLabel">Ubah Pengeluaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="editExpenseForm" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Tanggal <span class="text-danger">*</span></label>
+                                <input type="date" id="edit_expense_date" name="date" class="form-control form-control-solid" required />
+                            </div>
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Wallet <span class="text-danger">*</span></label>
+                                <select class="form-control form-control-solid" id="edit_expense_wallet_id" name="wallet_id" required>
+                                    @foreach ($wallets as $wallet)
+                                        <option value="{{ $wallet->id }}">{{ $wallet->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label>Kategori <span class="text-danger">*</span></label>
+                                <select class="form-control form-control-solid" id="edit_expense_category" name="category" required>
+                                    <option value="">Pilih Kategori</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Keterangan <span class="text-danger">*</span></label>
+                            <input type="text" id="edit_expense_description" name="description" class="form-control form-control-solid" required />
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Quantity <span class="text-danger">*</span></label>
+                                <input type="number" id="edit_expense_quantity" name="quantity" class="form-control form-control-solid" min="1" required />
+                            </div>
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Nominal (Rp) <span class="text-danger">*</span></label>
+                                <input type="number" id="edit_expense_amount" name="amount" class="form-control form-control-solid" step="0.01" min="0" required />
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label>Total Nominal (Rp)</label>
+                                <input type="text" id="edit_expense_total_display" class="form-control form-control-solid" readonly />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nota/Bukti (Opsional)</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="image" id="edit_expense_image" accept="image/*" />
+                                <label class="custom-file-label" for="edit_expense_image" id="edit_expense_image_label">Pilih berkas</label>
+                            </div>
+                            <span class="form-text text-muted">Format gambar (jpg, jpeg, png, dll.), maksimal ukuran berkas: 2MB.</span>
+                            <div class="mt-2" id="edit_expense_current_image_container" style="display:none;">
+                                <span class="text-muted">Nota Saat Ini:</span>
+                                <a href="#" id="edit_expense_current_image_link" target="_blank" class="text-primary font-weight-bold ml-1">Lihat Gambar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Pengeluaran -->
+    <div class="modal fade" id="createExpenseModal" tabindex="-1" role="dialog" aria-labelledby="createExpenseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createExpenseModalLabel">Tambah Pengeluaran Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{ route('expenses.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Tanggal <span class="text-danger">*</span></label>
+                                <input type="date" name="date" class="form-control form-control-solid" value="{{ date('Y-m-d') }}" required />
+                            </div>
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Buku Kas <span class="text-danger">*</span></label>
+                                <select class="form-control form-control-solid" name="wallet_id" required>
+                                    @foreach ($wallets as $wallet)
+                                        <option value="{{ $wallet->id }}">{{ $wallet->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label>Kategori <span class="text-danger">*</span></label>
+                                <select class="form-control form-control-solid" name="category" required>
+                                    <option value="">Pilih Kategori</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Keterangan <span class="text-danger">*</span></label>
+                            <input type="text" name="description" class="form-control form-control-solid" placeholder="Keterangan pengeluaran" required />
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Quantity <span class="text-danger">*</span></label>
+                                <input type="number" id="create_expense_quantity" name="quantity" class="form-control form-control-solid" value="1" min="1" required />
+                            </div>
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Nominal (Rp) <span class="text-danger">*</span></label>
+                                <input type="number" id="create_expense_amount" name="amount" class="form-control form-control-solid" step="0.01" min="0" required />
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label>Total Nominal (Rp)</label>
+                                <input type="text" id="create_expense_total_display" class="form-control form-control-solid" readonly value="Rp 0,00" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nota/Bukti (Opsional)</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="image" id="create_expense_image" accept="image/*" />
+                                <label class="custom-file-label" for="create_expense_image" id="create_expense_image_label">Pilih berkas</label>
+                            </div>
+                            <span class="form-text text-muted">Format gambar (jpg, jpeg, png, dll.), maksimal ukuran berkas: 2MB.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pratinjau Bukti -->
+    <div class="modal fade" id="previewReceiptModal" tabindex="-1" role="dialog" aria-labelledby="previewReceiptModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="previewReceiptModalLabel">Bukti Pengeluaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="receiptPreviewImage" src="" class="img-fluid rounded" style="max-height: 500px;" alt="Bukti Pengeluaran" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <a id="receiptDownloadLink" href="" download class="btn btn-primary">Unduh Gambar</a>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('scripts')
     <script>
         $(document).ready(function() {
             $('.select2').select2({
-                placeholder: "Select Category",
+                placeholder: "Pilih Kategori",
                 allowClear: true
+            });
+
+            function formatCurrency(val) {
+                return new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR'
+                }).format(val);
+            }
+
+            function recalculateTotal() {
+                var qty = parseInt($('#edit_expense_quantity').val()) || 0;
+                var amt = parseFloat($('#edit_expense_amount').val()) || 0;
+                var total = qty * amt;
+                $('#edit_expense_total_display').val(formatCurrency(total));
+            }
+
+            $('#edit_expense_quantity, #edit_expense_amount').on('input', recalculateTotal);
+
+            $('.btn-edit-expense').click(function() {
+                var id = $(this).data('id');
+                var date = $(this).data('date');
+                var walletId = $(this).data('wallet-id');
+                var category = $(this).data('category');
+                var description = $(this).data('description');
+                var quantity = $(this).data('quantity');
+                var amount = $(this).data('amount');
+                var image = $(this).data('image');
+
+                $('#edit_expense_date').val(date);
+                $('#edit_expense_wallet_id').val(walletId);
+                $('#edit_expense_category').val(category);
+                $('#edit_expense_description').val(description);
+                $('#edit_expense_quantity').val(quantity);
+                $('#edit_expense_amount').val(amount);
+                
+                recalculateTotal();
+
+                // Handle current image preview
+                if (image) {
+                    $('#edit_expense_current_image_container').show();
+                    $('#edit_expense_current_image_link').attr('href', image);
+                } else {
+                    $('#edit_expense_current_image_container').hide();
+                }
+
+                // Reset file input label
+                $('#edit_expense_image_label').text('Pilih berkas');
+                $('#edit_expense_image').val('');
+
+                // Set form action dynamically
+                var actionUrl = "{{ url('/expenses') }}/" + id;
+                $('#editExpenseForm').attr('action', actionUrl);
+            });
+
+            // Update file input label on file selection
+            $('#edit_expense_image').on('change', function() {
+                var fileName = $(this).val().split('\\').pop();
+                $(this).next('.custom-file-label').html(fileName || 'Pilih berkas');
+            });
+
+            function recalculateCreateTotal() {
+                var qty = parseInt($('#create_expense_quantity').val()) || 0;
+                var amt = parseFloat($('#create_expense_amount').val()) || 0;
+                var total = qty * amt;
+                $('#create_expense_total_display').val(formatCurrency(total));
+            }
+
+            $('#create_expense_quantity, #create_expense_amount').on('input', recalculateCreateTotal);
+
+            $('#create_expense_image').on('change', function() {
+                var fileName = $(this).val().split('\\').pop();
+                $(this).next('.custom-file-label').html(fileName || 'Pilih berkas');
+            });
+
+            @if(request()->query('create'))
+                $('#createExpenseModal').modal('show');
+            @endif
+
+            $('.btn-preview-receipt').click(function() {
+                var imageUrl = $(this).data('image');
+                $('#receiptPreviewImage').attr('src', imageUrl);
+                $('#receiptDownloadLink').attr('href', imageUrl);
             });
         });
     </script>

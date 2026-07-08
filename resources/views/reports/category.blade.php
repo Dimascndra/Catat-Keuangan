@@ -16,17 +16,17 @@
                 <form action="{{ route('reports.category') }}" method="GET">
                     <div class="form-group row mb-0">
                         <div class="col-lg-3">
-                            <label>Start Date</label>
+                            <label>Start Tanggal</label>
                             <input type="date" class="form-control" name="start_date" value="{{ $startDate }}">
                         </div>
                         <div class="col-lg-3">
-                            <label>End Date</label>
+                            <label>End Tanggal</label>
                             <input type="date" class="form-control" name="end_date" value="{{ $endDate }}">
                         </div>
                         <div class="col-lg-3">
                             <label>Wallet</label>
                             <select name="wallet_id" class="form-control">
-                                <option value="">All Wallets</option>
+                                <option value="">Semua Buku Kas</option>
                                 @foreach ($wallets as $wallet)
                                     <option value="{{ $wallet->id }}" {{ $walletId == $wallet->id ? 'selected' : '' }}>
                                         {{ $wallet->name }}

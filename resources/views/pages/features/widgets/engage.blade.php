@@ -358,7 +358,7 @@
                             <!--begin::Card Body-->
                             <div class="card-body px-12 py-10">
                                 <h3 class="font-weight-bolder font-size-h2 mb-1">
-                                    <a href="#" class="text-dark-75">Nike True Balance</a>
+                                    <a href="#" class="text-dark-75">Nike True Saldo</a>
                                 </h3>
                                 <div class="text-primary font-size-h4 mb-9">$ 399.99</div>
                                 <div class="font-size-sm mb-8">Outlines keep you honest. They stop you from indulging in
@@ -481,7 +481,7 @@
                             </div>
                             <div class="col-6 col-md-4">
                                 <div class="mb-8 d-flex flex-column">
-                                    <span class="text-dark font-weight-bold mb-4">Balance</span>
+                                    <span class="text-dark font-weight-bold mb-4">Saldo</span>
                                     <span class="text-muted font-weight-bolder font-size-lg">$68,300</span>
                                 </div>
                             </div>
@@ -539,7 +539,7 @@
                     <div class="card-body rounded p-0 d-flex bg-light">
                         <div
                             class="d-flex flex-column flex-lg-row-auto w-auto w-lg-350px w-xl-450px w-xxl-650px py-10 py-md-14 px-10 px-md-20 pr-lg-0">
-                            <h1 class="font-weight-bolder text-dark mb-0">Search Goods</h1>
+                            <h1 class="font-weight-bolder text-dark mb-0">Cari Goods</h1>
                             <div class="font-size-h4 mb-8">Get Amazing Gadgets</div>
                             <!--begin::Form-->
                             <form class="d-flex flex-center py-2 px-6 bg-white rounded">
@@ -560,7 +560,7 @@
                                     <!--end::Svg Icon-->
                                 </span>
                                 <input type="text" class="form-control border-0 font-weight-bold pl-2"
-                                    placeholder="Search Goods" />
+                                    placeholder="Cari Goods" />
                             </form>
                             <!--end::Form-->
                         </div>

@@ -621,7 +621,7 @@
                                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                                         posuere erat a ante.</p>
                                     <footer class="blockquote-footer">Someone famous in
-                                        <cite title="Source Title">Source Title</cite>
+                                        <cite title="Sumber Title">Sumber Title</cite>
                                     </footer>
                                 </blockquote>
                             </div>
@@ -633,7 +633,7 @@
        &lt;blockquote class="blockquote"&gt;
            &lt;p class="mb-0"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
            &lt;footer class="blockquote-footer"&gt;Someone famous in
-               &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+               &lt;cite title="Sumber Title"&gt;Source Title&lt;/cite&gt;
            &lt;/footer&gt;
        &lt;/blockquote&gt;</code>
 </pre>
@@ -651,7 +651,7 @@
                                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                                         posuere erat a ante.</p>
                                     <footer class="blockquote-footer">Someone famous in
-                                        <cite title="Source Title">Source Title</cite>
+                                        <cite title="Sumber Title">Sumber Title</cite>
                                     </footer>
                                 </blockquote>
                             </div>
@@ -663,7 +663,7 @@
        &lt;blockquote class="blockquote text-center"&gt;
            &lt;p class="mb-0"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
            &lt;footer class="blockquote-footer"&gt;Someone famous in
-               &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+               &lt;cite title="Sumber Title"&gt;Source Title&lt;/cite&gt;
            &lt;/footer&gt;
        &lt;/blockquote&gt;</code>
 </pre>
@@ -674,7 +674,7 @@
                                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
                                         posuere erat a ante.</p>
                                     <footer class="blockquote-footer">Someone famous in
-                                        <cite title="Source Title">Source Title</cite>
+                                        <cite title="Sumber Title">Sumber Title</cite>
                                     </footer>
                                 </blockquote>
                             </div>
@@ -686,7 +686,7 @@
        &lt;blockquote class="blockquote text-right"&gt;
            &lt;p class="mb-0"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
            &lt;footer class="blockquote-footer"&gt;Someone famous in
-               &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;
+               &lt;cite title="Sumber Title"&gt;Source Title&lt;/cite&gt;
            &lt;/footer&gt;
        &lt;/blockquote&gt;</code>
 </pre>

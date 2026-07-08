@@ -174,11 +174,11 @@
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <button type="reset" class="btn btn-primary mr-2">Save</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary mr-2">Simpan</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                                 <div class="col-lg-6 text-right">
-                                    <button type="reset" class="btn btn-danger">Delete</button>
+                                    <button type="reset" class="btn btn-danger">Hapus</button>
                                 </div>
                             </div>
                         </div>
@@ -337,8 +337,8 @@
                             <div class="row">
                                 <div class="col-lg-2"></div>
                                 <div class="col-lg-10">
-                                    <button type="reset" class="btn btn-success mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -547,8 +547,8 @@
                             <div class="row">
                                 <div class="col-lg-4"></div>
                                 <div class="col-lg-8">
-                                    <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -765,8 +765,8 @@
                             <div class="row">
                                 <div class="col-lg-5"></div>
                                 <div class="col-lg-7">
-                                    <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>

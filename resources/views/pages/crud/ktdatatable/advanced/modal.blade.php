@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <!--begin: Search Form-->
+                <!--begin: Cari Form-->
                 <!--begin::Search Form-->
                 <div class="mb-7">
                     <div class="row align-items-center">
@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="col-md-4 my-2 my-md-0">
                                     <div class="d-flex align-items-center">
-                                        <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                        <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                         <select class="form-control" id="kt_datatable_search_type">
                                             <option value="">All</option>
                                             <option value="1">Online</option>
@@ -192,12 +192,12 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                         </div>
                     </div>
                 </div>
                 <!--end::Search Form-->
-                <!--end: Search Form-->
+                <!--end: Cari Form-->
                 <!--begin: Datatable-->
                 <div class="datatable datatable-bordered datatable-head-custom" id="kt_datatable"></div>
                 <!--end: Datatable-->
@@ -218,7 +218,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!--begin: Search Form-->
+                        <!--begin: Cari Form-->
                         <!--begin::Search Form-->
                         <div class="mb-5">
                             <div class="row align-items-center">
@@ -249,7 +249,7 @@
                                         </div>
                                         <div class="col-md-4 my-2 my-md-0">
                                             <div class="d-flex align-items-center">
-                                                <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                                <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                                 <select class="form-control" id="kt_datatable_search_type_2">
                                                     <option value="">All</option>
                                                     <option value="1">Online</option>
@@ -261,12 +261,12 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                                 </div>
                             </div>
                         </div>
                         <!--end::Search Form-->
-                        <!--end: Search Form-->
+                        <!--end: Cari Form-->
                         <!--begin: Datatable-->
                         <div class="datatable datatable-bordered datatable-head-custom" id="kt_datatable_sub"></div>
                         <!--end: Datatable-->
@@ -274,7 +274,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light-primary font-weight-bold text-uppercase"
                             data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary font-weight-bold text-uppercase">Submit</button>
+                        <button type="button" class="btn btn-primary font-weight-bold text-uppercase">Kirim</button>
                     </div>
                 </div>
             </div>
@@ -327,7 +327,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!--begin: Search Form-->
+                        <!--begin: Cari Form-->
                         <!--begin::Search Form-->
                         <div class="mb-5">
                             <div class="row align-items-center">
@@ -358,7 +358,7 @@
                                         </div>
                                         <div class="col-md-4 my-2 my-md-0">
                                             <div class="d-flex align-items-center">
-                                                <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                                <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                                 <select class="form-control" id="kt_datatable_search_type_3">
                                                     <option value="">All</option>
                                                     <option value="1">Online</option>
@@ -370,12 +370,12 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                                 </div>
                             </div>
                         </div>
                         <!--end::Search Form-->
-                        <!--end: Search Form-->
+                        <!--end: Cari Form-->
                         <!--begin: Datatable-->
                         <div class="datatable datatable-bordered datatable-head-custom" id="kt_datatable_2"></div>
                         <!--end: Datatable-->
@@ -397,7 +397,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!--begin: Search Form-->
+                        <!--begin: Cari Form-->
                         <!--begin::Search Form-->
                         <div class="mb-5">
                             <div class="row align-items-center">
@@ -428,7 +428,7 @@
                                         </div>
                                         <div class="col-md-4 my-2 my-md-0">
                                             <div class="d-flex align-items-center">
-                                                <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                                <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                                 <select class="form-control" id="kt_datatable_search_type_4">
                                                     <option value="">All</option>
                                                     <option value="1">Online</option>
@@ -440,12 +440,12 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                                 </div>
                             </div>
                         </div>
                         <!--end::Search Form-->
-                        <!--end: Search Form-->
+                        <!--end: Cari Form-->
                         <!--begin: Datatable-->
                         <div class="datatable datatable-bordered datatable-head-custom" id="kt_datatable_3"></div>
                         <!--end: Datatable-->

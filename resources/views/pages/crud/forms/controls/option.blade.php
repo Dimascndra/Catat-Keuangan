@@ -37,7 +37,7 @@
                     <form class="form">
                         <div class="card-body">
                             <div class="form-group m-0">
-                                <label>Choose Delivery Type:</label>
+                                <label>Choose Delivery Tipe:</label>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <label class="option">
@@ -127,7 +127,7 @@
        &lt;form class="form"&gt;
         &lt;div class="card-body"&gt;
          &lt;div class="form-group m-0"&gt;
-          &lt;label&gt;Choose Delivery Type:&lt;/label&gt;
+          &lt;label&gt;Choose Delivery Tipe:&lt;/label&gt;
           &lt;div class="row"&gt;
            &lt;div class="col-lg-6"&gt;
             &lt;label class="option"&gt;
@@ -242,8 +242,8 @@
                             <!--end::Code example-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -475,8 +475,8 @@
                             <!--end::Code example-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-success mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->

@@ -8,7 +8,7 @@
         @endslot
         @slot('action')
             <a href="{{ route('expenses.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">
-                Back to List
+                Kembali ke Daftar
             </a>
         @endslot
     @endcomponent
@@ -30,7 +30,7 @@
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Date</th>
+                                        <th>Tanggal</th>
                                         <th class="text-right">Total Expense</th>
                                     </tr>
                                 </thead>

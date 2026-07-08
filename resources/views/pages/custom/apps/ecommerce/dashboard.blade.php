@@ -92,7 +92,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group mb-8">
-                                            <label for="exampleTextarea" class="font-weight-bolder">Description</label>
+                                            <label for="exampleTextarea" class="font-weight-bolder">Keterangan</label>
                                             <textarea class="form-control form-control-solid form-control-lg" rows="3"></textarea>
                                         </div>
                                         <div class="form-group">
@@ -132,7 +132,7 @@
                                         </div>
                                         <!--end::Color-->
                                         <button type="submit"
-                                            class="btn btn-primary font-weight-bolder mr-2 px-8">Save</button>
+                                            class="btn btn-primary font-weight-bolder mr-2 px-8">Simpan</button>
                                         <button type="reset"
                                             class="btn btn-clear font-weight-bolder text-muted px-8">Discard</button>
                                         <!--end::Input-->
@@ -231,7 +231,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-23.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -257,7 +257,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-25.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -290,7 +290,7 @@
                                     <div class="card-body rounded p-0 d-flex" style="background-color:#DAF0FD;">
                                         <div
                                             class="d-flex flex-column flex-lg-row-auto w-auto w-lg-350px w-xl-450px w-xxl-500px p-10 p-md-20">
-                                            <h1 class="font-weight-bolder text-dark">Search Goods</h1>
+                                            <h1 class="font-weight-bolder text-dark">Cari Goods</h1>
                                             <div class="font-size-h4 mb-8">Get Amazing Gadgets</div>
                                             <!--begin::Form-->
                                             <form class="d-flex flex-center py-2 px-6 bg-white rounded">
@@ -313,7 +313,7 @@
                                                     <!--end::Svg Icon-->
                                                 </span>
                                                 <input type="text" class="form-control border-0 font-weight-bold pl-2"
-                                                    placeholder="Search Goods" />
+                                                    placeholder="Cari Goods" />
                                             </form>
                                             <!--end::Form-->
                                         </div>

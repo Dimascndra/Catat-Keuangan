@@ -183,8 +183,8 @@
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
-                                    <button type="reset" class="btn btn-primary">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-primary">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>

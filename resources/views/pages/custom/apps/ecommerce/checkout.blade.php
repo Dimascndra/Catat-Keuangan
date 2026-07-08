@@ -295,7 +295,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-23.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -321,7 +321,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-25.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -383,7 +383,7 @@
                                                     <div class="wizard-number">3</div>
                                                     <div class="wizard-label">
                                                         <div class="wizard-title">Purchase</div>
-                                                        <div class="wizard-desc">Review and Submit</div>
+                                                        <div class="wizard-desc">Review and Kirim</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -860,7 +860,7 @@
                                                         <div class="pb-5" data-wizard-type="step-content">
                                                             <!--begin::Section-->
                                                             <h4 class="mb-10 font-weight-bold text-dark">Review your Order
-                                                                and Submit</h4>
+                                                                and Kirim</h4>
                                                             <h6 class="font-weight-bolder mb-3">Delivery Address:</h6>
                                                             <div class="text-dark-50 line-height-lg">
                                                                 <div>Address Line 1</div>
@@ -887,7 +887,7 @@
                                                                                     Unit Price</th>
                                                                                 <th
                                                                                     class="text-right pr-0 font-weight-bold text-muted text-uppercase">
-                                                                                    Amount</th>
+                                                                                    Nominal</th>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
@@ -995,7 +995,7 @@
                                                             <div class="separator separator-dashed my-5"></div>
                                                             <!--end::Section-->
                                                             <!--begin::Section-->
-                                                            <h6 class="font-weight-bolder mb-3">Delivery Service Type:</h6>
+                                                            <h6 class="font-weight-bolder mb-3">Delivery Service Tipe:</h6>
                                                             <div class="text-dark-50 line-height-lg">
                                                                 <div>Overnight Delivery with Regular Packaging</div>
                                                                 <div>Preferred Morning (8:00AM - 11:00AM) Delivery</div>
@@ -1013,7 +1013,7 @@
                                                             <div>
                                                                 <button type="button"
                                                                     class="btn btn-success font-weight-bolder text-uppercase px-9 py-4"
-                                                                    data-wizard-type="action-submit">Submit</button>
+                                                                    data-wizard-type="action-submit">Kirim</button>
                                                                 <button type="button"
                                                                     class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4"
                                                                     data-wizard-type="action-next">Next</button>

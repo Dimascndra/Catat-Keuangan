@@ -64,10 +64,10 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th class="pl-0 font-weight-bold text-muted text-uppercase">Description</th>
+                                        <th class="pl-0 font-weight-bold text-muted text-uppercase">Keterangan</th>
                                         <th class="text-right font-weight-bold text-muted text-uppercase">Hours</th>
                                         <th class="text-right font-weight-bold text-muted text-uppercase">Rate</th>
-                                        <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">Amount</th>
+                                        <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">Nominal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -104,8 +104,8 @@
                                     <tr>
                                         <th class="font-weight-bold text-muted text-uppercase">BANK</th>
                                         <th class="font-weight-bold text-muted text-uppercase">ACC.NO.</th>
-                                        <th class="font-weight-bold text-muted text-uppercase">DUE DATE</th>
-                                        <th class="font-weight-bold text-muted text-uppercase">TOTAL AMOUNT</th>
+                                        <th class="font-weight-bold text-muted text-uppercase">DUE TANGGAL</th>
+                                        <th class="font-weight-bold text-muted text-uppercase">TOTAL NOMINAL</th>
                                     </tr>
                                 </thead>
                                 <tbody>

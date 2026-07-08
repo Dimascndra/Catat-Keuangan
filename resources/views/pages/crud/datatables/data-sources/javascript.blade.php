@@ -166,7 +166,7 @@
                             <th>Ship Address</th>
                             <th>Company Email</th>
                             <th>Company Agent</th>
-                            <th>Actions</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                 </table>

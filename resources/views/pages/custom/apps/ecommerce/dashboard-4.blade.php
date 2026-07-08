@@ -161,7 +161,7 @@
                                     <!--begin::Card Body-->
                                     <div class="card-body px-12 py-10">
                                         <h3 class="font-weight-bolder font-size-h2 mb-1">
-                                            <a href="#" class="text-dark-75">Nike True Balance</a>
+                                            <a href="#" class="text-dark-75">Nike True Saldo</a>
                                         </h3>
                                         <div class="text-primary font-size-h4 mb-9">$ 399.99</div>
                                         <div class="font-size-sm mb-8">Outlines keep you honest. They stop you from
@@ -232,7 +232,7 @@
                                                 <th class="pl-0" style="min-width: 120px">Order id</th>
                                                 <th style="min-width: 110px">Country</th>
                                                 <th style="min-width: 110px">
-                                                    <span class="text-primary">Date</span>
+                                                    <span class="text-primary">Tanggal</span>
                                                     <span class="svg-icon svg-icon-sm svg-icon-primary">
                                                         <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Down-2.svg-->
                                                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +277,7 @@
                                                 <td>
                                                     <span
                                                         class="text-primary font-weight-bolder d-block font-size-lg">05/28/2020</span>
-                                                    <span class="text-muted font-weight-bold">Paid</span>
+                                                    <span class="text-muted font-weight-bold">Lunas</span>
                                                 </td>
                                                 <td>
                                                     <span
@@ -473,7 +473,7 @@
                                                 <td>
                                                     <span
                                                         class="text-primary font-weight-bolder d-block font-size-lg">23/12/2020</span>
-                                                    <span class="text-muted font-weight-bold">Paid</span>
+                                                    <span class="text-muted font-weight-bold">Lunas</span>
                                                 </td>
                                                 <td>
                                                     <span

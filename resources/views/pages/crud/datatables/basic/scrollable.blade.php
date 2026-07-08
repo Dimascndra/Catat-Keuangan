@@ -144,10 +144,10 @@
                             <th>Ship Address</th>
                             <th>Company Agent</th>
                             <th>Company Name</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -927,13 +927,13 @@
                             <th>Website</th>
                             <th>Latitude</th>
                             <th>Longitude</th>
-                            <th>Ship Date</th>
-                            <th>Payment Date</th>
+                            <th>Ship Tanggal</th>
+                            <th>Payment Tanggal</th>
                             <th>Time Zone</th>
                             <th>Total Payment</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>

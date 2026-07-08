@@ -490,7 +490,7 @@
                     <!--end::Header-->
                     <!--begin::Body-->
                     <div class="card-body">
-                        <!--begin: Search Form-->
+                        <!--begin: Cari Form-->
                         <!--begin::Search Form-->
                         <div class="mb-10">
                             <div class="row align-items-center">
@@ -516,7 +516,7 @@
                                         </div>
                                         <div class="col-md-4 my-2 my-md-0">
                                             <select class="form-control form-control-solid" id="kt_datatable_search_type">
-                                                <option value="">Type</option>
+                                                <option value="">Tipe</option>
                                                 <option value="4">Success</option>
                                                 <option value="5">Info</option>
                                                 <option value="6">Danger</option>
@@ -525,12 +525,12 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                                    <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                                 </div>
                             </div>
                         </div>
                         <!--end::Search Form-->
-                        <!--end: Search Form-->
+                        <!--end: Cari Form-->
                         <!--begin: Datatable-->
                         <div class="datatable datatable-bordered datatable-head-custom" id="kt_datatable"></div>
                         <!--end: Datatable-->

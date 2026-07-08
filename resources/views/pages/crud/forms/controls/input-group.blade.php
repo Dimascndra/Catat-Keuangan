@@ -98,7 +98,7 @@
                                         <span class="input-group-text">0.00</span>
                                     </div>
                                     <input type="text" class="form-control"
-                                        aria-label="Amount (to the nearest dollar)" />
+                                        aria-label="Nominal (to the nearest dollar)" />
                                 </div>
                             </div>
                             <div class="form-group mb-2">
@@ -162,7 +162,7 @@
              &lt;span class="input-group-text"&gt;$&lt;/span&gt;
              &lt;span class="input-group-text"&gt;0.00&lt;/span&gt;
             &lt;/div&gt;
-            &lt;input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"/&gt;
+            &lt;input type="text" class="form-control" aria-label="Nominal (to the nearest dollar)"/&gt;
            &lt;/div&gt;
           &lt;/div&gt;
           &lt;div class="form-group mb-2"&gt;
@@ -188,8 +188,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -266,7 +266,7 @@
                                         <span class="input-group-text">$</span>
                                     </div>
                                     <input type="text" class="form-control" placeholder="0.00"
-                                        aria-label="Amount (to the nearest dollar)" />
+                                        aria-label="Nominal (to the nearest dollar)" />
                                     <div class="input-group-append">
                                         <span class="input-group-text">
                                             <i class="la la-registered icon-lg"></i>
@@ -405,7 +405,7 @@
             &lt;div class="input-group-prepend"&gt;
              &lt;span class="input-group-text"&gt;$&lt;/span&gt;
             &lt;/div&gt;
-            &lt;input type="text" class="form-control" placeholder="0.00" aria-label="Amount (to the nearest dollar)"/&gt;
+            &lt;input type="text" class="form-control" placeholder="0.00" aria-label="Nominal (to the nearest dollar)"/&gt;
             &lt;div class="input-group-append"&gt;
              &lt;span class="input-group-text"&gt;&lt;i class="la la-registered"&gt;&lt;/i&gt;&lt;/span&gt;
             &lt;/div&gt;
@@ -466,8 +466,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -656,8 +656,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -773,8 +773,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -1074,8 +1074,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -1129,13 +1129,13 @@
                                     <div class="input-group-prepend">
                                         <button class="btn btn-secondary" type="button">Go!</button>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Search for..." />
+                                    <input type="text" class="form-control" placeholder="Cari for..." />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Right Addon Button</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for..." />
+                                    <input type="text" class="form-control" placeholder="Cari for..." />
                                     <div class="input-group-append">
                                         <button class="btn btn-secondary" type="button">Go!</button>
                                     </div>
@@ -1147,7 +1147,7 @@
                                     <div class="input-group-prepend">
                                         <button class="btn btn-secondary" type="button">Go!</button>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Search for..." />
+                                    <input type="text" class="form-control" placeholder="Cari for..." />
                                     <div class="input-group-append">
                                         <button class="btn btn-secondary" type="button">Go!</button>
                                     </div>
@@ -1159,13 +1159,13 @@
                                     <div class="input-group-prepend">
                                         <button class="btn btn-primary" type="button">Go!</button>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Search for..." />
+                                    <input type="text" class="form-control" placeholder="Cari for..." />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Right Addon Button</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for..." />
+                                    <input type="text" class="form-control" placeholder="Cari for..." />
                                     <div class="input-group-append">
                                         <button class="btn btn-primary" type="button">Go!</button>
                                     </div>
@@ -1177,7 +1177,7 @@
                                     <div class="input-group-prepend">
                                         <button class="btn btn-success" type="button">Go!</button>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Search for..." />
+                                    <input type="text" class="form-control" placeholder="Cari for..." />
                                     <div class="input-group-append">
                                         <button class="btn btn-warning" type="button">Go!</button>
                                     </div>
@@ -1212,13 +1212,13 @@
             &lt;div class="input-group-prepend"&gt;
              &lt;button class="btn btn-secondary" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
-            &lt;input type="text" class="form-control" placeholder="Search for..."/&gt;
+            &lt;input type="text" class="form-control" placeholder="Cari for..."/&gt;
            &lt;/div&gt;
           &lt;/div&gt;
           &lt;div class="form-group"&gt;
            &lt;label&gt;Right Addon Button&lt;/label&gt;
            &lt;div class="input-group"&gt;
-            &lt;input type="text" class="form-control" placeholder="Search for..."/&gt;
+            &lt;input type="text" class="form-control" placeholder="Cari for..."/&gt;
             &lt;div class="input-group-append"&gt;
              &lt;button class="btn btn-secondary" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
@@ -1230,7 +1230,7 @@
             &lt;div class="input-group-prepend"&gt;
              &lt;button class="btn btn-secondary" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
-            &lt;input type="text" class="form-control" placeholder="Search for..."/&gt;
+            &lt;input type="text" class="form-control" placeholder="Cari for..."/&gt;
             &lt;div class="input-group-append"&gt;
              &lt;button class="btn btn-secondary" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
@@ -1242,13 +1242,13 @@
             &lt;div class="input-group-prepend"&gt;
              &lt;button class="btn btn-primary" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
-            &lt;input type="text" class="form-control" placeholder="Search for..."/&gt;
+            &lt;input type="text" class="form-control" placeholder="Cari for..."/&gt;
            &lt;/div&gt;
           &lt;/div&gt;
           &lt;div class="form-group"&gt;
            &lt;label&gt;Right Addon Button&lt;/label&gt;
            &lt;div class="input-group"&gt;
-            &lt;input type="text" class="form-control" placeholder="Search for..."/&gt;
+            &lt;input type="text" class="form-control" placeholder="Cari for..."/&gt;
             &lt;div class="input-group-append"&gt;
              &lt;button class="btn btn-primary" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
@@ -1260,7 +1260,7 @@
             &lt;div class="input-group-prepend"&gt;
              &lt;button class="btn btn-success" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
-            &lt;input type="text" class="form-control" placeholder="Search for..."/&gt;
+            &lt;input type="text" class="form-control" placeholder="Cari for..."/&gt;
             &lt;div class="input-group-append"&gt;
              &lt;button class="btn btn-warning" type="button"&gt;Go!&lt;/button&gt;
             &lt;/div&gt;
@@ -1281,8 +1281,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -1506,8 +1506,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -1770,8 +1770,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->

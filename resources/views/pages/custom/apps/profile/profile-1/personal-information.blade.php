@@ -369,8 +369,8 @@
                                 informaiton</span>
                         </div>
                         <div class="card-toolbar">
-                            <button type="reset" class="btn btn-success mr-2">Save Changes</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-success mr-2">Simpan Changes</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                     <!--end::Header-->
@@ -401,7 +401,7 @@
                                         </label>
                                         <span
                                             class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
-                                            data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                            data-action="cancel" data-toggle="tooltip" title="Batal avatar">
                                             <i class="ki ki-bold-close icon-xs text-muted"></i>
                                         </span>
                                         <span

@@ -65,10 +65,10 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th class="pl-0 font-weight-bold text-muted text-uppercase">Description</th>
+                                        <th class="pl-0 font-weight-bold text-muted text-uppercase">Keterangan</th>
                                         <th class="text-right font-weight-bold text-muted text-uppercase">Hours</th>
                                         <th class="text-right font-weight-bold text-muted text-uppercase">Rate</th>
-                                        <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">Amount</th>
+                                        <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">Nominal</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -107,7 +107,7 @@
                                     <span class="text-right">Barclays UK</span>
                                 </div>
                                 <div class="d-flex justify-content-between mb-3">
-                                    <span class="mr-15 font-weight-bold">Account Number:</span>
+                                    <span class="mr-15 font-weight-bold">Nomor Rekening:</span>
                                     <span class="text-right">1234567890934</span>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-column text-md-right">
-                                <span class="font-size-lg font-weight-bolder mb-1">TOTAL AMOUNT</span>
+                                <span class="font-size-lg font-weight-bolder mb-1">TOTAL NOMINAL</span>
                                 <span class="font-size-h2 font-weight-boldest text-danger mb-1">$20.600.00</span>
                                 <span>Taxes Included</span>
                             </div>

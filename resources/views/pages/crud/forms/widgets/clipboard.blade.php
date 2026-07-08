@@ -92,7 +92,7 @@
            &lt;label class="col-form-label text-right col-lg-3 col-sm-12"&gt;Basic Demo&lt;/label&gt;
            &lt;div class="col-lg-6 col-md-9 col-sm-12"&gt;
             &lt;div class="input-group"&gt;
-             &lt;input type="text" class="form-control" id="kt_clipboard_1" placeholder="Type some value to copy"/&gt;
+             &lt;input type="text" class="form-control" id="kt_clipboard_1" placeholder="Tipe some value to copy"/&gt;
              &lt;div class="input-group-append"&gt;
               &lt;a href="#" class="btn btn-secondary" data-clipboard="true" data-clipboard-target="#kt_clipboard_1"&gt;&lt;i class="la la-copy"&gt;&lt;/i&gt;&lt;/a&gt;
              &lt;/div&gt;
@@ -181,7 +181,7 @@
                         <div class="col-lg-6 col-md-9 col-sm-12">
                             <div class="input-group">
                                 <input type="text" class="form-control" id="kt_clipboard_1"
-                                    placeholder="Type some value to copy" />
+                                    placeholder="Tipe some value to copy" />
                                 <div class="input-group-append">
                                     <a href="#" class="btn btn-secondary" data-clipboard="true"
                                         data-clipboard-target="#kt_clipboard_1">
@@ -228,8 +228,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="reset" class="btn btn-success mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

@@ -81,14 +81,6 @@ class WalletController extends Controller
      */
     public function destroy(Wallet $wallet)
     {
-        // Optional: Check for transactions.
-        if ($wallet->incomes()->exists() || $wallet->expenses()->exists() || $wallet->transfersSent()->exists() || $wallet->transfersReceived()->exists()) {
-            return back()->with('error', 'Cannot delete wallet with existing transactions.');
-        }
-
-        $wallet->delete();
-
-        return redirect()->route('wallets.index')
-            ->with('success', 'Wallet deleted successfully.');
+        return back()->with('error', 'Penghapusan Buku Kas tidak diperbolehkan.');
     }
 }

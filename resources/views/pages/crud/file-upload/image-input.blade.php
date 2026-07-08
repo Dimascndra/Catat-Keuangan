@@ -75,7 +75,7 @@
                                     <input type="hidden" name="profile_avatar_remove" />
                                 </label>
                                 <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
-                                    data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                    data-action="cancel" data-toggle="tooltip" title="Batal avatar">
                                     <i class="ki ki-bold-close icon-xs text-muted"></i>
                                 </span>
                             </div>
@@ -107,7 +107,7 @@
         &lt;input type="hidden" name="profile_avatar_remove"/&gt;
        &lt;/label&gt;
 
-       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar"&gt;
+       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Batal avatar"&gt;
         &lt;i class="ki ki-bold-close icon-xs text-muted"&gt;&lt;/i&gt;
        &lt;/span&gt;
       &lt;/div&gt;
@@ -160,7 +160,7 @@
                                     <input type="hidden" name="profile_avatar_remove" />
                                 </label>
                                 <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
-                                    data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                    data-action="cancel" data-toggle="tooltip" title="Batal avatar">
                                     <i class="ki ki-bold-close icon-xs text-muted"></i>
                                 </span>
                             </div>
@@ -192,7 +192,7 @@
         &lt;input type="hidden" name="profile_avatar_remove"/&gt;
        &lt;/label&gt;
 
-       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar"&gt;
+       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Batal avatar"&gt;
         &lt;i class="ki ki-bold-close icon-xs text-muted"&gt;&lt;/i&gt;
        &lt;/span&gt;
       &lt;/div&gt;
@@ -245,7 +245,7 @@
                                     <input type="hidden" name="profile_avatar_remove" />
                                 </label>
                                 <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
-                                    data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                    data-action="cancel" data-toggle="tooltip" title="Batal avatar">
                                     <i class="ki ki-bold-close icon-xs text-muted"></i>
                                 </span>
                             </div>
@@ -277,7 +277,7 @@
         &lt;input type="hidden" name="profile_avatar_remove"/&gt;
        &lt;/label&gt;
 
-       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar"&gt;
+       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Batal avatar"&gt;
         &lt;i class="ki ki-bold-close icon-xs text-muted"&gt;&lt;/i&gt;
        &lt;/span&gt;
       &lt;/div&gt;
@@ -331,7 +331,7 @@
                                     <input type="hidden" name="profile_avatar_remove" />
                                 </label>
                                 <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
-                                    data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                    data-action="cancel" data-toggle="tooltip" title="Batal avatar">
                                     <i class="ki ki-bold-close icon-xs text-muted"></i>
                                 </span>
                                 <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
@@ -368,7 +368,7 @@
         &lt;input type="hidden" name="profile_avatar_remove"/&gt;
        &lt;/label&gt;
 
-       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar"&gt;
+       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Batal avatar"&gt;
         &lt;i class="ki ki-bold-close icon-xs text-muted"&gt;&lt;/i&gt;
        &lt;/span&gt;
 
@@ -455,7 +455,7 @@
                                     <input type="hidden" name="profile_avatar_remove" />
                                 </label>
                                 <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
-                                    data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                    data-action="cancel" data-toggle="tooltip" title="Batal avatar">
                                     <i class="ki ki-bold-close icon-xs text-muted"></i>
                                 </span>
                                 <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
@@ -491,7 +491,7 @@
         &lt;input type="hidden" name="profile_avatar_remove"/&gt;
        &lt;/label&gt;
 
-       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar"&gt;
+       &lt;span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Batal avatar"&gt;
         &lt;i class="ki ki-bold-close icon-xs text-muted"&gt;&lt;/i&gt;
        &lt;/span&gt;
 

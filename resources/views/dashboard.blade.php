@@ -1,5 +1,13 @@
 @extends('layouts.index')
-@section('title', 'System Reports')
+@section('title', 'Dasbor')
+
+@php
+    $monthsId = [
+        1 => 'Januari', 2 => 'Februari', 3 => 'Maret', 4 => 'April', 5 => 'Mei', 6 => 'Juni',
+        7 => 'Juli', 8 => 'Agustus', 9 => 'September', 10 => 'Oktober', 11 => 'November', 12 => 'Desember'
+    ];
+    $formattedDate = ($monthsId[(int)$currentMonth] ?? date('F', mktime(0,0,0,$currentMonth,1))) . ' ' . $currentYear;
+@endphp
 
 @section('subheader')
     <style>
@@ -13,15 +21,17 @@
     </style>
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Financial Report System
+            Sistem Laporan Keuangan
         @endslot
         @slot('action')
-            <a href="{{ route('expenses.create') }}" class="btn btn-primary font-weight-bolder btn-sm">
-                Add Expense
-            </a>
-            <a href="{{ route('incomes.create') }}" class="btn btn-success font-weight-bolder btn-sm ml-2">
-                Add Income
-            </a>
+            <div class="d-flex align-items-center flex-wrap">
+                <a href="{{ route('expenses.index', ['create' => 1]) }}" class="btn btn-primary font-weight-bolder btn-sm mr-2 mb-2 mb-sm-0">
+                    Tambah Pengeluaran
+                </a>
+                <a href="{{ route('incomes.index', ['create' => 1]) }}" class="btn btn-success font-weight-bolder btn-sm mb-2 mb-sm-0">
+                    Tambah Pemasukan
+                </a>
+            </div>
         @endslot
     @endcomponent
 @endsection
@@ -32,12 +42,12 @@
         <div class="card card-custom gutter-b">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
                         <div class="card card-custom bg-light-success">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex flex-column">
-                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Total Income</span>
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Total Pemasukan</span>
                                         <span class="text-muted font-weight-bold mt-2">Pemasukan</span>
                                     </div>
                                     <span class="text-success font-weight-bolder font-size-h3">
@@ -47,12 +57,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
                         <div class="card card-custom bg-light-danger">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex flex-column">
-                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Total Expenses</span>
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Total Pengeluaran</span>
                                         <span class="text-muted font-weight-bold mt-2">Pemakaian</span>
                                     </div>
                                     <span class="text-danger font-weight-bolder font-size-h3">
@@ -62,12 +72,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-12 col-md-4">
                         <div class="card card-custom bg-light-primary">
                             <div class="card-body">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex flex-column">
-                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Balance</span>
+                                        <span class="text-dark-75 font-weight-bolder font-size-h5">Saldo</span>
                                         <span class="text-muted font-weight-bold mt-2">Sisa Uang</span>
                                     </div>
                                     <span class="text-primary font-weight-bolder font-size-h3">
@@ -84,14 +94,22 @@
         <!-- Wallet Balances -->
         <div class="row mb-5">
             @foreach ($wallets as $wallet)
-                <div class="col-lg-4 col-xl-3">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                     <div class="card card-custom gutter-b card-stretch">
                         <div class="card-body pt-4">
                             <div class="d-flex justify-content-between align-items-center mb-5">
                                 <span class="text-dark-75 font-weight-bolder mr-2">{{ $wallet->type }}</span>
-                                <a href="{{ route('wallets.edit', $wallet) }}"
-                                    class="btn btn-clean btn-hover-light-primary btn-sm btn-icon">
-                                    <i class="ki ki-bold-edit text-primary"></i>
+                                <a href="{{ route('wallets.index') }}"
+                                    class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" title="Kelola Buku Kas">
+                                    <span class="svg-icon svg-icon-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24"></rect>
+                                                <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "></path>
+                                                <rect fill="#000000" opacity="0.3" x="5" y="20" width="15" height="2" rx="1"></rect>
+                                            </g>
+                                        </svg>
+                                    </span>
                                 </a>
                             </div>
                             <div class="d-flex flex-column">
@@ -108,20 +126,19 @@
             @endforeach
         </div>
 
-        <!-- Budget Realization -->
+        <!-- Realisasi Anggaran -->
         <div class="card card-custom gutter-b">
             <div class="card-header border-0 pb-0">
-                <h3 class="card-title font-weight-bolder text-dark">Budget Realization
-                    ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
+                <h3 class="card-title font-weight-bolder text-dark">Realisasi Anggaran
+                    ({{ $formattedDate }})</h3>
                 <div class="card-toolbar">
-                    <a href="{{ route('budgets.index') }}" class="btn btn-light-primary btn-sm font-weight-bold">Manage
-                        Budgets</a>
+                    <a href="{{ route('budgets.index') }}" class="btn btn-light-primary btn-sm font-weight-bold">Kelola Anggaran</a>
                 </div>
             </div>
             <div class="card-body">
                 <div class="row">
                     @foreach ($budgets as $budget)
-                        <div class="col-lg-6 mb-8">
+                        <div class="col-12 col-md-6 mb-8">
                             <div class="d-flex align-items-center justify-content-between mb-2">
                                 <span class="font-weight-bold mr-2">{{ $budget->category }}</span>
                                 <span class="text-muted">{{ 'Rp ' . number_format($budget->spent_amount, 0, ',', '.') }} /
@@ -135,13 +152,12 @@
                             </div>
                             <span
                                 class="font-weight-bolder {{ $budget->progress > 100 ? 'text-danger' : 'text-dark' }}">{{ $budget->progress }}%
-                                Used</span>
+                                Terpakai</span>
                         </div>
                     @endforeach
                     @if ($budgets->isEmpty())
                         <div class="col-12 text-center text-muted">
-                            No budgets set. <a href="{{ route('budgets.create') }}">Set a budget</a> to track your
-                            spending.
+                            Belum ada anggaran yang diatur. Silakan <a href="{{ route('budgets.index', ['create' => 1]) }}">Atur anggaran</a> untuk memantau pengeluaran Anda.
                         </div>
                     @endif
                 </div>
@@ -150,12 +166,12 @@
 
         <!-- Chart Section -->
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-12 col-lg-8">
                 <div class="card card-custom gutter-b">
                     <div class="card-header">
                         <div class="card-title">
-                            <h3 class="card-label">Financial Overview
-                                ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
+                            <h3 class="card-label">Ringkasan Keuangan
+                                ({{ $formattedDate }})</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -163,11 +179,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-12 col-lg-4">
                 <div class="card card-custom gutter-b">
                     <div class="card-header">
                         <div class="card-title">
-                            <h3 class="card-label">Expense By Category</h3>
+                            <h3 class="card-label">Pengeluaran per Kategori</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -178,22 +194,22 @@
         </div>
 
 
-        <!-- Expense Breakdown Table -->
+        <!-- Rincian Pengeluaran Table -->
         <div class="row">
             <div class="col-lg-12">
                 <div class="card card-custom gutter-b">
                     <div class="card-header border-0">
-                        <h3 class="card-title font-weight-bolder text-dark">Expense Breakdown
-                            ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
+                        <h3 class="card-title font-weight-bolder text-dark">Rincian Pengeluaran
+                            ({{ $formattedDate }})</h3>
                     </div>
                     <div class="card-body pt-0">
                         <div class="table-responsive">
                             <table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_3">
                                 <thead>
                                     <tr class="text-uppercase">
-                                        <th style="min-width: 150px">Category</th>
-                                        <th class="text-right" style="min-width: 130px">Total Amount</th>
-                                        <th class="text-right" style="min-width: 100px">% of Total</th>
+                                        <th style="min-width: 150px">Kategori</th>
+                                        <th class="text-right" style="min-width: 130px">Total Nominal</th>
+                                        <th class="text-right" style="min-width: 100px">% dari Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -234,9 +250,9 @@
                                                         <table class="table table-borderless table-sm mb-0">
                                                             <thead>
                                                                 <tr class="text-muted text-uppercase font-size-xs">
-                                                                    <th>Date</th>
-                                                                    <th>Description</th>
-                                                                    <th class="text-right">Amount</th>
+                                                                    <th>Tanggal</th>
+                                                                    <th>Keterangan</th>
+                                                                    <th class="text-right">Nominal</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -259,8 +275,7 @@
                                     @endforeach
                                     @if ($allCategoryStats->isEmpty())
                                         <tr>
-                                            <td colspan="3" class="text-center text-muted">No expenses recorded for
-                                                this month.</td>
+                                            <td colspan="3" class="text-center text-muted">Tidak ada data pengeluaran untuk bulan ini.</td>
                                         </tr>
                                     @endif
                                 </tbody>
@@ -277,7 +292,7 @@
                 <div class="card card-custom gutter-b">
                     <div class="card-header">
                         <div class="card-title">
-                            <h3 class="card-label">Daily Spending (Last 30 Days)</h3>
+                            <h3 class="card-label">Pengeluaran Harian (30 Hari Terakhir)</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -289,7 +304,7 @@
                 <div class="card card-custom gutter-b">
                     <div class="card-header">
                         <div class="card-title">
-                            <h3 class="card-label">Income Sources</h3>
+                            <h3 class="card-label">Sumber Pemasukan</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -301,17 +316,17 @@
 
         <div class="card card-custom gutter-b">
             <div class="card-header border-0">
-                <h3 class="card-title font-weight-bolder text-dark">Recent Activity</h3>
+                <h3 class="card-title font-weight-bolder text-dark">Aktivitas Terkini</h3>
             </div>
             <div class="card-body pt-0">
                 <div class="table-responsive">
                     <table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_2">
                         <thead>
                             <tr class="text-uppercase">
-                                <th class="pl-0" style="width: 150px">Date</th>
-                                <th style="min-width: 150px">Description</th>
-                                <th style="min-width: 120px">Category/Source</th>
-                                <th class="text-right" style="min-width: 130px">Amount</th>
+                                <th class="pl-0" style="width: 150px">Tanggal</th>
+                                <th style="min-width: 150px">Keterangan</th>
+                                <th style="min-width: 120px">Kategori/Sumber</th>
+                                <th class="text-right" style="min-width: 130px">Nominal</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -324,7 +339,7 @@
                                     <td>
                                         <span
                                             class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $activity->description ?? '-' }}</span>
-                                        <span class="text-muted font-weight-bold">{{ ucfirst($activity->type) }}</span>
+                                        <span class="text-muted font-weight-bold">{{ $activity->type == 'income' ? 'Pemasukan' : 'Pengeluaran' }}</span>
                                     </td>
                                     <td>
                                         @if ($activity->type == 'income')
@@ -347,7 +362,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="4" class="text-center text-muted">No recent activity.</td>
+                                    <td colspan="4" class="text-center text-muted">Tidak ada aktivitas terkini.</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -492,7 +507,7 @@
             var chartDaily = new ApexCharts(document.querySelector("#chart_daily"), optionsDaily);
             chartDaily.render();
 
-            // Income Source Chart
+            // Income Sumber Chart
             var optionsIncome = {
                 series: @json($incomeTotals),
                 labels: @json($incomeLabels),

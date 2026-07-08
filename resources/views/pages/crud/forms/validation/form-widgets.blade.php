@@ -94,7 +94,7 @@
        &lt;/div&gt;
 
        &lt;div class="form-group row"&gt;
-        &lt;label class="col-form-label col-lg-3 col-sm-12 text-right"&gt;Bootstrap Date Picker *&lt;/label&gt;
+        &lt;label class="col-form-label col-lg-3 col-sm-12 text-right"&gt;Bootstrap Tanggal Picker *&lt;/label&gt;
         &lt;div class="col-lg-4 col-md-9 col-sm-12"&gt;
          &lt;div class="input-group"&gt;
           &lt;input type="text" class="form-control" name="date" placeholder="Select date" id="kt_datepicker"/&gt;
@@ -109,7 +109,7 @@
        &lt;/div&gt;
 
        &lt;div class="form-group row"&gt;
-        &lt;label class="col-form-label col-lg-3 col-sm-12 text-right"&gt;Bootstrap Date Time Picker *&lt;/label&gt;
+        &lt;label class="col-form-label col-lg-3 col-sm-12 text-right"&gt;Bootstrap Tanggal Time Picker *&lt;/label&gt;
         &lt;div class="col-lg-4 col-md-9 col-sm-12"&gt;
          &lt;div class="input-group date"&gt;
           &lt;input type="text" class="form-control" name="datetime" placeholder="Select date &amp; time" id="kt_datetimepicker"/&gt;
@@ -135,7 +135,7 @@
        &lt;/div&gt;
 
        &lt;div class="form-group row"&gt;
-        &lt;label class="col-form-label col-lg-3 col-sm-12 text-right"&gt;Bootstrap Date Range Picker *&lt;/label&gt;
+        &lt;label class="col-form-label col-lg-3 col-sm-12 text-right"&gt;Bootstrap Tanggal Range Picker *&lt;/label&gt;
         &lt;div class="col-lg-4 col-md-9 col-sm-12"&gt;
          &lt;div class="input-group" id="kt_daterangepicker"&gt;
           &lt;input type="text" class="form-control" readonly name="daterangepicker" placeholder="Select date range"/&gt;
@@ -291,7 +291,7 @@
          date: {
           validators: {
            notEmpty: {
-            message: 'Date is required'
+            message: 'Tanggal is required'
            }
           }
          },
@@ -479,7 +479,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label col-lg-3 col-sm-12 text-right">Bootstrap Date Picker *</label>
+                        <label class="col-form-label col-lg-3 col-sm-12 text-right">Bootstrap Tanggal Picker *</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class="input-group">
                                 <input type="text" class="form-control" name="date" placeholder="Select date"
@@ -494,7 +494,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label col-lg-3 col-sm-12 text-right">Bootstrap Date Time Picker *</label>
+                        <label class="col-form-label col-lg-3 col-sm-12 text-right">Bootstrap Tanggal Time Picker *</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class='input-group date'>
                                 <input type="text" class="form-control" name="datetime"
@@ -524,7 +524,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label col-lg-3 col-sm-12 text-right">Bootstrap Date Range Picker *</label>
+                        <label class="col-form-label col-lg-3 col-sm-12 text-right">Bootstrap Tanggal Range Picker *</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class="input-group" id='kt_daterangepicker'>
                                 <input type="text" class="form-control" readonly="readonly" name="daterangepicker"
@@ -658,7 +658,7 @@
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
                             <button type="submit" class="btn btn-primary mr-2">Validate</button>
-                            <button type="reset" class="btn btn-light-primary">Cancel</button>
+                            <button type="reset" class="btn btn-light-primary">Batal</button>
                         </div>
                     </div>
                 </div>

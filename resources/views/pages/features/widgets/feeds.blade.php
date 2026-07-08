@@ -1364,7 +1364,7 @@
                                         <select
                                             class="form-control border-0 form-control-solid text-muted font-size-lg font-weight-bolder pl-5 min-h-50px"
                                             id="exampleSelects">
-                                            <option>Select Category</option>
+                                            <option>Pilih Kategori</option>
                                             <option>2</option>
                                             <option>3</option>
                                             <option>4</option>

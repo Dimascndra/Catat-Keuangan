@@ -1,14 +1,14 @@
 @extends('layouts.index')
-@section('title', 'Add Income')
+@section('title', 'Tambah Pemasukan')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Add Income
+            Tambah Pemasukan
         @endslot
         @slot('action')
             <a href="{{ route('incomes.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">
-                Back to List
+                Kembali ke Daftar
             </a>
         @endslot
     @endcomponent
@@ -31,7 +31,7 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">New Income Entry</h3>
+                    <h3 class="card-label">Entri Pemasukan Baru</h3>
                 </div>
             </div>
             <form action="{{ route('incomes.store') }}" method="POST">
@@ -39,7 +39,7 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <div class="col-lg-4">
-                            <label>Date <span class="text-danger">*</span></label>
+                            <label>Tanggal <span class="text-danger">*</span></label>
                             <input type="date"
                                 class="form-control form-control-solid @error('date') is-invalid @enderror" name="date"
                                 value="{{ old('date', date('Y-m-d')) }}" required />
@@ -48,7 +48,7 @@
                             @enderror
                         </div>
                         <div class="col-lg-4">
-                            <label>Wallet <span class="text-danger">*</span></label>
+                            <label>Buku Kas <span class="text-danger">*</span></label>
                             <select class="form-control form-control-solid select2 @error('wallet_id') is-invalid @enderror"
                                 id="kt_select2_wallet" name="wallet_id" required>
                                 @foreach ($wallets as $wallet)
@@ -63,10 +63,10 @@
                             @enderror
                         </div>
                         <div class="col-lg-4">
-                            <label>Category <span class="text-danger">*</span></label>
+                            <label>Kategori <span class="text-danger">*</span></label>
                             <select class="form-control form-control-solid select2 @error('category') is-invalid @enderror"
                                 id="categorySelect" name="category" required>
-                                <option value="">Select Category</option>
+                                <option value="">Pilih Kategori</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->name }}"
                                         {{ old('category') == $category->name ? 'selected' : '' }}>
@@ -80,16 +80,16 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
+                        <label>Keterangan</label>
                         <input type="text"
                             class="form-control form-control-solid @error('description') is-invalid @enderror"
-                            name="description" placeholder="Optional details" value="{{ old('description') }}" />
+                            name="description" placeholder="Keterangan tambahan (opsional)" value="{{ old('description') }}" />
                         @error('description')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label>Amount (Rp) <span class="text-danger">*</span></label>
+                        <label>Nominal (Rp) <span class="text-danger">*</span></label>
                         <input type="number" class="form-control form-control-solid @error('amount') is-invalid @enderror"
                             name="amount" id="amount" placeholder="0" value="{{ old('amount') }}" step="0.01"
                             min="0" required />
@@ -100,10 +100,9 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary mr-2">Save</button>
-                    <button type="submit" name="save_and_new" value="1" class="btn btn-info mr-2">Save & Add
-                        Another</button>
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary mr-2">Simpan</button>
+                    <button type="submit" name="save_and_new" value="1" class="btn btn-info mr-2">Simpan & Tambah Lagi</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
                 </div>
             </form>
         </div>
@@ -114,11 +113,11 @@
     <script>
         $(document).ready(function() {
             $('#kt_select2_wallet').select2({
-                placeholder: "Select Wallet",
+                placeholder: "Pilih Buku Kas",
                 allowClear: false
             });
             $('#categorySelect').select2({
-                placeholder: "Select Category",
+                placeholder: "Pilih Kategori",
                 allowClear: false
             });
         });

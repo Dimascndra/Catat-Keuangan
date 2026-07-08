@@ -18,7 +18,9 @@ class TransferController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        return view('transfers.index', compact('transfers'));
+        $wallets = Wallet::all();
+
+        return view('transfers.index', compact('transfers', 'wallets'));
     }
 
     /**
@@ -43,10 +45,12 @@ class TransferController extends Controller
             'description' => 'nullable|string|max:255',
         ]);
 
-        // Optional: Check sufficient balance
-        $fromWallet = Wallet::find($validated['from_wallet_id']);
+        // Check sufficient balance
+        $fromWallet = Wallet::findOrFail($validated['from_wallet_id']);
         if ($fromWallet->balance < $validated['amount']) {
-            return back()->withErrors(['amount' => 'Insufficient balance in source wallet.'])->withInput();
+            throw \Illuminate\Validation\ValidationException::withMessages([
+                'amount' => 'Saldo tidak mencukupi. Saldo saat ini: Rp ' . number_format($fromWallet->balance, 0, ',', '.'),
+            ]);
         }
 
         Transfer::create($validated);

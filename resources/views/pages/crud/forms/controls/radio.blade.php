@@ -570,7 +570,7 @@
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">Outline Type</h3>
+                        <h3 class="card-title">Outline Tipe</h3>
                         <div class="card-toolbar">
                             <div class="example-tools justify-content-center">
                                 <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
@@ -681,7 +681,7 @@
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">Accent Type</h3>
+                        <h3 class="card-title">Accent Tipe</h3>
                         <div class="card-toolbar">
                             <div class="example-tools justify-content-center">
                                 <span class="example-toggle" data-toggle="tooltip" title="View code"></span>

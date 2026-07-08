@@ -648,7 +648,7 @@
                                     <!--begin::Button-->
                                     <div class="col-sm-5 d-flex align-items-center justify-content-sm-end">
                                         <a href="custom/apps/support-center/feedback.html"
-                                            class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Submit
+                                            class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Kirim
                                             a Request</a>
                                     </div>
                                     <!--end::Button-->

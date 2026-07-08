@@ -8,7 +8,7 @@
         @endslot
         @slot('action')
             <a href="{{ route('budgets.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">
-                Back to List
+                Kembali ke Daftar
             </a>
         @endslot
     @endcomponent
@@ -19,7 +19,7 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Set Monthly Limit</h3>
+                    <h3 class="card-label">Set Batas Bulanan</h3>
                 </div>
             </div>
             <form action="{{ route('budgets.store') }}" method="POST">
@@ -30,7 +30,7 @@
                             <label>Category <span class="text-danger">*</span></label>
                             <select class="form-control form-control-solid select2 @error('category') is-invalid @enderror"
                                 id="kt_select2_category" name="category" required>
-                                <option value="">Select Category</option>
+                                <option value="">Pilih Kategori</option>
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->name }}"
                                         {{ old('category') == $category->name ? 'selected' : '' }}>
@@ -45,7 +45,7 @@
                                 existing budgets are excluded.</span>
                         </div>
                         <div class="col-lg-6">
-                            <label>Monthly Limit (Rp) <span class="text-danger">*</span></label>
+                            <label>Batas Bulanan (Rp) <span class="text-danger">*</span></label>
                             <input type="number"
                                 class="form-control form-control-solid @error('amount') is-invalid @enderror" name="amount"
                                 id="amount" placeholder="0" value="{{ old('amount') }}" step="0.01" min="0"
@@ -58,8 +58,8 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary mr-2">Save</button>
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary mr-2">Simpan</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
                 </div>
             </form>
         </div>
@@ -70,7 +70,7 @@
     <script>
         $(document).ready(function() {
             $('#kt_select2_category').select2({
-                placeholder: "Select Category",
+                placeholder: "Pilih Kategori",
                 allowClear: true
             });
         });

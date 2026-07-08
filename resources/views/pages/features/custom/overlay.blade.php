@@ -632,7 +632,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-light-primary font-weight-bold"
                                             data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary font-weight-bold">Save
+                                        <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                             changes</button>
                                     </div>
                                 </div>
@@ -663,7 +663,7 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-light-primary font-weight-bold"
                                                 data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary font-weight-bold">Save
+                                            <button type="button" class="btn btn-primary font-weight-bold">Simpan
                                                 changes</button>
                                         </div>
                                         <!--end::Modal Content-->

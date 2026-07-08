@@ -1557,7 +1557,7 @@
                                                                         <td>Mark Andre</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td class="text-muted py-2">Date:</td>
+                                                                        <td class="text-muted py-2">Tanggal:</td>
                                                                         <td>11:27 PM</td>
                                                                     </tr>
                                                                     <tr>
@@ -1661,7 +1661,7 @@
                                                                         <td>Mark Andre</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td class="text-muted py-2">Date:</td>
+                                                                        <td class="text-muted py-2">Tanggal:</td>
                                                                         <td>11:27 PM</td>
                                                                     </tr>
                                                                     <tr>
@@ -1810,7 +1810,7 @@
                                                                                     <i
                                                                                         class="flaticon2-medical-records"></i>
                                                                                 </span>
-                                                                                <span class="navi-text">Save &amp;
+                                                                                <span class="navi-text">Simpan &amp;
                                                                                     archive</span>
                                                                             </a>
                                                                         </li>
@@ -1819,7 +1819,7 @@
                                                                                 <span class="navi-icon">
                                                                                     <i class="flaticon2-hourglass-1"></i>
                                                                                 </span>
-                                                                                <span class="navi-text">Cancel</span>
+                                                                                <span class="navi-text">Batal</span>
                                                                             </a>
                                                                         </li>
                                                                     </ul>

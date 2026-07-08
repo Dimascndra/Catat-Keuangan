@@ -239,7 +239,7 @@
                                 <a href="#" class="text-muted text-hover-primary">$76,810</a>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                <span class="text-dark-75 font-weight-bolder mr-2">Jatuh Tempo:</span>
                                 <span class="text-muted font-weight-bold">21.05.2016</span>
                             </div>
                         </div>
@@ -354,7 +354,7 @@
                                 <a href="#" class="text-muted text-hover-primary">$76,810</a>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                <span class="text-dark-75 font-weight-bolder mr-2">Jatuh Tempo:</span>
                                 <span class="text-muted font-weight-bold">21.05.2016</span>
                             </div>
                         </div>
@@ -479,7 +479,7 @@
                                 <a href="#" class="text-muted text-hover-primary">$76,810</a>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                <span class="text-dark-75 font-weight-bolder mr-2">Jatuh Tempo:</span>
                                 <span class="text-muted font-weight-bold">21.05.2016</span>
                             </div>
                         </div>
@@ -604,7 +604,7 @@
                                 <a href="#" class="text-muted text-hover-primary">$76,810</a>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                <span class="text-dark-75 font-weight-bolder mr-2">Jatuh Tempo:</span>
                                 <span class="text-muted font-weight-bold">21.05.2016</span>
                             </div>
                         </div>
@@ -719,7 +719,7 @@
                                 <a href="#" class="text-muted text-hover-primary">$76,810</a>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                <span class="text-dark-75 font-weight-bolder mr-2">Jatuh Tempo:</span>
                                 <span class="text-muted font-weight-bold">21.05.2016</span>
                             </div>
                         </div>
@@ -844,7 +844,7 @@
                                 <a href="#" class="text-muted text-hover-primary">$76,810</a>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                <span class="text-dark-75 font-weight-bolder mr-2">Jatuh Tempo:</span>
                                 <span class="text-muted font-weight-bold">21.05.2016</span>
                             </div>
                         </div>

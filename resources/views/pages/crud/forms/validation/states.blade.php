@@ -82,8 +82,8 @@
                             <!--end::Code example-->
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-success font-weight-bold mr-2">Submit</button>
-                            <button type="submit" class="btn btn-light-success font-weight-bold">Cancel</button>
+                            <button type="submit" class="btn btn-success font-weight-bold mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-light-success font-weight-bold">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -163,8 +163,8 @@
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col-lg-9 ml-lg-auto">
-                                    <button type="submit" class="btn btn-primary font-weight-bold mr-2">Submit</button>
-                                    <button type="submit" class="btn btn-light-primary font-weight-bold">Cancel</button>
+                                    <button type="submit" class="btn btn-primary font-weight-bold mr-2">Kirim</button>
+                                    <button type="submit" class="btn btn-light-primary font-weight-bold">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -251,8 +251,8 @@
                             <!--end::Code example-->
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-success font-weight-bold mr-2">Submit</button>
-                            <button type="submit" class="btn btn-light-success font-weight-bold">Cancel</button>
+                            <button type="submit" class="btn btn-success font-weight-bold mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-light-success font-weight-bold">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -446,8 +446,8 @@
                             <!--end::Code example-->
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-success font-weight-bold mr-2">Submit</button>
-                            <button type="submit" class="btn btn-light-success font-weight-bold">Cancel</button>
+                            <button type="submit" class="btn btn-success font-weight-bold mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-light-success font-weight-bold">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -531,8 +531,8 @@
                             <!--end::Code example-->
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary font-weight-bold mr-2">Submit</button>
-                            <button type="submit" class="btn btn-light-primary font-weight-bold">Cancel</button>
+                            <button type="submit" class="btn btn-primary font-weight-bold mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-light-primary font-weight-bold">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->

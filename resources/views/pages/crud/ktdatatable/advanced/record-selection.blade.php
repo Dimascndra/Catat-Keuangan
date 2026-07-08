@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <!--begin: Search Form-->
+                <!--begin: Cari Form-->
                 <!--begin::Search Form-->
                 <div class="mb-7">
                     <div class="row align-items-center">
@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="col-md-4 my-2 my-md-0">
                                     <div class="d-flex align-items-center">
-                                        <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                        <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                         <select class="form-control" id="kt_datatable_search_type">
                                             <option value="">All</option>
                                             <option value="1">Online</option>
@@ -192,12 +192,12 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                         </div>
                     </div>
                 </div>
                 <!--end::Search Form-->
-                <!--end: Search Form-->
+                <!--end: Cari Form-->
                 <!--begin: Selected Rows Group Action Form-->
                 <div class="mt-10 mb-5 collapse" id="kt_datatable_group_action_form">
                     <div class="d-flex align-items-center">
@@ -227,7 +227,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <button class="btn btn-sm btn-danger mr-2" type="button" id="kt_datatable_delete_all">Delete
+                        <button class="btn btn-sm btn-danger mr-2" type="button" id="kt_datatable_delete_all">Hapus
                             All</button>
                         <button class="btn btn-sm btn-success" type="button" data-toggle="modal"
                             data-target="#kt_datatable_fetch_modal">Fetch Selected Records</button>
@@ -365,7 +365,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <!--begin: Search Form-->
+                <!--begin: Cari Form-->
                 <!--begin::Search Form-->
                 <div class="mb-7">
                     <div class="row align-items-center">
@@ -396,7 +396,7 @@
                                 </div>
                                 <div class="col-md-4 my-2 my-md-0">
                                     <div class="d-flex align-items-center">
-                                        <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                        <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                         <select class="form-control" id="kt_datatable_search_type_2">
                                             <option value="">All</option>
                                             <option value="1">Online</option>
@@ -408,12 +408,12 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                         </div>
                     </div>
                 </div>
                 <!--end::Search Form-->
-                <!--end: Search Form-->
+                <!--end: Cari Form-->
                 <!--begin: Selected Rows Group Action Form-->
                 <div class="mt-10 mb-5 collapse" id="kt_datatable_group_action_form_2">
                     <div class="d-flex align-items-center">
@@ -443,7 +443,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <button class="btn btn-sm btn-danger mr-2" type="button" id="kt_datatable_delete_all_2">Delete
+                        <button class="btn btn-sm btn-danger mr-2" type="button" id="kt_datatable_delete_all_2">Hapus
                             All</button>
                         <button class="btn btn-sm btn-success" type="button" data-toggle="modal"
                             data-target="#kt_datatable_fetch_modal_2">Fetch Selected Records</button>

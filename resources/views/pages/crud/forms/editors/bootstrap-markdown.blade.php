@@ -168,8 +168,8 @@
                     <div class="row">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-9">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
+                            <button type="submit" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-secondary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Kirim</button>
                         </div>
                     </form>
                 </div>
@@ -332,8 +332,8 @@
                     <div class="row">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-9">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
+                            <button type="submit" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

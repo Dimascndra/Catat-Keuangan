@@ -164,7 +164,7 @@
                             <th>Company Agent</th>
                             <th>Company Name</th>
                             <th>Status</th>
-                            <th>Type</th>
+                            <th>Tipe</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -746,7 +746,7 @@
                             <th>Company Agent</th>
                             <th>Company Name</th>
                             <th>Status</th>
-                            <th>Type</th>
+                            <th>Tipe</th>
                         </tr>
                     </thead>
                 </table>

@@ -85,7 +85,7 @@
                             <button id="kt_login_signup_submit"
                                 class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2">Sign Up</button>
                             <button id="kt_login_signup_cancel"
-                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-2">Cancel</button>
+                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-2">Batal</button>
                         </div>
                     </form>
                 </div>
@@ -105,7 +105,7 @@
                             <button id="kt_login_forgot_submit"
                                 class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2">Request</button>
                             <button id="kt_login_forgot_cancel"
-                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-2">Cancel</button>
+                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-2">Batal</button>
                         </div>
                     </form>
                 </div>

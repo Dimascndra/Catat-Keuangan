@@ -2,13 +2,14 @@
     <table class="table table-head-custom table-vertical-center table-head-bg table-borderless">
         <thead>
             <tr class="text-left">
-                <th style="min-width: 200px" class="pl-7"><span class="text-dark-75">Name/Description</span></th>
-                <th style="min-width: 120px">Amount</th>
-                <th style="min-width: 120px">Paid</th>
-                <th style="min-width: 120px">Remaining</th>
-                <th style="min-width: 120px">Due Date</th>
+                <th style="min-width: 200px" class="pl-7"><span class="text-dark-75">Nama/Keterangan</span></th>
+                <th style="min-width: 120px">Nominal</th>
+                <th style="min-width: 120px">Lunas</th>
+                <th style="min-width: 120px">Sisa</th>
+                <th style="min-width: 120px">Jatuh Tempo</th>
                 <th style="min-width: 100px">Status</th>
-                <th style="min-width: 120px">Actions</th>
+                <th style="min-width: 120px">Terakhir Diperbarui</th>
+                <th style="min-width: 120px">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -58,11 +59,12 @@
                     </td>
                     <td>
                         @if ($item->status == 'paid')
-                            <span class="label label-lg label-light-success label-inline">Paid</span>
+                            <span class="label label-lg label-light-success label-inline">Lunas</span>
                         @else
-                            <span class="label label-lg label-light-warning label-inline">Unpaid</span>
+                            <span class="label label-lg label-light-warning label-inline">Belum Lunas</span>
                         @endif
                     </td>
+                    <td>{{ $item->updated_at ? $item->updated_at->format('d M Y H:i') : '-' }}</td>
                     <td class="pr-0">
                         @if ($item->status != 'paid')
                             <button type="button" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3"
@@ -86,10 +88,19 @@
                                 </span>
                             </button>
                         @endif
-                        <a href="{{ route('debts.edit', $item) }}"
-                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3" title="Edit">
+                        <button type="button" 
+                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 btn-edit-debt" 
+                            data-toggle="modal" 
+                            data-target="#editDebtModal"
+                            data-id="{{ $item->id }}"
+                            data-name="{{ $item->name }}"
+                            data-due-date="{{ $item->due_date ? $item->due_date->format('Y-m-d') : '' }}"
+                            data-description="{{ $item->description }}"
+                            data-amount="{{ (float)$item->amount }}"
+                            data-type="{{ $item->type }}"
+                            title="Ubah">
                             <span class="svg-icon svg-icon-md svg-icon-primary">
-                                <!-- Edit Icon -->
+                                <!-- Ubah Icon -->
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -103,15 +114,15 @@
                                     </g>
                                 </svg>
                             </span>
-                        </a>
+                        </button>
                         <form action="{{ route('debts.destroy', $item) }}" method="POST" class="d-inline"
-                            onsubmit="return confirm('Delete this record? This action cannot be undone.');">
+                            onsubmit="return confirm('Hapus this record? This action cannot be undone.');">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-icon btn-light btn-hover-danger btn-sm"
-                                title="Delete">
+                                title="Hapus">
                                 <span class="svg-icon svg-icon-md svg-icon-danger">
-                                    <!-- Delete Icon -->
+                                    <!-- Hapus Icon -->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -132,7 +143,7 @@
             @empty
                 <tr>
                     <td colspan="7" class="text-center text-muted py-5">
-                        No records found.
+                        Tidak ada data utang/piutang.
                     </td>
                 </tr>
             @endforelse

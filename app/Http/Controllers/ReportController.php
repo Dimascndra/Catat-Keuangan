@@ -72,11 +72,14 @@ class ReportController extends Controller
         $year = $request->input('year', date('Y'));
         $walletId = $request->input('wallet_id');
 
+        $driver = DB::connection()->getDriverName();
+        $monthSelect = $driver === 'sqlite' ? "strftime('%m', date) as month" : "DATE_FORMAT(date, '%m') as month";
+
         $monthlyIncomes = \App\Models\Income::whereYear('date', $year)
             ->when($walletId, function ($q) use ($walletId) {
                 return $q->where('wallet_id', $walletId);
             })
-            ->selectRaw("DATE_FORMAT(date, '%m') as month, SUM(amount) as total")
+            ->selectRaw($monthSelect . ", SUM(amount) as total")
             ->groupBy('month')
             ->get()->pluck('total', 'month');
 
@@ -84,7 +87,7 @@ class ReportController extends Controller
             ->when($walletId, function ($q) use ($walletId) {
                 return $q->where('wallet_id', $walletId);
             })
-            ->selectRaw("DATE_FORMAT(date, '%m') as month, SUM(amount * quantity) as total")
+            ->selectRaw($monthSelect . ", SUM(amount * quantity) as total")
             ->groupBy('month')
             ->get()->pluck('total', 'month');
 
@@ -123,12 +126,17 @@ class ReportController extends Controller
         $startDate = \Carbon\Carbon::createFromDate($year, $month, 1)->startOfMonth();
         $endDate = \Carbon\Carbon::createFromDate($year, $month, 1)->endOfMonth();
 
+        $driver = DB::connection()->getDriverName();
+        $weekSelect = $driver === 'sqlite' 
+            ? "CAST(strftime('%W', date) AS INTEGER) as week, MIN(date) as week_start, MAX(date) as week_end" 
+            : "WEEK(date, 1) as week, MIN(date) as week_start, MAX(date) as week_end";
+
         // Retrieve income and expense data
         $weeklyIncomes = \App\Models\Income::whereBetween('date', [$startDate, $endDate])
             ->when($walletId, function ($q) use ($walletId) {
                 return $q->where('wallet_id', $walletId);
             })
-            ->selectRaw("WEEK(date, 1) as week, MIN(date) as week_start, MAX(date) as week_end, SUM(amount) as total")
+            ->selectRaw($weekSelect . ", SUM(amount) as total")
             ->groupBy('week')
             ->get()
             ->keyBy('week');
@@ -137,7 +145,7 @@ class ReportController extends Controller
             ->when($walletId, function ($q) use ($walletId) {
                 return $q->where('wallet_id', $walletId);
             })
-            ->selectRaw("WEEK(date, 1) as week, MIN(date) as week_start, MAX(date) as week_end, SUM(amount * quantity) as total")
+            ->selectRaw($weekSelect . ", SUM(amount * quantity) as total")
             ->groupBy('week')
             ->get()
             ->keyBy('week');
@@ -187,19 +195,23 @@ class ReportController extends Controller
         $startYear = 2026; // New logic: show only from 2026 onwards
         $endYear = max(date('Y'), 2026); // Ensure we show at least 2026, or current year if greater
 
-        $yearlyIncomes = \App\Models\Income::whereBetween(DB::raw('YEAR(date)'), [$startYear, $endYear])
+        $driver = DB::connection()->getDriverName();
+        $yearExpression = $driver === 'sqlite' ? "CAST(strftime('%Y', date) AS INTEGER)" : "YEAR(date)";
+        $yearSelect = $driver === 'sqlite' ? "CAST(strftime('%Y', date) AS INTEGER) as year" : "YEAR(date) as year";
+
+        $yearlyIncomes = \App\Models\Income::whereBetween(DB::raw($yearExpression), [$startYear, $endYear])
             ->when($walletId, function ($q) use ($walletId) {
                 return $q->where('wallet_id', $walletId);
             })
-            ->selectRaw("YEAR(date) as year, SUM(amount) as total")
+            ->selectRaw($yearSelect . ", SUM(amount) as total")
             ->groupBy('year')
             ->get()->pluck('total', 'year');
 
-        $yearlyExpenses = \App\Models\Expense::whereBetween(DB::raw('YEAR(date)'), [$startYear, $endYear])
+        $yearlyExpenses = \App\Models\Expense::whereBetween(DB::raw($yearExpression), [$startYear, $endYear])
             ->when($walletId, function ($q) use ($walletId) {
                 return $q->where('wallet_id', $walletId);
             })
-            ->selectRaw("YEAR(date) as year, SUM(amount * quantity) as total")
+            ->selectRaw($yearSelect . ", SUM(amount * quantity) as total")
             ->groupBy('year')
             ->get()->pluck('total', 'year');
 

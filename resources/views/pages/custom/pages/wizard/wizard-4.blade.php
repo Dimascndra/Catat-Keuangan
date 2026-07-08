@@ -66,7 +66,7 @@
                                     <div class="wizard-number">4</div>
                                     <div class="wizard-label">
                                         <div class="wizard-title">Completed</div>
-                                        <div class="wizard-desc">Review and Submit</div>
+                                        <div class="wizard-desc">Review and Kirim</div>
                                     </div>
                                 </div>
                             </div>
@@ -539,7 +539,7 @@
                                         <!--begin: Wizard Step 4-->
                                         <div class="pb-5" data-wizard-type="step-content">
                                             <!--begin::Section-->
-                                            <h4 class="mb-10 font-weight-bold text-dark">Review your Details and Submit
+                                            <h4 class="mb-10 font-weight-bold text-dark">Review your Details and Kirim
                                             </h4>
                                             <h6 class="font-weight-bolder mb-3">Current Address:</h6>
                                             <div class="text-dark-50 line-height-lg">
@@ -560,7 +560,7 @@
                                             <div class="separator separator-dashed my-5"></div>
                                             <!--end::Section-->
                                             <!--begin::Section-->
-                                            <h6 class="font-weight-bolder mb-3">Delivery Service Type:</h6>
+                                            <h6 class="font-weight-bolder mb-3">Delivery Service Tipe:</h6>
                                             <div class="text-dark-50 line-height-lg">
                                                 <div>Overnight Delivery with Regular Packaging</div>
                                                 <div>Preferred Morning (8:00AM - 11:00AM) Delivery</div>
@@ -587,7 +587,7 @@
                                             <div>
                                                 <button type="button"
                                                     class="btn btn-success font-weight-bolder text-uppercase px-9 py-4"
-                                                    data-wizard-type="action-submit">Submit</button>
+                                                    data-wizard-type="action-submit">Kirim</button>
                                                 <button type="button"
                                                     class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4"
                                                     data-wizard-type="action-next">Next</button>

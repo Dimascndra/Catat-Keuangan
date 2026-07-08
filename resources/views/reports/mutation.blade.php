@@ -16,17 +16,17 @@
                 <form action="{{ route('reports.mutation') }}" method="GET">
                     <div class="form-group row mb-0">
                         <div class="col-lg-3">
-                            <label>Start Date</label>
+                            <label>Start Tanggal</label>
                             <input type="date" class="form-control" name="start_date" value="{{ $startDate }}">
                         </div>
                         <div class="col-lg-3">
-                            <label>End Date</label>
+                            <label>End Tanggal</label>
                             <input type="date" class="form-control" name="end_date" value="{{ $endDate }}">
                         </div>
                         <div class="col-lg-3">
                             <label>Wallet</label>
                             <select name="wallet_id" class="form-control">
-                                <option value="">All Wallets</option>
+                                <option value="">Semua Buku Kas</option>
                                 @foreach ($wallets as $wallet)
                                     <option value="{{ $wallet->id }}" {{ $walletId == $wallet->id ? 'selected' : '' }}>
                                         {{ $wallet->name }}
@@ -49,7 +49,7 @@
                 </div>
                 <div class="card-toolbar">
                     <span class="label label-xl label-light-primary label-inline font-weight-bold">
-                        Opening Balance: Rp {{ number_format($openingBalance, 0, ',', '.') }}
+                        Opening Saldo: Rp {{ number_format($openingBalance, 0, ',', '.') }}
                     </span>
                 </div>
             </div>
@@ -58,11 +58,11 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Date</th>
-                                <th>Type</th>
-                                <th>Category / Description</th>
-                                <th class="text-right">Amount (IDR)</th>
-                                <th class="text-right">Balance (IDR)</th>
+                                <th>Tanggal</th>
+                                <th>Tipe</th>
+                                <th>Category / Keterangan</th>
+                                <th class="text-right">Nominal (IDR)</th>
+                                <th class="text-right">Saldo (IDR)</th>
                             </tr>
                         </thead>
                         <tbody>

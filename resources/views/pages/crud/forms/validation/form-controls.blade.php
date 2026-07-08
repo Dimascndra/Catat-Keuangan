@@ -383,9 +383,9 @@
            trigger: new FormValidation.plugins.Trigger(),
            // Bootstrap Framework Integration
            bootstrap: new FormValidation.plugins.Bootstrap(),
-           // Validate fields when clicking the Submit button
+           // Validate fields when clicking the Kirim button
            submitButton: new FormValidation.plugins.SubmitButton(),
-                    // Submit the form when all fields are valid
+                    // Kirim the form when all fields are valid
            defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
           }
          }
@@ -570,7 +570,7 @@
                                 <div class="col-lg-9 ml-lg-auto">
                                     <button type="submit" class="btn btn-primary font-weight-bold mr-2"
                                         name="submitButton">Validate</button>
-                                    <button type="reset" class="btn btn-light-primary font-weight-bold">Cancel</button>
+                                    <button type="reset" class="btn btn-light-primary font-weight-bold">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -721,7 +721,7 @@
 
          &lt;div class="mb-3"&gt;
           &lt;h3 class="font-size-lg text-dark-75 font-weight-bold mb-10"&gt;
-           Delivery Type:
+           Delivery Tipe:
           &lt;/h3&gt;
           &lt;div class="mb-2"&gt;
            &lt;div class="form-group"&gt;
@@ -956,9 +956,9 @@
 
           plugins: {
            trigger: new FormValidation.plugins.Trigger(),
-           // Validate fields when clicking the Submit button
+           // Validate fields when clicking the Kirim button
            submitButton: new FormValidation.plugins.SubmitButton(),
-           // Submit the form when all fields are valid
+           // Kirim the form when all fields are valid
            defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
            // Bootstrap Framework Integration
            bootstrap: new FormValidation.plugins.Bootstrap({
@@ -1074,7 +1074,7 @@
                             </div>
                             <div class="separator separator-dashed my-10"></div>
                             <div class="mb-3">
-                                <h3 class="font-size-lg text-dark-75 font-weight-bold mb-10">Delivery Type:</h3>
+                                <h3 class="font-size-lg text-dark-75 font-weight-bold mb-10">Delivery Tipe:</h3>
                                 <div class="mb-2">
                                     <div class="form-group">
                                         <div class="row">
@@ -1174,7 +1174,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <button type="submit" class="btn btn-primary font-weight-bold mr-2">Validate</button>
-                                    <button type="reset" class="btn btn-light-primary font-weight-bold">Cancel</button>
+                                    <button type="reset" class="btn btn-light-primary font-weight-bold">Batal</button>
                                 </div>
                             </div>
                         </div>

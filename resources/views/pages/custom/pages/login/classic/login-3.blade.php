@@ -95,7 +95,7 @@
                                 class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3 m-2">Sign
                                 Up</button>
                             <button id="kt_login_signup_cancel"
-                                class="btn btn-pill btn-outline-white font-weight-bold opacity-70 px-15 py-3 m-2">Cancel</button>
+                                class="btn btn-pill btn-outline-white font-weight-bold opacity-70 px-15 py-3 m-2">Batal</button>
                         </div>
                     </form>
                 </div>
@@ -116,7 +116,7 @@
                             <button id="kt_login_forgot_submit"
                                 class="btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15 py-3 m-2">Request</button>
                             <button id="kt_login_forgot_cancel"
-                                class="btn btn-pill btn-outline-white font-weight-bold opacity-70 px-15 py-3 m-2">Cancel</button>
+                                class="btn btn-pill btn-outline-white font-weight-bold opacity-70 px-15 py-3 m-2">Batal</button>
                         </div>
                     </form>
                 </div>

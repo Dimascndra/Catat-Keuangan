@@ -1,14 +1,14 @@
 @extends('layouts.index')
-@section('title', 'Edit Income')
+@section('title', 'Ubah Pemasukan')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Edit Income
+            Ubah Pemasukan
         @endslot
         @slot('action')
             <a href="{{ route('incomes.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">
-                Back to List
+                Kembali ke Daftar
             </a>
         @endslot
     @endcomponent
@@ -19,7 +19,7 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Edit Income Entry</h3>
+                    <h3 class="card-label">Ubah Pemasukan Entry</h3>
                 </div>
             </div>
             <form action="{{ route('incomes.update', $income) }}" method="POST">
@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <div class="form-group row">
                         <div class="col-lg-4">
-                            <label>Date <span class="text-danger">*</span></label>
+                            <label>Tanggal <span class="text-danger">*</span></label>
                             <input type="date"
                                 class="form-control form-control-solid @error('date') is-invalid @enderror" name="date"
                                 value="{{ old('date', $income->date->format('Y-m-d')) }}" required />
@@ -52,7 +52,7 @@
                             @enderror
                         </div>
                         <div class="col-lg-4">
-                            <label>Source <span class="text-danger">*</span></label>
+                            <label>Sumber <span class="text-danger">*</span></label>
                             <input list="income-sources"
                                 class="form-control form-control-solid @error('source') is-invalid @enderror" name="source"
                                 value="{{ old('source', $income->source) }}" placeholder="Select or type source" required />
@@ -70,7 +70,7 @@
                         <label>Category <span class="text-danger">*</span></label>
                         <select class="form-control form-control-solid select2 @error('category') is-invalid @enderror"
                             id="categorySelect" name="category" required>
-                            <option value="">Select Category</option>
+                            <option value="">Pilih Kategori</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->name }}"
                                     {{ old('category', $income->category) == $category->name ? 'selected' : '' }}>
@@ -83,17 +83,17 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
+                        <label>Keterangan</label>
                         <input type="text"
                             class="form-control form-control-solid @error('description') is-invalid @enderror"
-                            name="description" placeholder="Optional details"
+                            name="description" placeholder="Keterangan tambahan (opsional)"
                             value="{{ old('description', $income->description) }}" />
                         @error('description')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label>Amount (Rp) <span class="text-danger">*</span></label>
+                        <label>Nominal (Rp) <span class="text-danger">*</span></label>
                         <input type="number" class="form-control form-control-solid @error('amount') is-invalid @enderror"
                             name="amount" id="amount" placeholder="0" value="{{ old('amount', $income->amount) }}"
                             step="0.01" min="0" required />
@@ -105,7 +105,7 @@
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary mr-2">Update</button>
-                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
                 </div>
             </form>
         </div>
@@ -116,11 +116,11 @@
     <script>
         $(document).ready(function() {
             $('#kt_select2_wallet').select2({
-                placeholder: "Select Wallet",
+                placeholder: "Pilih Buku Kas",
                 allowClear: false
             });
             $('#categorySelect').select2({
-                placeholder: "Select Category",
+                placeholder: "Pilih Kategori",
                 allowClear: false
             });
         });

@@ -256,7 +256,7 @@
                     </div>
                     <!--end: Code-->
                     <div class="form-group row">
-                        <label class="col-form-label text-right col-lg-3 col-sm-12">Date</label>
+                        <label class="col-form-label text-right col-lg-3 col-sm-12">Tanggal</label>
                         <div class="col-lg-6 col-md-9 col-sm-12">
                             <input class="form-control" id="kt_inputmask_1" type="text" />
                             <span class="form-text text-muted">Custom date format:
@@ -267,7 +267,7 @@
                         <label class="col-form-label text-right col-lg-3 col-sm-12">Custom Placeholder</label>
                         <div class="col-lg-6 col-md-9 col-sm-12">
                             <input class="form-control" id="kt_inputmask_2" type="text" />
-                            <span class="form-text text-muted">Date mask with custom placeholder:
+                            <span class="form-text text-muted">Tanggal mask with custom placeholder:
                                 <code>mm/dd/yyyy</code></span>
                         </div>
                     </div>
@@ -328,8 +328,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

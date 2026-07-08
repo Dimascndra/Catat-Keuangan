@@ -290,7 +290,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-23.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -316,7 +316,7 @@
                                                 style="background-image: url('assets/media/stock-600x400/img-25.jpg')">
                                             </div>
                                             <a href="#"
-                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                                                class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Ubah</a>
                                         </div>
                                     </div>
                                     <!--end::Symbol-->
@@ -365,7 +365,7 @@
                                         <div class="border-bottom w-100"></div>
                                         <div class="d-flex justify-content-between pt-6">
                                             <div class="d-flex flex-column flex-root">
-                                                <span class="font-weight-bolder mb-2">ORDER DATE</span>
+                                                <span class="font-weight-bolder mb-2">ORDER TANGGAL</span>
                                                 <span class="opacity-70">Jan 07, 2020</span>
                                             </div>
                                             <div class="d-flex flex-column flex-root">
@@ -396,7 +396,7 @@
                                                             Unit Price</th>
                                                         <th
                                                             class="text-right pr-0 font-weight-bold text-muted text-uppercase">
-                                                            Amount</th>
+                                                            Nominal</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -467,7 +467,7 @@
                                                         </th>
                                                         <th class="font-weight-bold text-muted text-uppercase">PAYMENT
                                                             STATUS</th>
-                                                        <th class="font-weight-bold text-muted text-uppercase">PAYMENT DATE
+                                                        <th class="font-weight-bold text-muted text-uppercase">PAYMENT TANGGAL
                                                         </th>
                                                         <th class="font-weight-bold text-muted text-uppercase text-right">
                                                             TOTAL PAID</th>

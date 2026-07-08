@@ -42,10 +42,10 @@
                                     <table class="table">
                                         <thead>
                                             <tr class="font-weight-boldest title-color">
-                                                <td class="align-middle font-size-h4 pl-0 border-0 pb-10">DESCRIPTION</td>
+                                                <td class="align-middle font-size-h4 pl-0 border-0 pb-10">KETERANGAN</td>
                                                 <td class="align-middle font-size-h4 text-right border-0 pb-12">HOURS</td>
                                                 <td class="align-middle font-size-h4 text-right border-0 pb-12">RATE</td>
-                                                <td class="align-middle font-size-h4 text-right pr-0 border-0 pb-12">AMOUNT
+                                                <td class="align-middle font-size-h4 text-right pr-0 border-0 pb-12">NOMINAL
                                                 </td>
                                             </tr>
                                         </thead>

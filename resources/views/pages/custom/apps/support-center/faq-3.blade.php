@@ -781,7 +781,7 @@
                         <!--end::Content-->
                         <!--begin::Button-->
                         <a href="custom/apps/support-center/feedback.html"
-                            class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Submit a
+                            class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Kirim a
                             Request</a>
                         <!--end::Button-->
                     </div>

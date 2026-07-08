@@ -123,10 +123,10 @@
                             <th>Ship Address</th>
                             <th>Company Agent</th>
                             <th>Company Name</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -790,10 +790,10 @@
                             <th>Ship Address</th>
                             <th>Company Agent</th>
                             <th>Company Name</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </tfoot>
                 </table>
@@ -821,10 +821,10 @@
                             <th>Ship Address</th>
                             <th>Company Agent</th>
                             <th>Company Name</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1488,10 +1488,10 @@
                             <th>Ship Address</th>
                             <th>Company Agent</th>
                             <th>Company Name</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </tfoot>
                 </table>

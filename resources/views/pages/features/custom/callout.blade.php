@@ -55,7 +55,7 @@
                             </div>
                             <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
                                 <a href="/custom/apps/support-center/feedback" target="_blank"
-                                    class="btn font-weight-bolder text-uppercase btn-primary py-4 px-6">Submit a Request</a>
+                                    class="btn font-weight-bolder text-uppercase btn-primary py-4 px-6">Kirim a Request</a>
                             </div>
                         </div>
                     </div>

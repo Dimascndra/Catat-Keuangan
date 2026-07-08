@@ -369,8 +369,8 @@
                             <span class="text-muted font-weight-bold font-size-sm mt-1">Change your account settings</span>
                         </div>
                         <div class="card-toolbar">
-                            <button type="reset" class="btn btn-success mr-2">Save Changes</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-success mr-2">Simpan Changes</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                     <!--end::Header-->
@@ -472,8 +472,8 @@
                                 <label class="col-xl-3 col-lg-3 col-form-label">Time Zone</label>
                                 <div class="col-lg-9 col-xl-6">
                                     <select class="form-control form-control-lg form-control-solid">
-                                        <option data-offset="-39600" value="International Date Line West">(GMT-11:00)
-                                            International Date Line West</option>
+                                        <option data-offset="-39600" value="International Tanggal Line West">(GMT-11:00)
+                                            International Tanggal Line West</option>
                                         <option data-offset="-39600" value="Midway Island">(GMT-11:00) Midway Island
                                         </option>
                                         <option data-offset="-39600" value="Samoa">(GMT-11:00) Samoa</option>

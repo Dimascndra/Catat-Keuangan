@@ -35,7 +35,7 @@
         @else
             <div class="d-flex align-items-center">
                 <!--begin::Actions-->
-                <a href="#" class="btn btn-light-primary font-weight-bolder btn-sm">Actions</a>
+                <a href="#" class="btn btn-light-primary font-weight-bolder btn-sm">Aksi</a>
                 <!--end::Actions-->
                 <!--begin::Dropdown-->
                 <div class="dropdown dropdown-inline" data-toggle="tooltip" title="" data-placement="left"

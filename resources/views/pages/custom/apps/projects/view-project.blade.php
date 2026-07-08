@@ -226,13 +226,13 @@
                             <div class="d-flex flex-wrap align-items-center py-2">
                                 <div class="d-flex align-items-center mr-10">
                                     <div class="mr-6">
-                                        <div class="font-weight-bold mb-2">Start Date</div>
+                                        <div class="font-weight-bold mb-2">Start Tanggal</div>
                                         <span
                                             class="btn btn-sm btn-text btn-light-primary text-uppercase font-weight-bold">07
                                             May, 2020</span>
                                     </div>
                                     <div class="">
-                                        <div class="font-weight-bold mb-2">Due Date</div>
+                                        <div class="font-weight-bold mb-2">Jatuh Tempo</div>
                                         <span
                                             class="btn btn-sm btn-text btn-light-danger text-uppercase font-weight-bold">10
                                             June, 2021</span>
@@ -416,11 +416,11 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,790</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Bradly
@@ -572,12 +572,12 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$23,800</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Zoey
@@ -650,12 +650,12 @@
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span
                                                 class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
-                                            <span class="text-muted font-weight-bold">Paid</span>
+                                            <span class="text-muted font-weight-bold">Lunas</span>
                                         </td>
                                         <td>
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">Brandon

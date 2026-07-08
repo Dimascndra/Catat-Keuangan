@@ -18,7 +18,7 @@
                         <div class="col-lg-3">
                             <label>Wallet</label>
                             <select name="wallet_id" class="form-control">
-                                <option value="">All Wallets</option>
+                                <option value="">Semua Buku Kas</option>
                                 @foreach ($wallets as $wallet)
                                     <option value="{{ $wallet->id }}" {{ $walletId == $wallet->id ? 'selected' : '' }}>
                                         {{ $wallet->name }}
@@ -117,7 +117,7 @@
             },
             yaxis: {
                 title: {
-                    text: 'Amount (Rp)'
+                    text: 'Nominal (Rp)'
                 }
             },
             fill: {

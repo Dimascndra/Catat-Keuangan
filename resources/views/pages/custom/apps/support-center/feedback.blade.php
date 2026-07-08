@@ -9,7 +9,7 @@
                 <!--begin::Section-->
                 <div class="text-center pt-15">
                     <h1 class="h2 font-weight-bolder text-dark mb-6">Looking for Help?</h1>
-                    <div class="h4 text-dark-50 font-weight-normal">Submit your help request to one of our Metronic Experts!
+                    <div class="h4 text-dark-50 font-weight-normal">Kirim your help request to one of our Metronic Experts!
                     </div>
                     <div class="row">
                         <div class="offset-md-3 col-md-6">
@@ -537,8 +537,8 @@
                             <div class="row">
                                 <div class="col-xl-3"></div>
                                 <div class="col-xl-6">
-                                    <button type="reset" class="btn btn-primary font-weight-bold mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-clean font-weight-bold">Cancel</button>
+                                    <button type="reset" class="btn btn-primary font-weight-bold mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-clean font-weight-bold">Batal</button>
                                 </div>
                                 <div class="col-xl-3"></div>
                             </div>
@@ -592,7 +592,7 @@
                                     <!--begin::Button-->
                                     <div class="ml-6 flex-shrink-0">
                                         <a href="#" data-toggle="modal" data-target="#kt_chat_modal"
-                                            class="btn font-weight-bolder text-uppercase font-size-lg btn-success py-3 px-6">Submit
+                                            class="btn font-weight-bolder text-uppercase font-size-lg btn-success py-3 px-6">Kirim
                                             a Request</a>
                                     </div>
                                     <!--end::Button-->

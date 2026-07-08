@@ -51,7 +51,7 @@
         <!--begin::Card-->
         <div class="card card-custom gutter-b example example-compact">
             <div class="card-header">
-                <h3 class="card-title">Bootstrap Date Picker Examples</h3>
+                <h3 class="card-title">Bootstrap Tanggal Picker Examples</h3>
                 <div class="card-toolbar">
                     <div class="example-tools justify-content-center">
                         <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
@@ -80,7 +80,7 @@
             &lt;div class="card card-custom"&gt;
              &lt;div class="card-header"&gt;
               &lt;h3 class="card-title"&gt;
-               Bootstrap Date Picker Examples
+               Bootstrap Tanggal Picker Examples
               &lt;/h3&gt;
              &lt;/div&gt;
              &lt;!--begin::Form--&gt;
@@ -444,8 +444,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -459,7 +459,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Bootstrap Date Picker Examples</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Bootstrap Tanggal Picker Examples</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <i aria-hidden="true" class="ki ki-close"></i>
                         </button>
@@ -505,7 +505,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-secondary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Kirim</button>
                         </div>
                     </form>
                 </div>
@@ -694,8 +694,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

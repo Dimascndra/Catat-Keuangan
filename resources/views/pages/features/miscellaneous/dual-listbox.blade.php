@@ -183,7 +183,7 @@
                     </div>
                     <div class="card-body">
                         <select id="kt_dual_listbox_2" class="dual-listbox" multiple="multiple"
-                            data-available-title="Source Options" data-selected-title="Destination Options"
+                            data-available-title="Sumber Options" data-selected-title="Destination Options"
                             data-add="&lt;i class='flaticon2-next'&gt;&lt;/i&gt;"
                             data-remove="&lt;i class='flaticon2-back'&gt;&lt;/i&gt;"
                             data-add-all="&lt;i class='flaticon2-fast-next'&gt;&lt;/i&gt;"
@@ -215,7 +215,7 @@
                                         <pre>
 <code class="language-html">
                             &lt;select id="kt_dual_listbox_2" class="dual-listbox" multiple
-                 data-available-title="Source Options"
+                 data-available-title="Sumber Options"
                  data-selected-title="Destination Options"
                  data-add="&lt;i class='flaticon2-next'&gt;&lt;/i&gt;"
                  data-remove="&lt;i class='flaticon2-back'&gt;&lt;/i&gt;"
@@ -266,7 +266,7 @@
           removeEvent: function (value) {
            console.log(value);
           },
-          availableTitle: "Source Options",
+          availableTitle: "Sumber Options",
           selectedTitle: "Destination Options",
           addButtonText: "&lt;i class='flaticon2-next'&gt;&lt;/i&gt;",
           removeButtonText: "&lt;i class='flaticon2-back'&gt;&lt;/i&gt;",
@@ -423,7 +423,7 @@
                 <div class="card card-custom card-stretch example example-compact">
                     <div class="card-header">
                         <div class="card-title">
-                            <h3 class="card-label">Dual Listbox without Search</h3>
+                            <h3 class="card-label">Dual Listbox without Cari</h3>
                         </div>
                         <div class="card-toolbar">
                             <div class="example-tools justify-content-center">

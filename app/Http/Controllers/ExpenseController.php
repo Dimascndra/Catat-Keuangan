@@ -116,6 +116,15 @@ class ExpenseController extends Controller
             'image' => 'nullable|image|max:2048', // Max 2MB
         ]);
 
+        // Check sufficient balance
+        $wallet = \App\Models\Wallet::findOrFail($request->wallet_id);
+        $totalAmount = $request->quantity * $request->amount;
+        if ($wallet->balance < $totalAmount) {
+            throw \Illuminate\Validation\ValidationException::withMessages([
+                'amount' => 'Saldo tidak mencukupi. Saldo saat ini: Rp ' . number_format($wallet->balance, 0, ',', '.'),
+            ]);
+        }
+
         $data = $validated;
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('expenses', 'public');
@@ -160,6 +169,24 @@ class ExpenseController extends Controller
             'amount' => 'required|numeric|min:0',
             'image' => 'nullable|image|max:2048',
         ]);
+
+        // Check sufficient balance
+        $wallet = \App\Models\Wallet::findOrFail($request->wallet_id);
+        $newTotal = $request->quantity * $request->amount;
+        
+        if ($expense->wallet_id == $request->wallet_id) {
+            if ($wallet->balance + $expense->total_amount < $newTotal) {
+                throw \Illuminate\Validation\ValidationException::withMessages([
+                    'amount' => 'Saldo tidak mencukupi. Saldo saat ini: Rp ' . number_format($wallet->balance, 0, ',', '.'),
+                ]);
+            }
+        } else {
+            if ($wallet->balance < $newTotal) {
+                throw \Illuminate\Validation\ValidationException::withMessages([
+                    'amount' => 'Saldo tidak mencukupi. Saldo saat ini: Rp ' . number_format($wallet->balance, 0, ',', '.'),
+                ]);
+            }
+        }
 
         $data = $validated;
         if ($request->hasFile('image')) {

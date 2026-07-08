@@ -275,7 +275,7 @@
                     </div>
                     <!--end: Code-->
                     <div class="form-group row">
-                        <label class="col-form-label text-right col-lg-3 col-sm-12">Date</label>
+                        <label class="col-form-label text-right col-lg-3 col-sm-12">Tanggal</label>
                         <div class="col-lg-6 col-md-9 col-sm-12">
                             <input type="text" class="form-control date" id="kt_date_input" />
                             <span class="form-text text-muted">Custom date format:
@@ -291,7 +291,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label text-right col-lg-3 col-sm-12">Date &amp; Hour</label>
+                        <label class="col-form-label text-right col-lg-3 col-sm-12">Tanggal &amp; Hour</label>
                         <div class="col-lg-6 col-md-9 col-sm-12">
                             <input type="text" class="form-control date_time" id="kt_date_time_input" />
                             <span class="form-text text-muted">Custom date &amp; time format:
@@ -367,7 +367,7 @@
                         <div class="col-lg-6 col-md-9 col-sm-12">
                             <input type="text" class="form-control clear-if-not-match"
                                 id="kt_clear_if_not_match_input" />
-                            <span class="form-text text-muted">Date format:
+                            <span class="form-text text-muted">Tanggal format:
                                 <code>mm/dd/yyyy</code></span>
                         </div>
                     </div>
@@ -375,8 +375,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="reset" class="btn btn-success mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <!--begin: Search Form-->
+                <!--begin: Cari Form-->
                 <!--begin::Search Form-->
                 <div class="mb-7">
                     <div class="row align-items-center">
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="col-md-4 my-2 my-md-0">
                                     <div class="d-flex align-items-center">
-                                        <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                        <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                         <select class="form-control" id="kt_datatable_search_type">
                                             <option value="">All</option>
                                             <option value="1">Online</option>
@@ -195,12 +195,12 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                         </div>
                     </div>
                 </div>
                 <!--end::Search Form-->
-                <!--end: Search Form-->
+                <!--end: Cari Form-->
                 <!--begin: Datatable-->
                 <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                     <thead>
@@ -209,10 +209,10 @@
                             <th title="Field #2">Car Make</th>
                             <th title="Field #3">Car Model</th>
                             <th title="Field #4">Color</th>
-                            <th title="Field #5">Deposit Paid</th>
-                            <th title="Field #6">Order Date</th>
+                            <th title="Field #5">Deposit Lunas</th>
+                            <th title="Field #6">Order Tanggal</th>
                             <th title="Field #7">Status</th>
-                            <th title="Field #8">Type</th>
+                            <th title="Field #8">Tipe</th>
                         </tr>
                     </thead>
                     <tbody>

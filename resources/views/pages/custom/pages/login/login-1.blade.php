@@ -140,9 +140,9 @@
                         <!--begin::Form group-->
                         <div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
                             <button type="button" id="kt_login_signup_submit"
-                                class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
+                                class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Kirim</button>
                             <button type="button" id="kt_login_signup_cancel"
-                                class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button>
+                                class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Batal</button>
                         </div>
                         <!--end::Form group-->
                     </form>
@@ -168,9 +168,9 @@
                         <!--begin::Form group-->
                         <div class="form-group d-flex flex-wrap pb-lg-0">
                             <button type="button" id="kt_login_forgot_submit"
-                                class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
+                                class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Kirim</button>
                             <button type="button" id="kt_login_forgot_cancel"
-                                class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button>
+                                class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Batal</button>
                         </div>
                         <!--end::Form group-->
                     </form>

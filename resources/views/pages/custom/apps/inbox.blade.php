@@ -312,7 +312,7 @@
                                         <!--end::Svg Icon-->
                                     </span>
                                 </span>
-                                <span class="btn btn-default btn-icon btn-sm mr-2" data-toggle="tooltip" title="Delete">
+                                <span class="btn btn-default btn-icon btn-sm mr-2" data-toggle="tooltip" title="Hapus">
                                     <span class="svg-icon svg-icon-md">
                                         <!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1236,7 +1236,7 @@
                                     <!--end::Svg Icon-->
                                 </span>
                             </span>
-                            <span class="btn btn-default btn-icon btn-sm mr-2" data-toggle="tooltip" title="Delete">
+                            <span class="btn btn-default btn-icon btn-sm mr-2" data-toggle="tooltip" title="Hapus">
                                 <span class="svg-icon svg-icon-md">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1437,7 +1437,7 @@
                                                             <td>Mark Andre</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-muted py-2">Date:</td>
+                                                            <td class="text-muted py-2">Tanggal:</td>
                                                             <td>Jul 30, 2019, 11:27 PM</td>
                                                         </tr>
                                                         <tr>
@@ -1519,7 +1519,7 @@
                                                             <td>Mark Andre</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-muted py-2">Date:</td>
+                                                            <td class="text-muted py-2">Tanggal:</td>
                                                             <td>Jul 30, 2019, 11:27 PM</td>
                                                         </tr>
                                                         <tr>
@@ -1602,7 +1602,7 @@
                                                             <td>Mark Andre</td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-muted py-2">Date:</td>
+                                                            <td class="text-muted py-2">Tanggal:</td>
                                                             <td>Jul 30, 2019, 11:27 PM</td>
                                                         </tr>
                                                         <tr>
@@ -1781,7 +1781,7 @@
                                                                     <span class="navi-icon">
                                                                         <i class="flaticon2-medical-records"></i>
                                                                     </span>
-                                                                    <span class="navi-text">Save &amp; archive</span>
+                                                                    <span class="navi-text">Simpan &amp; archive</span>
                                                                 </a>
                                                             </li>
                                                             <li class="navi-item">
@@ -1789,7 +1789,7 @@
                                                                     <span class="navi-icon">
                                                                         <i class="flaticon2-hourglass-1"></i>
                                                                     </span>
-                                                                    <span class="navi-text">Cancel</span>
+                                                                    <span class="navi-text">Batal</span>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -1960,7 +1960,7 @@
                                                     <span class="navi-icon">
                                                         <i class="flaticon2-medical-records"></i>
                                                     </span>
-                                                    <span class="navi-text">Save &amp; archive</span>
+                                                    <span class="navi-text">Simpan &amp; archive</span>
                                                 </a>
                                             </li>
                                             <li class="navi-item">
@@ -1968,7 +1968,7 @@
                                                     <span class="navi-icon">
                                                         <i class="flaticon2-hourglass-1"></i>
                                                     </span>
-                                                    <span class="navi-text">Cancel</span>
+                                                    <span class="navi-text">Batal</span>
                                                 </a>
                                             </li>
                                         </ul>

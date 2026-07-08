@@ -193,7 +193,7 @@
                                     </div>
                                     <div class="wizard-label">
                                         <h3 class="wizard-title">Completed!</h3>
-                                        <div class="wizard-desc">Review and Submit</div>
+                                        <div class="wizard-desc">Review and Kirim</div>
                                     </div>
                                 </div>
                             </div>
@@ -594,10 +594,10 @@
                                         <h4 class="mb-10 font-weight-bold text-dark">Select your Services</h4>
                                         <!--begin::Select-->
                                         <div class="form-group">
-                                            <label>Delivery Type:</label>
+                                            <label>Delivery Tipe:</label>
                                             <select name="delivery"
                                                 class="form-control form-control-solid form-control-lg">
-                                                <option value="">Select a Service Type Option</option>
+                                                <option value="">Select a Service Tipe Option</option>
                                                 <option value="overnight" selected="selected">Overnight Delivery (within
                                                     48 hours)</option>
                                                 <option value="express">Express Delivery (within 5 working days)</option>
@@ -607,10 +607,10 @@
                                         <!--end::Select-->
                                         <!--begin::Select-->
                                         <div class="form-group">
-                                            <label>Packaging Type:</label>
+                                            <label>Packaging Tipe:</label>
                                             <select name="packaging"
                                                 class="form-control form-control-solid form-control-lg">
-                                                <option value="">Select a Packaging Type Option</option>
+                                                <option value="">Select a Packaging Tipe Option</option>
                                                 <option value="regular" selected="selected">Regular Packaging</option>
                                                 <option value="oversized">Oversized Packaging</option>
                                                 <option value="fragile">Fragile Packaging</option>
@@ -1038,7 +1038,7 @@
                                     <!--begin: Wizard Step 6-->
                                     <div class="pb-5" data-wizard-type="step-content">
                                         <!--begin::Section-->
-                                        <h4 class="mb-10 font-weight-bold text-dark">Review your Details and Submit</h4>
+                                        <h4 class="mb-10 font-weight-bold text-dark">Review your Details and Kirim</h4>
                                         <h6 class="font-weight-bolder mb-3">Current Address:</h6>
                                         <div class="text-dark-50 line-height-lg">
                                             <div>Address Line 1</div>
@@ -1058,7 +1058,7 @@
                                         <div class="separator separator-dashed my-5"></div>
                                         <!--end::Section-->
                                         <!--begin::Section-->
-                                        <h6 class="font-weight-bolder mb-3">Delivery Service Type:</h6>
+                                        <h6 class="font-weight-bolder mb-3">Delivery Service Tipe:</h6>
                                         <div class="text-dark-50 line-height-lg">
                                             <div>Overnight Delivery with Regular Packaging</div>
                                             <div>Preferred Morning (8:00AM - 11:00AM) Delivery</div>
@@ -1085,7 +1085,7 @@
                                         <div>
                                             <button type="button"
                                                 class="btn btn-success font-weight-bolder text-uppercase px-9 py-4"
-                                                data-wizard-type="action-submit">Submit</button>
+                                                data-wizard-type="action-submit">Kirim</button>
                                             <button type="button"
                                                 class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4"
                                                 data-wizard-type="action-next">Next</button>

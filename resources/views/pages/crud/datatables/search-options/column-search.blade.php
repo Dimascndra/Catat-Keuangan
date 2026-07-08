@@ -59,7 +59,7 @@
                     <span class="card-icon">
                         <i class="flaticon2-layers text-primary"></i>
                     </span>
-                    <h3 class="card-label">Individual Column Search</h3>
+                    <h3 class="card-label">Individual Column Cari</h3>
                 </div>
                 <div class="card-toolbar">
                     <!--begin::Dropdown-->
@@ -123,10 +123,10 @@
                             <th>Country</th>
                             <th>Ship City</th>
                             <th>Company Agent</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -136,10 +136,10 @@
                             <th>Country</th>
                             <th>Ship City</th>
                             <th>Company Agent</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </tfoot>
                 </table>

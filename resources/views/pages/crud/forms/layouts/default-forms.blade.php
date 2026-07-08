@@ -136,8 +136,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -268,8 +268,8 @@
                             <!--end: Code-->
                         </div>
                         <div class="card-footer">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -445,8 +445,8 @@
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
-                                    <button type="reset" class="btn btn-success mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -622,8 +622,8 @@
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-6">
-                                    <button type="reset" class="btn btn-success mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="reset" class="btn btn-success mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>

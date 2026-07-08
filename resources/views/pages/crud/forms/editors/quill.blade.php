@@ -113,7 +113,7 @@
                                                 ['image', 'code-block']
                                             ]
                                         },
-                                        placeholder: 'Type your text here...',
+                                        placeholder: 'Tipe your text here...',
                                         theme: 'snow' // or 'bubble'
                                     });
                                 }
@@ -146,7 +146,7 @@
                 <!--begin::Card-->
                 <div class="card card-custom example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">Auto Save</h3>
+                        <h3 class="card-title">Auto Simpan</h3>
                         <div class="card-toolbar">
                             <div class="example-tools justify-content-center">
                                 <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
@@ -174,7 +174,7 @@
                             &lt;div class="card card-custom"&gt;
                                 &lt;div class="card-header"&gt;
                                     &lt;h3 class="card-title"&gt;
-                                        Auto Save
+                                        Auto Simpan
                                     &lt;/h3&gt;
                                 &lt;/div&gt;
                                 &lt;div class="card-body"&gt;
@@ -201,7 +201,7 @@
                                         modules: {
                                             toolbar: true
                                         },
-                                        placeholder: 'Type your text here...',
+                                        placeholder: 'Tipe your text here...',
                                         theme: 'snow'
                                     });
 
@@ -211,7 +211,7 @@
                                         change = change.compose(delta);
                                     });
 
-                                    // Save periodically
+                                    // Simpan periodically
                                     setInterval(function() {
                                         if (change.length() &gt; 0) {
                                             console.log('Saving changes', change);

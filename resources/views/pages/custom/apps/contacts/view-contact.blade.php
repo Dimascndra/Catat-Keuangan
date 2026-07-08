@@ -557,13 +557,13 @@
                                     <form class="form">
                                         <div class="form-group">
                                             <textarea class="form-control form-control-lg form-control-solid" id="exampleTextarea" rows="3"
-                                                placeholder="Type notes"></textarea>
+                                                placeholder="Tipe notes"></textarea>
                                         </div>
                                         <div class="row">
                                             <div class="col">
                                                 <a href="#" class="btn btn-light-primary font-weight-bold">Add
                                                     notes</a>
-                                                <a href="#" class="btn btn-clean font-weight-bold">Cancel</a>
+                                                <a href="#" class="btn btn-clean font-weight-bold">Batal</a>
                                             </div>
                                         </div>
                                     </form>
@@ -1139,8 +1139,8 @@
                                         <label class="col-xl-3 col-lg-3 col-form-label text-right">Time Zone</label>
                                         <div class="col-lg-9 col-xl-6">
                                             <select class="form-control form-control-lg form-control-solid">
-                                                <option data-offset="-39600" value="International Date Line West">
-                                                    (GMT-11:00) International Date Line West</option>
+                                                <option data-offset="-39600" value="International Tanggal Line West">
+                                                    (GMT-11:00) International Tanggal Line West</option>
                                                 <option data-offset="-39600" value="Midway Island">(GMT-11:00) Midway
                                                     Island</option>
                                                 <option data-offset="-39600" value="Samoa">(GMT-11:00) Samoa</option>

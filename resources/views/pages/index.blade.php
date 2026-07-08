@@ -219,7 +219,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<i class="menu-bullet menu-bullet-dot">
 																	<span></span>
 																</i>
-																<span class="menu-text">Edit User</span>
+																<span class="menu-text">Ubah User</span>
 															</a>
 														</li>
 													</ul>
@@ -365,7 +365,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<i class="menu-bullet menu-bullet-dot">
 																	<span></span>
 																</i>
-																<span class="menu-text">Edit Contact</span>
+																<span class="menu-text">Ubah Contact</span>
 															</a>
 														</li>
 													</ul>
@@ -443,7 +443,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<i class="menu-bullet menu-bullet-dot">
 																	<span></span>
 																</i>
-																<span class="menu-text">Edit Project</span>
+																<span class="menu-text">Ubah Project</span>
 															</a>
 														</li>
 													</ul>
@@ -1342,7 +1342,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>
-													<span class="menu-text">Actions Buttons</span>
+													<span class="menu-text">Aksi Buttons</span>
 												</a>
 											</li>
 											<li class="menu-item" aria-haspopup="true">
@@ -2308,7 +2308,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>
-													<span class="menu-text">Search Options</span>
+													<span class="menu-text">Cari Options</span>
 													<i class="menu-arrow"></i>
 												</a>
 												<div class="menu-submenu">
@@ -2319,7 +2319,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<i class="menu-bullet menu-bullet-dot">
 																	<span></span>
 																</i>
-																<span class="menu-text">Column Search</span>
+																<span class="menu-text">Column Cari</span>
 															</a>
 														</li>
 														<li class="menu-item" aria-haspopup="true">
@@ -2327,7 +2327,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<i class="menu-bullet menu-bullet-dot">
 																	<span></span>
 																</i>
-																<span class="menu-text">Advanced Search</span>
+																<span class="menu-text">Advanced Cari</span>
 															</a>
 														</li>
 													</ul>
@@ -3411,7 +3411,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<i class="menu-bullet menu-bullet-dot">
 																			<span></span>
 																		</i>
-																		<span class="menu-text">Edit Team Member</span>
+																		<span class="menu-text">Ubah Team Member</span>
 																	</a>
 																</li>
 																<li class="menu-item" aria-haspopup="true">
@@ -3419,7 +3419,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<i class="menu-bullet menu-bullet-dot">
 																			<span></span>
 																		</i>
-																		<span class="menu-text">Delete Team Member</span>
+																		<span class="menu-text">Hapus Team Member</span>
 																	</a>
 																</li>
 																<li class="menu-item" aria-haspopup="true">
@@ -3666,7 +3666,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<i class="menu-bullet menu-bullet-line">
 																			<span></span>
 																		</i>
-																		<span class="menu-text">Year to Date Reports</span>
+																		<span class="menu-text">Year to Tanggal Reports</span>
 																	</a>
 																</li>
 																<li class="menu-item" aria-haspopup="true">
@@ -4515,7 +4515,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
 										<!--begin:Header-->
 										<div class="d-flex flex-column flex-center py-10 bgi-size-cover bgi-no-repeat rounded-top" style="background-image: url(assets/media/misc/bg-1.jpg)">
-											<h4 class="text-white font-weight-bold">Quick Actions</h4>
+											<h4 class="text-white font-weight-bold">Quick Aksi</h4>
 											<span class="btn btn-success btn-sm font-weight-bold font-size-sm mt-2">23 tasks pending</span>
 										</div>
 										<!--end:Header-->
@@ -5569,7 +5569,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">Laravel, Metronic</span>
@@ -5636,7 +5636,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -5703,7 +5703,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">ReactJS, Ruby</span>
@@ -5770,7 +5770,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">ReactJs, HTML</span>
@@ -5837,7 +5837,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">Python, MySQL</span>
@@ -5926,7 +5926,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">Python, MySQL</span>
@@ -5993,7 +5993,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">Laravel, Metronic</span>
@@ -6060,7 +6060,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -6127,7 +6127,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">ReactJs, HTML</span>
@@ -6194,7 +6194,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">ReactJS, Ruby</span>
@@ -6283,7 +6283,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,000,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">ReactJs, HTML</span>
@@ -6350,7 +6350,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$4,600,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">Python, MySQL</span>
@@ -6417,7 +6417,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$560,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">Laravel, Metronic</span>
@@ -6484,7 +6484,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$57,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-bold">AngularJS, C#</span>
@@ -6551,7 +6551,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		</td>
 																		<td class="text-right">
 																			<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$45,200,000</span>
-																			<span class="text-muted font-weight-bold">Paid</span>
+																			<span class="text-muted font-weight-bold">Lunas</span>
 																		</td>
 																		<td class="text-right">
 																			<span class="text-muted font-weight-500">ReactJS, Ruby</span>
@@ -7830,7 +7830,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	</td>
 																	<td>
 																		<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$520</span>
-																		<span class="text-muted font-weight-bold">Paid</span>
+																		<span class="text-muted font-weight-bold">Lunas</span>
 																	</td>
 																	<td>
 																		<span class="text-dark-75 font-weight-bolder d-block font-size-lg">Intertico</span>
@@ -7894,15 +7894,15 @@ License: You must have a valid license purchased only from themeforest(the above
 																	</td>
 																	<td>
 																		<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$34,000,000</span>
-																		<span class="text-muted font-weight-bold">Paid</span>
+																		<span class="text-muted font-weight-bold">Lunas</span>
 																	</td>
 																	<td>
 																		<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$6,700</span>
-																		<span class="text-muted font-weight-bold">Paid</span>
+																		<span class="text-muted font-weight-bold">Lunas</span>
 																	</td>
 																	<td>
 																		<span class="text-dark-75 font-weight-bolder d-block font-size-lg">RoadGee</span>
-																		<span class="text-muted font-weight-bold">Paid</span>
+																		<span class="text-muted font-weight-bold">Lunas</span>
 																	</td>
 																	<td>
 																		<img src="assets/media/logos/stars.png" alt="image" style="width: 5.5rem" />
@@ -7928,7 +7928,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																	</td>
 																	<td class="text-left pr-0">
 																		<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$2,600,000</span>
-																		<span class="text-muted font-weight-bold">Paid</span>
+																		<span class="text-muted font-weight-bold">Lunas</span>
 																	</td>
 																	<td>
 																		<span class="text-dark-75 font-weight-bolder d-block font-size-lg">$14,000</span>
@@ -9176,7 +9176,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Footer-->
 						<div class="card-footer align-items-center">
 							<!--begin::Compose-->
-							<textarea class="form-control border-0 p-0" rows="2" placeholder="Type a message"></textarea>
+							<textarea class="form-control border-0 p-0" rows="2" placeholder="Tipe a message"></textarea>
 							<div class="d-flex align-items-center justify-content-between mt-5">
 								<div class="mr-3">
 									<a href="#" class="btn btn-clean btn-icon btn-md mr-1">

@@ -107,9 +107,9 @@
                         </div>
                         <div class="form-group d-flex flex-wrap flex-center">
                             <button type="button" id="kt_login_signup_submit"
-                                class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Submit</button>
+                                class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Kirim</button>
                             <button type="button" id="kt_login_signup_cancel"
-                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancel</button>
+                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->
@@ -129,9 +129,9 @@
                         </div>
                         <div class="form-group d-flex flex-wrap flex-center">
                             <button type="button" id="kt_login_forgot_submit"
-                                class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Submit</button>
+                                class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Kirim</button>
                             <button type="button" id="kt_login_forgot_cancel"
-                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Cancel</button>
+                                class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4">Batal</button>
                         </div>
                     </form>
                     <!--end::Form-->

@@ -51,12 +51,15 @@ class DashboardController extends Controller
 
         $recentActivity = $latestIncomes->merge($latestExpenses)->sortByDesc('date')->take(10);
 
+        $driver = \Illuminate\Support\Facades\DB::connection()->getDriverName();
+        $monthSelect = $driver === 'sqlite' ? "CAST(strftime('%m', date) AS INTEGER) as month" : "MONTH(date) as month";
+
         // Chart Data: Monthly Trend
-        $trendIncomeQuery = Income::selectRaw('MONTH(date) as month, SUM(amount) as total')
+        $trendIncomeQuery = Income::selectRaw($monthSelect . ', SUM(amount) as total')
             ->whereYear('date', $currentYear)
             ->groupBy('month');
 
-        $trendExpenseQuery = Expense::selectRaw('MONTH(date) as month, SUM(total_amount) as total')
+        $trendExpenseQuery = Expense::selectRaw($monthSelect . ', SUM(total_amount) as total')
             ->whereYear('date', $currentYear)
             ->groupBy('month');
 

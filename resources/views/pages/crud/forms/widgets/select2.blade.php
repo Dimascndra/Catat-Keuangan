@@ -511,7 +511,7 @@
            &lt;/div&gt;
           &lt;/div&gt;
           &lt;div class="form-group row"&gt;
-           &lt;label class="col-form-label text-right col-lg-3 col-sm-12"&gt;Hiding Search box&lt;/label&gt;
+           &lt;label class="col-form-label text-right col-lg-3 col-sm-12"&gt;Hiding Cari box&lt;/label&gt;
            &lt;div class=" col-lg-4 col-md-9 col-sm-12"&gt;
             &lt;select class="form-control select2" id="kt_select2_10" name="param"&gt;
              &lt;option label="Label"&gt;&lt;/option&gt;
@@ -745,7 +745,7 @@
         }
 
         $("#kt_select2_6").select2({
-         placeholder: "Search for git repositories",
+         placeholder: "Cari for git repositories",
          allowClear: true,
          ajax: {
           url: "https://api.github.com/search/repositories",
@@ -1290,7 +1290,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label text-right col-lg-3 col-sm-12">Hiding Search box</label>
+                        <label class="col-form-label text-right col-lg-3 col-sm-12">Hiding Cari box</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <select class="form-control select2" id="kt_select2_10" name="param">
                                 <option label="Label"></option>
@@ -1437,8 +1437,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -1721,7 +1721,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-secondary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Kirim</button>
                         </div>
                     </form>
                 </div>
@@ -2012,8 +2012,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="reset" class="btn btn-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="reset" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

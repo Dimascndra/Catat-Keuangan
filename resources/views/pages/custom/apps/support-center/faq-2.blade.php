@@ -212,7 +212,7 @@
                                         <!--end::SVG-->
                                         <!--begin::Input-->
                                         <input type="text" class="form-control h-auto border-0 font-size-lg py-7 px-1"
-                                            placeholder="Search FAQ 2" />
+                                            placeholder="Cari FAQ 2" />
                                         <!--end::Input-->
                                     </div>
                                 </form>
@@ -876,7 +876,7 @@
                                     <div class="col-sm-5 d-flex align-items-center justify-content-sm-end">
                                         <!--begin::Button-->
                                         <a href="custom/apps/support-center/feedback.html"
-                                            class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Submit
+                                            class="btn font-weight-bolder text-uppercase font-size-lg btn-primary py-3 px-6">Kirim
                                             a Request</a>
                                         <!--end::Button-->
                                     </div>

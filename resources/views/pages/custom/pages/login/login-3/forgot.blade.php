@@ -61,9 +61,9 @@
                         <!--begin::Form group-->
                         <div class="form-group d-flex flex-wrap">
                             <button type="submit" id="kt_login_forgot_form_submit_button"
-                                class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
+                                class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Kirim</button>
                             <a href="/custom/pages/login/login-3/signin" id="kt_login_forgot_cancel"
-                                class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</a>
+                                class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Batal</a>
                         </div>
                         <!--end::Form group-->
                     </form>

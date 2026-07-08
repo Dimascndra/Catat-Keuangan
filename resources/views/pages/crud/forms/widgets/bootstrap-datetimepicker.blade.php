@@ -53,7 +53,7 @@
         <!--begin::Card-->
         <div class="card card-custom gutter-b example example-compact">
             <div class="card-header">
-                <h3 class="card-title">Bootstrap Date Time Picker Examples</h3>
+                <h3 class="card-title">Bootstrap Tanggal Time Picker Examples</h3>
                 <div class="card-toolbar">
                     <div class="example-tools justify-content-center">
                         <span class="example-toggle" data-toggle="tooltip" title="View code"></span>
@@ -350,7 +350,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label text-right col-lg-3 col-sm-12">Date Only</label>
+                        <label class="col-form-label text-right col-lg-3 col-sm-12">Tanggal Only</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class="input-group input-group-solid date" id="kt_datetimepicker_3"
                                 data-target-input="nearest">
@@ -453,8 +453,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="submit" class="btn btn-success mr-2">Submit</button>
-                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-success mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -467,7 +467,7 @@
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Bootstrap Date Time Picker Examples</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Bootstrap Tanggal Time Picker Examples</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <i aria-hidden="true" class="ki ki-close"></i>
                         </button>
@@ -490,7 +490,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-form-label text-right col-lg-3 col-sm-12">Date Picker</label>
+                                <label class="col-form-label text-right col-lg-3 col-sm-12">Tanggal Picker</label>
                                 <div class="col-lg-9 col-md-9 col-sm-12">
                                     <div class="input-group date" id="kt_datetimepicker_10" data-target-input="nearest">
                                         <input type="text" class="form-control datetimepicker-input"
@@ -522,7 +522,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
-                            <button type="reset" class="btn btn-secondary">Submit</button>
+                            <button type="reset" class="btn btn-secondary">Kirim</button>
                         </div>
                     </form>
                 </div>
@@ -648,8 +648,8 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-9 ml-lg-auto">
-                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                            <button type="submit" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary mr-2">Kirim</button>
+                            <button type="submit" class="btn btn-secondary">Batal</button>
                         </div>
                     </div>
                 </div>

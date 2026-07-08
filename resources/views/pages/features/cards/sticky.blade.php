@@ -21,7 +21,7 @@
         <div class="card card-custom card-sticky" id="kt_page_sticky_card">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Sticky Form Actions
+                    <h3 class="card-label">Sticky Form Aksi
                         <i class="mr-2"></i>
                         <small class="">try to scroll the page</small>
                     </h3>
@@ -31,7 +31,7 @@
                         <i class="ki ki-long-arrow-back icon-xs"></i>Back</a>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary font-weight-bolder">
-                            <i class="ki ki-check icon-xs"></i>Save Form</button>
+                            <i class="ki ki-check icon-xs"></i>Simpan Form</button>
                         <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
@@ -39,19 +39,19 @@
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="nav-icon flaticon2-reload"></i>
-                                        <span class="nav-text">Save &amp; continue</span>
+                                        <span class="nav-text">Simpan &amp; continue</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="nav-icon flaticon2-add-1"></i>
-                                        <span class="nav-text">Save &amp; add new</span>
+                                        <span class="nav-text">Simpan &amp; add new</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="nav-icon flaticon2-power"></i>
-                                        <span class="nav-text">Save &amp; exit</span>
+                                        <span class="nav-text">Simpan &amp; exit</span>
                                     </a>
                                 </li>
                             </ul>
@@ -517,8 +517,8 @@
                                     <label class="col-3">Time Zone</label>
                                     <div class="col-9">
                                         <select class="form-control">
-                                            <option data-offset="-39600" value="International Date Line West">(GMT-11:00)
-                                                International Date Line West</option>
+                                            <option data-offset="-39600" value="International Tanggal Line West">(GMT-11:00)
+                                                International Tanggal Line West</option>
                                             <option data-offset="-39600" value="Midway Island">(GMT-11:00) Midway Island
                                             </option>
                                             <option data-offset="-39600" value="Samoa">(GMT-11:00) Samoa</option>
@@ -780,7 +780,7 @@
      &lt;div class="card-header"&gt;
       &lt;div class="card-title"&gt;
        &lt;h3 class="card-label"&gt;
-        Sticky Form Actions &lt;i class="mr-2"&gt;&lt;/i&gt;
+        Sticky Form Aksi &lt;i class="mr-2"&gt;&lt;/i&gt;
         &lt;small class=""&gt;try to scroll the page&lt;/small&gt;
        &lt;/h3&gt;
       &lt;/div&gt;

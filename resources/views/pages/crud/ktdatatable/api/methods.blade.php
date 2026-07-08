@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <!--begin: Search Form-->
+                <!--begin: Cari Form-->
                 <!--begin::Search Form-->
                 <div class="mb-7">
                     <div class="row align-items-center">
@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="col-md-4 my-2 my-md-0">
                                     <div class="d-flex align-items-center">
-                                        <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                        <label class="mr-3 mb-0 d-none d-md-block">Tipe:</label>
                                         <select class="form-control" id="kt_datatable_search_type">
                                             <option value="">All</option>
                                             <option value="1">Online</option>
@@ -192,12 +192,12 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
-                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Cari</a>
                         </div>
                     </div>
                 </div>
                 <!--end::Search Form-->
-                <!--end: Search Form-->
+                <!--end: Cari Form-->
                 <div class="row py-5">
                     <div class="col-lg-2">
                         <div class="input-group">
@@ -219,9 +219,9 @@
                         <button class="btn btn-light font-weight-bold" type="button"
                             id="kt_datatable_uncheck_all">Unselect all rows</button>
                         <button class="btn btn-light font-weight-bold" type="button" id="kt_datatable_hide_column">Hide
-                            Date</button>
+                            Tanggal</button>
                         <button class="btn btn-light font-weight-bold" type="button" id="kt_datatable_show_column">Show
-                            Date</button>
+                            Tanggal</button>
                         <button class="btn btn-light font-weight-bold" type="button" id="kt_datatable_remove_row">Remove
                             active row</button>
                         <button class="btn btn-light font-weight-bold" type="button" id="kt_datatable_sort_asc">Sort

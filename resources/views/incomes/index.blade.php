@@ -1,15 +1,29 @@
+@php
+    $wallets = \App\Models\Wallet::all();
+    $categories = \App\Models\Category::where('type', 'income')->get();
+    $sources = \App\Models\Income::pluck('source')->unique()->filter()->values();
+    
+    $monthsId = [
+        1 => 'Januari', 2 => 'Februari', 3 => 'Maret', 4 => 'April', 5 => 'Mei', 6 => 'Juni',
+        7 => 'Juli', 8 => 'Agustus', 9 => 'September', 10 => 'Oktober', 11 => 'November', 12 => 'Desember'
+    ];
+    $formattedDate = ($monthsId[(int)$currentMonth] ?? date('F', mktime(0,0,0,$currentMonth,1))) . ' ' . $currentYear;
+@endphp
+
 @extends('layouts.index')
-@section('title', 'Income List')
+@section('title', 'Daftar Pemasukan')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Income Sources
+            Sumber Pemasukan
         @endslot
         @slot('action')
-            <a href="{{ route('incomes.create') }}" class="btn btn-primary font-weight-bolder btn-sm">
-                Add New Income
-            </a>
+            <div class="d-flex align-items-center flex-wrap">
+                <button type="button" class="btn btn-primary font-weight-bolder btn-sm mb-2 mb-sm-0" data-toggle="modal" data-target="#createIncomeModal">
+                    Tambah Pemasukan
+                </button>
+            </div>
         @endslot
     @endcomponent
 @endsection
@@ -29,16 +43,16 @@
         @endif
 
         <div class="row mb-5">
-            <div class="col-lg-12">
+            <div class="col-12">
                 <div class="card card-custom bg-light-success gutter-b">
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between p-4 flex-lg-wrap flex-xl-nowrap">
                             <div class="d-flex flex-column mr-5">
                                 <a href="#" class="h4 text-dark text-hover-primary mb-5">
-                                    Total Income ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})
+                                    Total Pemasukan ({{ $formattedDate }})
                                 </a>
                                 <p class="text-dark-50">
-                                    Total amount collected from all sources.
+                                    Total dana yang terkumpul dari semua sumber.
                                 </p>
                             </div>
                             <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
@@ -55,8 +69,7 @@
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Income History
-                        ({{ date('F Y', mktime(0, 0, 0, $currentMonth, 1, $currentYear)) }})</h3>
+                    <h3 class="card-label">Riwayat Pemasukan ({{ $formattedDate }})</h3>
                 </div>
             </div>
             <div class="card-body">
@@ -64,11 +77,12 @@
                     <table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_1">
                         <thead>
                             <tr class="text-left">
-                                <th>Date</th>
-                                <th>Source</th>
-                                <th>Description</th>
-                                <th>Amount</th>
-                                <th class="text-right">Actions</th>
+                                <th>Tanggal</th>
+                                <th>Sumber</th>
+                                <th>Keterangan</th>
+                                <th>Nominal</th>
+                                <th>Terakhir Diperbarui</th>
+                                <th class="text-right">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,33 +94,29 @@
                                     </td>
                                     <td>{{ $income->description ?? '-' }}</td>
                                     <td class="font-weight-bolder text-success">{{ $income->formatted_amount }}</td>
+                                    <td>{{ $income->updated_at ? $income->updated_at->format('d M Y H:i') : '-' }}</td>
                                     <td class="text-right pr-0">
-                                        <a href="{{ route('incomes.edit', $income) }}"
-                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                        <button type="button"
+                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 btn-edit-income"
+                                            data-toggle="modal"
+                                            data-target="#editIncomeModal"
+                                            data-id="{{ $income->id }}"
+                                            data-date="{{ $income->date->format('Y-m-d') }}"
+                                            data-wallet-id="{{ $income->wallet_id }}"
+                                            data-source="{{ $income->source }}"
+                                            data-description="{{ $income->description }}"
+                                            data-amount="{{ (float)$income->amount }}"
+                                            title="Ubah">
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
-                                                    viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <path
-                                                            d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114732 12.1704122,4.68075471 12.453976,4.41323195 L18.0687648,1.22912442 C18.7302484,0.854964648 19.5702229,1.10757788 19.9272379,1.7857418 C20.1068665,2.12662955 20.1976079,2.50529882 20.1976079,2.89066665 L20.1976079,15.1438302 C20.1976079,15.8929947 19.5786358,16.5 18.8294713,16.5 L12.2674799,16.5 C12.2674799,16.5 12.2674799,17.6565196 12.2674799,18.2323597 Z"
-                                                            fill="#000000" fill-rule="nonzero"
-                                                            transform="translate(16.103063, 8.864705) rotate(-270.000000) translate(-16.103063, -8.864705) " />
-                                                        <path
-                                                            d="M6.71185332,6.7610573 L6.9627721,19.5078926 C6.97127448,19.9070386 6.80211565,20.2882586 6.51868351,20.5562098 L0.9038947,23.7403173 C0.242410103,24.1144771 -0.5975644,23.8618639 -0.954579366,23.1836999 C-1.13420803,22.8428122 -1.22494936,22.4641429 -1.22494936,22.0787751 L-1.22494936,9.82561153 C-1.22494936,9.07644703 -0.60597725,8.46944173 0.14318725,8.46944173 L6.71185332,8.46944173 C6.71185332,8.46944173 6.71185332,7.31292203 6.71185332,6.7610573 Z"
-                                                            fill="#000000" fill-rule="nonzero" opacity="0.3"
-                                                            transform="translate(2.872856, 16.104880) rotate(-270.000000) translate(-2.872856, -16.104880) " />
-                                                    </g>
-                                                </svg>
+                                                <i class="flaticon-edit"></i>
                                             </span>
-                                        </a>
+                                        </button>
                                         <form action="{{ route('incomes.destroy', $income) }}" method="POST"
                                             style="display: inline-block;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-icon btn-light btn-hover-danger btn-sm"
-                                                onclick="return confirm('Delete this income?');">
+                                                onclick="return confirm('Apakah Anda yakin ingin menghapus pemasukan ini?');">
                                                 <span class="svg-icon svg-icon-md svg-icon-danger">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -129,7 +139,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="5" class="text-center text-muted">No income records found.</td>
+                                    <td colspan="6" class="text-center text-muted py-5">Tidak ada data pemasukan.</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -141,4 +151,162 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Edit Pemasukan -->
+    <div class="modal fade" id="editIncomeModal" tabindex="-1" role="dialog" aria-labelledby="editIncomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editIncomeModalLabel">Ubah Pemasukan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="editIncomeForm" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Tanggal <span class="text-danger">*</span></label>
+                                <input type="date" id="edit_income_date" name="date" class="form-control form-control-solid" required />
+                            </div>
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Wallet <span class="text-danger">*</span></label>
+                                <select class="form-control form-control-solid" id="edit_income_wallet_id" name="wallet_id" required>
+                                    @foreach ($wallets as $wallet)
+                                        <option value="{{ $wallet->id }}">{{ $wallet->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label>Sumber <span class="text-danger">*</span></label>
+                                <input list="edit-income-sources" class="form-control form-control-solid" id="edit_income_source" name="source" placeholder="Pilih atau ketik sumber" required />
+                                <datalist id="edit-income-sources">
+                                    @foreach ($sources as $source)
+                                        <option value="{{ $source }}">
+                                    @endforeach
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Keterangan</label>
+                            <input type="text" id="edit_income_description" name="description" class="form-control form-control-solid" placeholder="Keterangan tambahan (opsional)" />
+                        </div>
+                        <div class="form-group">
+                            <label>Nominal (Rp) <span class="text-danger">*</span></label>
+                            <input type="number" id="edit_income_amount" name="amount" class="form-control form-control-solid" step="0.01" min="0" required />
+                            <span class="form-text text-muted" id="edit_income_amount_display"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Pemasukan -->
+    <div class="modal fade" id="createIncomeModal" tabindex="-1" role="dialog" aria-labelledby="createIncomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createIncomeModalLabel">Tambah Pemasukan Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{ route('incomes.store') }}" method="POST">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Tanggal <span class="text-danger">*</span></label>
+                                <input type="date" name="date" class="form-control form-control-solid" value="{{ date('Y-m-d') }}" required />
+                            </div>
+                            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                                <label>Buku Kas <span class="text-danger">*</span></label>
+                                <select class="form-control form-control-solid" name="wallet_id" required>
+                                    @foreach ($wallets as $wallet)
+                                        <option value="{{ $wallet->id }}">{{ $wallet->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label>Kategori <span class="text-danger">*</span></label>
+                                <select class="form-control form-control-solid" name="category" required>
+                                    <option value="">Pilih Kategori</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Keterangan <span class="text-danger">*</span></label>
+                            <input type="text" name="description" class="form-control form-control-solid" placeholder="Keterangan tambahan" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Nominal (Rp) <span class="text-danger">*</span></label>
+                            <input type="number" id="create_income_amount" name="amount" class="form-control form-control-solid" step="0.01" min="0" required />
+                            <span class="form-text text-muted" id="create_income_amount_display"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            function formatCurrency(val) {
+                return new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR'
+                }).format(val);
+            }
+
+            $('.btn-edit-income').click(function() {
+                var id = $(this).data('id');
+                var date = $(this).data('date');
+                var walletId = $(this).data('wallet-id');
+                var source = $(this).data('source');
+                var description = $(this).data('description');
+                var amount = $(this).data('amount');
+
+                $('#edit_income_date').val(date);
+                $('#edit_income_wallet_id').val(walletId);
+                $('#edit_income_source').val(source);
+                $('#edit_income_description').val(description);
+                $('#edit_income_amount').val(amount);
+                $('#edit_income_amount_display').text(formatCurrency(amount));
+                
+                // Set form action dynamically
+                var actionUrl = "{{ url('/incomes') }}/" + id;
+                $('#editIncomeForm').attr('action', actionUrl);
+            });
+
+            $('#edit_income_amount').on('input', function() {
+                var val = parseFloat($(this).val()) || 0;
+                $('#edit_income_amount_display').text(formatCurrency(val));
+            });
+
+            $('#create_income_amount').on('input', function() {
+                var val = parseFloat($(this).val()) || 0;
+                $('#create_income_amount_display').text(formatCurrency(val));
+            });
+
+            @if(request()->query('create'))
+                $('#createIncomeModal').modal('show');
+            @endif
+        });
+    </script>
 @endsection

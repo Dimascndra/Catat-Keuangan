@@ -454,9 +454,9 @@
                                     <h4 class="mb-10 font-weight-bold text-dark">Select your Services</h4>
                                     <!--begin::Select-->
                                     <div class="form-group">
-                                        <label>Delivery Type</label>
+                                        <label>Delivery Tipe</label>
                                         <select name="delivery" class="form-control">
-                                            <option value="">Select a Service Type Option</option>
+                                            <option value="">Select a Service Tipe Option</option>
                                             <option value="overnight" selected="selected">Overnight Delivery (within 48
                                                 hours)</option>
                                             <option value="express">Express Delivery (within 5 working days)</option>
@@ -466,9 +466,9 @@
                                     <!--end::Select-->
                                     <!--begin::Select-->
                                     <div class="form-group">
-                                        <label>Packaging Type</label>
+                                        <label>Packaging Tipe</label>
                                         <select name="packaging" class="form-control">
-                                            <option value="">Select a Packaging Type Option</option>
+                                            <option value="">Select a Packaging Tipe Option</option>
                                             <option value="regular" selected="selected">Regular Packaging</option>
                                             <option value="oversized">Oversized Packaging</option>
                                             <option value="fragile">Fragile Packaging</option>
@@ -822,7 +822,7 @@
                                     <div>
                                         <button type="button"
                                             class="btn btn-success font-weight-bolder text-uppercase px-9 py-4"
-                                            data-wizard-type="action-submit">Submit</button>
+                                            data-wizard-type="action-submit">Kirim</button>
                                         <button type="button"
                                             class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4"
                                             data-wizard-type="action-next">Next</button>

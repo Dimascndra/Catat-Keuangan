@@ -59,7 +59,7 @@
                     <span class="card-icon">
                         <i class="flaticon2-delivery-package text-primary"></i>
                     </span>
-                    <h3 class="card-label">Advanced Search Form</h3>
+                    <h3 class="card-label">Advanced Cari Form</h3>
                 </div>
                 <div class="card-toolbar">
                     <!--begin::Dropdown-->
@@ -154,7 +154,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <!--begin: Search Form-->
+                <!--begin: Cari Form-->
                 <form class="mb-15">
                     <div class="row mb-6">
                         <div class="col-lg-3 mb-lg-0 mb-6">
@@ -181,7 +181,7 @@
                     </div>
                     <div class="row mb-8">
                         <div class="col-lg-3 mb-lg-0 mb-6">
-                            <label>Ship Date:</label>
+                            <label>Ship Tanggal:</label>
                             <div class="input-daterange input-group" id="kt_datepicker">
                                 <input type="text" class="form-control datatable-input" name="start"
                                     placeholder="From" data-col-index="5" />
@@ -201,7 +201,7 @@
                             </select>
                         </div>
                         <div class="col-lg-3 mb-lg-0 mb-6">
-                            <label>Type:</label>
+                            <label>Tipe:</label>
                             <select class="form-control datatable-input" data-col-index="7">
                                 <option value="">Select</option>
                             </select>
@@ -212,7 +212,7 @@
                             <button class="btn btn-primary btn-primary--icon" id="kt_search">
                                 <span>
                                     <i class="la la-search"></i>
-                                    <span>Search</span>
+                                    <span>Cari</span>
                                 </span>
                             </button>&#160;&#160;
                             <button class="btn btn-secondary btn-secondary--icon" id="kt_reset">
@@ -234,10 +234,10 @@
                             <th>Country</th>
                             <th>Ship City</th>
                             <th>Company Agent</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -247,10 +247,10 @@
                             <th>Country</th>
                             <th>Ship City</th>
                             <th>Company Agent</th>
-                            <th>Ship Date</th>
+                            <th>Ship Tanggal</th>
                             <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
+                            <th>Tipe</th>
+                            <th>Aksi</th>
                         </tr>
                     </tfoot>
                 </table>

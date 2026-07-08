@@ -143,8 +143,8 @@
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col-lg-9 ml-lg-auto">
-                                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-secondary">Batal</button>
                                 </div>
                             </div>
                         </div>

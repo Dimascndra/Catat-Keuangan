@@ -1,10 +1,10 @@
 @extends('layouts.index')
-@section('title', 'Edit Category')
+@section('title', 'Ubah Kategori')
 
 @section('subheader')
     @component('layouts.partials._subheader.subheader-v1')
         @slot('title')
-            Edit Category
+            Ubah Kategori
         @endslot
         @slot('action')
             <a href="{{ route('categories.index') }}" class="btn btn-secondary font-weight-bolder btn-sm">Back</a>
@@ -25,7 +25,7 @@
                             value="{{ $category->name }}" required />
                     </div>
                     <div class="form-group">
-                        <label>Type <span class="text-danger">*</span></label>
+                        <label>Tipe <span class="text-danger">*</span></label>
                         <select class="form-control form-control-solid select2" id="typeSelect" name="type" required>
                             <option value="expense" {{ $category->type == 'expense' ? 'selected' : '' }}>Expense</option>
                             <option value="income" {{ $category->type == 'income' ? 'selected' : '' }}>Income</option>
@@ -37,7 +37,7 @@
                             value="{{ $category->color }}" style="height: 45px" />
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
+                        <label>Keterangan</label>
                         <textarea class="form-control form-control-solid" name="description">{{ $category->description }}</textarea>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
     <script>
         $(document).ready(function() {
             $('#typeSelect').select2({
-                placeholder: "Select Type",
+                placeholder: "Select Tipe",
                 allowClear: false,
                 minimumResultsForSearch: Infinity
             });

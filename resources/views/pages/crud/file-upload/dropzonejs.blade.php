@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">File Type Validation</label>
+                        <label class="col-form-label col-lg-3 col-sm-12 text-lg-right">File Tipe Validation</label>
                         <div class="col-lg-4 col-md-9 col-sm-12">
                             <div class="dropzone dropzone-default dropzone-success" id="kt_dropzone_3">
                                 <div class="dropzone-msg dz-message needsclick">
@@ -94,8 +94,8 @@
                     <div class="row">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-4">
-                            <button type="reset" class="btn btn-light-primary mr-2">Submit</button>
-                            <button type="reset" class="btn btn-primary">Cancel</button>
+                            <button type="reset" class="btn btn-light-primary mr-2">Kirim</button>
+                            <button type="reset" class="btn btn-primary">Batal</button>
                         </div>
                     </div>
                 </div>
@@ -192,8 +192,8 @@
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-9">
-                                    <button type="reset" class="btn btn-light-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-primary">Cancel</button>
+                                    <button type="reset" class="btn btn-light-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-primary">Batal</button>
                                 </div>
                             </div>
                         </div>
@@ -279,8 +279,8 @@
                             <div class="row">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-9">
-                                    <button type="reset" class="btn btn-light-primary mr-2">Submit</button>
-                                    <button type="reset" class="btn btn-primary">Cancel</button>
+                                    <button type="reset" class="btn btn-light-primary mr-2">Kirim</button>
+                                    <button type="reset" class="btn btn-primary">Batal</button>
                                 </div>
                             </div>
                         </div>
