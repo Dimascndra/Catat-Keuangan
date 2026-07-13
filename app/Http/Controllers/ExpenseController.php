@@ -113,7 +113,7 @@ class ExpenseController extends Controller
             'description' => 'required|string|max:255',
             'quantity' => 'required|integer|min:1',
             'amount' => 'required|numeric|min:0',
-            'image' => 'nullable|image|max:2048', // Max 2MB
+            'image' => 'nullable|image|max:51200', // 50MB
         ]);
 
         // Check sufficient balance
