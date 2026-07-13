@@ -112,6 +112,9 @@
                                 accept="image/*" />
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
+                        @error('image')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                         @if ($expense->image_path)
                             <div class="mt-2">
                                 <span class="text-muted">Current Receipt:</span>

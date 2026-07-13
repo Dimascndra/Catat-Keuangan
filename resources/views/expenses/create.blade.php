@@ -109,6 +109,9 @@
                                 accept="image/*" />
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
+                        @error('image')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
                 <div class="card-footer">

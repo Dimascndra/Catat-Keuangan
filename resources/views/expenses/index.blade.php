@@ -355,6 +355,9 @@
                                 <input type="file" class="custom-file-input" name="image" id="edit_expense_image" accept="image/*" />
                                 <label class="custom-file-label" for="edit_expense_image" id="edit_expense_image_label">Pilih berkas</label>
                             </div>
+                            @error('image')
+                                <span class="text-danger d-block mt-1">{{ $message }}</span>
+                            @enderror
                             <span class="form-text text-muted">Format gambar (jpg, jpeg, png, dll.), maksimal ukuran berkas: 50MB.</span>
                             <div class="mt-2" id="edit_expense_current_image_container" style="display:none;">
                                 <span class="text-muted">Nota Saat Ini:</span>
@@ -431,6 +434,9 @@
                                 <input type="file" class="custom-file-input" name="image" id="create_expense_image" accept="image/*" />
                                 <label class="custom-file-label" for="create_expense_image" id="create_expense_image_label">Pilih berkas</label>
                             </div>
+                            @error('image')
+                                <span class="text-danger d-block mt-1">{{ $message }}</span>
+                            @enderror
                             <span class="form-text text-muted">Format gambar (jpg, jpeg, png, dll.), maksimal ukuran berkas: 50MB.</span>
                         </div>
                     </div>
