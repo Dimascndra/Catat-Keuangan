@@ -22,6 +22,18 @@
                     <h3 class="card-label">Ubah Pengeluaran Entry</h3>
                 </div>
             </div>
+            @if ($errors->any())
+                <div class="alert alert-custom alert-light-danger fade show mb-5" role="alert" style="background-color: #ffcccc; color: red; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+                    <div class="alert-text">
+                        <strong>Oops! Ada masalah dengan inputan Anda:</strong>
+                        <ul class="mb-0">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            @endif
             <form action="{{ route('expenses.update', $expense) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')

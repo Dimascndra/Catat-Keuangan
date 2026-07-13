@@ -304,6 +304,18 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                @if ($errors->any())
+                    <div class="alert alert-custom alert-light-danger fade show mb-5" role="alert" style="background-color: #ffcccc; color: red; padding: 10px; margin-bottom: 15px; border-radius: 5px; margin-left: 15px; margin-right: 15px;">
+                        <div class="alert-text">
+                            <strong>Oops! Ada masalah dengan inputan Anda:</strong>
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endif
                 <form id="editExpenseForm" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
@@ -384,6 +396,18 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                @if ($errors->any())
+                    <div class="alert alert-custom alert-light-danger fade show mb-5" role="alert" style="background-color: #ffcccc; color: red; padding: 10px; margin-bottom: 15px; border-radius: 5px; margin-left: 15px; margin-right: 15px;">
+                        <div class="alert-text">
+                            <strong>Oops! Ada masalah dengan inputan Anda:</strong>
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endif
                 <form action="{{ route('expenses.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
