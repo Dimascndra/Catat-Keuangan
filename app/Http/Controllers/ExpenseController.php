@@ -167,13 +167,13 @@ class ExpenseController extends Controller
             'description' => 'required|string|max:255',
             'quantity' => 'required|integer|min:1',
             'amount' => 'required|numeric|min:0',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|max:51200', // 50MB
         ]);
 
         // Check sufficient balance
         $wallet = \App\Models\Wallet::findOrFail($request->wallet_id);
         $newTotal = $request->quantity * $request->amount;
-        
+
         if ($expense->wallet_id == $request->wallet_id) {
             if ($wallet->balance + $expense->total_amount < $newTotal) {
                 throw \Illuminate\Validation\ValidationException::withMessages([
